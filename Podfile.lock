@@ -1,0 +1,170 @@
+PODS:
+  - Alamofire (5.0.5)
+  - AlamofireNetworkActivityLogger (3.0.0):
+    - Alamofire (~> 5.0.0-rc.2)
+  - Fakery (4.1.2)
+  - Firebase/Analytics (6.33.0):
+    - Firebase/Core
+  - Firebase/Core (6.33.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 6.8.3)
+  - Firebase/CoreOnly (6.33.0):
+    - FirebaseCore (= 6.10.3)
+  - Firebase/Crashlytics (6.33.0):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 4.6.1)
+  - FirebaseAnalytics (6.8.3):
+    - FirebaseCore (~> 6.10)
+    - FirebaseInstallations (~> 1.6)
+    - GoogleAppMeasurement (= 6.8.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30906.0)
+  - FirebaseCore (6.10.3):
+    - FirebaseCoreDiagnostics (~> 1.6)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+  - FirebaseCoreDiagnostics (1.7.0):
+    - GoogleDataTransport (~> 7.4)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+    - nanopb (~> 1.30906.0)
+  - FirebaseCrashlytics (4.6.1):
+    - FirebaseCore (~> 6.10)
+    - FirebaseInstallations (~> 1.6)
+    - GoogleDataTransport (~> 7.2)
+    - nanopb (~> 1.30906.0)
+    - PromisesObjC (~> 1.2)
+  - FirebaseInstallations (1.7.0):
+    - FirebaseCore (~> 6.10)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/UserDefaults (~> 6.7)
+    - PromisesObjC (~> 1.2)
+  - GoogleAppMeasurement (6.8.3):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30906.0)
+  - GoogleDataTransport (7.4.0):
+    - nanopb (~> 1.30906.0)
+  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.7.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.7.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.7.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.7.2)"
+  - GoogleUtilities/Reachability (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (6.7.2):
+    - GoogleUtilities/Logger
+  - Keys (1.0.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - nanopb (1.30906.0):
+    - nanopb/decode (= 1.30906.0)
+    - nanopb/encode (= 1.30906.0)
+  - nanopb/decode (1.30906.0)
+  - nanopb/encode (1.30906.0)
+  - OxeNetworking (0.2.0):
+    - Moya (~> 14.0)
+    - OxeNetworking/OxeNetworking (= 0.2.0)
+    - SwiftyJSON (~> 5.0)
+  - OxeNetworking/OxeNetworking (0.2.0):
+    - Moya (~> 14.0)
+    - SwiftyJSON (~> 5.0)
+  - PromisesObjC (1.2.10)
+  - SwiftDate (6.2.0)
+  - SwiftLint (0.40.3)
+  - SwiftyJSON (5.0.0)
+  - Swinject (2.7.1)
+  - SwinjectAutoregistration (2.7.0):
+    - Swinject (~> 2.7)
+
+DEPENDENCIES:
+  - AlamofireNetworkActivityLogger (~> 3.0)
+  - Fakery (from `https://github.com/vadymmarkov/Fakery`, branch `master`)
+  - Firebase/Analytics
+  - Firebase/Crashlytics
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - OxeNetworking
+  - SwiftDate
+  - SwiftLint
+  - Swinject (~> 2.7.0)
+  - SwinjectAutoregistration (~> 2.7.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireNetworkActivityLogger
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUtilities
+    - Moya
+    - nanopb
+    - OxeNetworking
+    - PromisesObjC
+    - SwiftDate
+    - SwiftLint
+    - SwiftyJSON
+    - Swinject
+    - SwinjectAutoregistration
+
+EXTERNAL SOURCES:
+  Fakery:
+    :branch: master
+    :git: https://github.com/vadymmarkov/Fakery
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+CHECKOUT OPTIONS:
+  Fakery:
+    :commit: 121ec594c957b4e65bc828d71bd890fcbf8212e1
+    :git: https://github.com/vadymmarkov/Fakery
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
+  Fakery: eae1f41e41c7fef040b247a3817ca6a64bfcf6c3
+  Firebase: 8db6f2d1b2c5e2984efba4949a145875a8f65fe5
+  FirebaseAnalytics: 5dd088bd2e67bb9d13dbf792d1164ceaf3052193
+  FirebaseCore: d889d9e12535b7f36ac8bfbf1713a0836a3012cd
+  FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
+  FirebaseCrashlytics: 5777d3462fb8c3ab9e80a2473bd7d667a2e8411c
+  FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
+  GoogleAppMeasurement: 966e88df9d19c15715137bb2ddaf52373f111436
+  GoogleDataTransport: b7f406340a291370045a270c599e53c6fa6ec20f
+  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  OxeNetworking: 15f44757b83899cf773a30e202feb69f66d6cc41
+  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  SwiftDate: d117c3eb6beed72e47d3f4d1e3bc63fa1e66d7c3
+  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
+
+PODFILE CHECKSUM: b5e892d7b364a4e3b41d1a227b13c58caa89cab0
+
+COCOAPODS: 1.9.3
