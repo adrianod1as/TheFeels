@@ -61,6 +61,14 @@ abstract_target 'TheFeelsTargets' do
   end
 end
 
+target 'Domain' do
+  project 'Domain/Domain'
+  sharedPods
+  diPods
+  target 'DomainTests'
+end
+
+
 post_install do |pi|
   pi.pods_project.targets.each do |t|
     t.build_configurations.each do |config|
