@@ -5,6 +5,35 @@
       location = "group:TheFeels.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:DI/DI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AppNavigation/AppNavigation.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Presentation">
+      <FileRef
+         location = "group:Presentation/Common/Common.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Domain/Domain.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Data">
+      <FileRef
+         location = "group:Data/AppData/AppData.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Data/Networking/Networking.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Data/Storage/Storage.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

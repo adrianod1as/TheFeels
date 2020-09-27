@@ -25,6 +25,10 @@ def sharedPods
 end
 
 def presentationPods
+  pod 'SwiftGen', '~> 6.0'
+  pod 'SwiftMessages'
+  pod 'SwiftRichString'
+  pod 'NVActivityIndicatorView/Extended'
 end
 
 def diPods
@@ -57,6 +61,69 @@ abstract_target 'TheFeelsTargets' do
     target 'TheFeelsTests' do
 	   inherit! :search_paths
     end
+  end
+end
+
+target 'DI' do
+  project 'DI/DI'
+  sharedPods
+  presentationPods
+  diPods
+  networkingPods
+  storagePods
+  target 'DITests'
+end
+
+target 'AppNavigation' do
+  project 'AppNavigation/AppNavigation'
+  use_frameworks!
+  sharedPods
+  presentationPods
+  diPods
+  networkingPods
+  storagePods
+  target 'AppNavigationTests'
+end
+
+target 'Common' do
+  project 'Presentation/Common/Common'
+  sharedPods
+  presentationPods
+  diPods
+  target 'CommonTests'
+end
+
+target 'Domain' do
+  project 'Domain/Domain'
+  sharedPods
+  diPods
+  target 'DomainTests'
+end
+
+target 'AppData' do
+  project 'Data/AppData/AppData'
+  use_frameworks!
+  sharedPods
+  target 'AppDataTests' do
+    diPods
+  end
+end
+
+target 'Networking' do
+  project 'Data/Networking/Networking'
+  sharedPods
+  networkingPods
+  target 'NetworkingTests' do
+    diPods
+  end
+end
+
+target 'Storage' do
+  project 'Data/Storage/Storage'
+  sharedPods
+  storagePods
+  target 'StorageTests' do
+    diPods
   end
 end
 

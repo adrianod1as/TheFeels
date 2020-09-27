@@ -79,6 +79,9 @@ PODS:
     - nanopb/encode (= 1.30906.0)
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
+  - NVActivityIndicatorView/Base (5.0.1)
+  - NVActivityIndicatorView/Extended (5.0.1):
+    - NVActivityIndicatorView/Base
   - OxeNetworking (0.2.0):
     - Moya (~> 14.0)
     - OxeNetworking/OxeNetworking (= 0.2.0)
@@ -88,7 +91,12 @@ PODS:
     - SwiftyJSON (~> 5.0)
   - PromisesObjC (1.2.10)
   - SwiftDate (6.2.0)
+  - SwiftGen (6.3.0)
   - SwiftLint (0.40.3)
+  - SwiftMessages (8.0.2):
+    - SwiftMessages/App (= 8.0.2)
+  - SwiftMessages/App (8.0.2)
+  - SwiftRichString (3.7.2)
   - SwiftyJSON (5.0.0)
   - Swinject (2.7.1)
   - SwinjectAutoregistration (2.7.0):
@@ -100,9 +108,13 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Keys (from `Pods/CocoaPodsKeys`)
+  - NVActivityIndicatorView/Extended
   - OxeNetworking
   - SwiftDate
+  - SwiftGen (~> 6.0)
   - SwiftLint
+  - SwiftMessages
+  - SwiftRichString
   - Swinject (~> 2.7.0)
   - SwinjectAutoregistration (~> 2.7.0)
 
@@ -121,10 +133,14 @@ SPEC REPOS:
     - GoogleUtilities
     - Moya
     - nanopb
+    - NVActivityIndicatorView
     - OxeNetworking
     - PromisesObjC
     - SwiftDate
+    - SwiftGen
     - SwiftLint
+    - SwiftMessages
+    - SwiftRichString
     - SwiftyJSON
     - Swinject
     - SwinjectAutoregistration
@@ -157,14 +173,18 @@ SPEC CHECKSUMS:
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
   OxeNetworking: 15f44757b83899cf773a30e202feb69f66d6cc41
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   SwiftDate: d117c3eb6beed72e47d3f4d1e3bc63fa1e66d7c3
+  SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
   SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  SwiftMessages: 633304165351b8e3dcbb81a71f8efcd86f9c1669
+  SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 42ec78b4241131d142f3326f829b25e863e66d29
+PODFILE CHECKSUM: da16a336459a8723acf8fded173d3ee7ea5775e4
 
 COCOAPODS: 1.9.3

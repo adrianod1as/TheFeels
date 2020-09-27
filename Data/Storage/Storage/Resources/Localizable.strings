@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Storage
+
+  Created by Adriano Dias on 09/08/20.
+  Copyright © 2020 dias. All rights reserved.
+*/
+
+"LaunchStorage.ValueKey.hasLaunched" = "hasLaunched";
+"Error.Descriction.biometric" = "Não foi possível recuperar os dados via biometria.";
+"Error.Descriction.Token.saving" = "Não foi possível recuperar o token.";
+"Error.Descriction.Token.retrieving" = "Não foi possível salvar o token.";
+"Error.Descriction.Localized.saving" = "Não foi possível salvar as mensagens.";
+"Error.Descriction.Localized.retrieving" = "Não foi possível recuperar as mensagens.";
+"Address.File.extension" = "json";
+"File.Extension.json" = "json";
+"Realm.Database.defaultName" = "default";
+"Realm.Database.name" = "realm_database_%@";
+"Realm.Database.path" = "%@.realm";
