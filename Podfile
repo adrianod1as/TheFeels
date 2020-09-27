@@ -68,6 +68,14 @@ target 'Domain' do
   target 'DomainTests'
 end
 
+target 'AppData' do
+  project 'Data/AppData/AppData'
+  use_frameworks!
+  sharedPods
+  target 'AppDataTests' do
+    diPods
+  end
+end
 
 post_install do |pi|
   pi.pods_project.targets.each do |t|

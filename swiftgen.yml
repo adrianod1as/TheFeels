@@ -9,3 +9,9 @@ strings:
         output: Domain/Domain/Helpers/Constants/Generated/SwiftGenStrings.swift
         params: 
           publicAccess: true
+  - inputs: Data/AppData/AppData/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Data/AppData/AppData/Helpers/Constants/Generated/SwiftGenStrings.swift
+        params: 
+          publicAccess: true
