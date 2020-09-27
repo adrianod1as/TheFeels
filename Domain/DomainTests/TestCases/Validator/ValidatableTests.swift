@@ -23,14 +23,14 @@ class ValidatableTests: XCTestCase {
     func testValidable() {
         let sucess: ValidationResult = .success(())
         let successful = ModelStub(validations: [sucess])
-        let failure = ModelStub(validations: [.failure(ModelStub.Failure.some("")), sucess])
+        let failure = ModelStub(validations: [.failure(ModelStub.Failure.some(String())), sucess])
         XCTAssertTrue(successful.isValid)
         XCTAssertFalse(failure.isValid)
     }
 
     func testValidationResultIsValid() {
         let sucess: ValidationResult = .success(())
-        let failure: ValidationResult = .failure(InteractionError.invalidInput(""))
+        let failure: ValidationResult = .failure(InteractionError.invalidInput(String()))
         XCTAssertTrue(sucess.isValid)
         XCTAssertFalse(failure.isValid)
     }

@@ -26,6 +26,9 @@ end
 
 def presentationPods
   pod 'SwiftGen', '~> 6.0'
+  pod 'SwiftMessages'
+  pod 'SwiftRichString'
+  pod 'NVActivityIndicatorView/Extended'
 end
 
 def diPods
@@ -59,6 +62,14 @@ abstract_target 'TheFeelsTargets' do
 	   inherit! :search_paths
     end
   end
+end
+
+target 'Common' do
+  project 'Presentation/Common/Common'
+  sharedPods
+  presentationPods
+  diPods
+  target 'CommonTests'
 end
 
 target 'Domain' do

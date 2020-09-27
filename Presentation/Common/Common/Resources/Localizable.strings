@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Common
+
+  Created by Adriano Dias on 12/08/20.
+  Copyright © 2020 dias. All rights reserved.
+*/
+
+"Resolver.SafelyResolve.preconditionFailure" = "%@ is nil";
+"Symbol.backspace" = "\\b";

@@ -51,13 +51,13 @@ class UserSessionRequestHandlerTests: XCTestCase {
     }
 
     func testHandleRequestNonMappedInteractionError() {
-        sut.handleRequest(error: InteractionError.failedRequest("")) { result in
+        sut.handleRequest(error: InteractionError.failedRequest(String())) { result in
             XCTAssertNotNil(result.success)
         }
     }
 
     func testHandleRequestExpiredUserSession() {
-        sut.handleRequest(error: InteractionError.expiredUserSession("")) { result in
+        sut.handleRequest(error: InteractionError.expiredUserSession(String())) { result in
             guard let coordinator = self.sut.coordinator as? SignOutSceneCoordinatorSpy else {
                 XCTFail("Should be possible to cast coordinator as SignOutSceneCoordinatorSpy")
                 return

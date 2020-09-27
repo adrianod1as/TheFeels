@@ -4,6 +4,13 @@
    <FileRef
       location = "group:TheFeels.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Presentation">
+      <FileRef
+         location = "group:Presentation/Common/Common.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Domain/Domain.xcodeproj">
    </FileRef>

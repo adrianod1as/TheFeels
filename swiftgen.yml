@@ -1,3 +1,24 @@
+colors:
+  - inputs: Presentation/Common/Common/Resources/colors.json
+    outputs:
+      - templateName: literals-swift5
+        output: Presentation/Common/Common//Helpers/Constants/Generated/SwiftGenColors.swift
+        params: 
+          publicAccess: true
+xcassets:
+  - inputs: Presentation/Common/Common/Resources/Common.xcassets
+    outputs:
+      - templateName: swift5
+        output: Presentation/Common/Common/Helpers/Constants/Generated/SwiftGenAssets.swift
+        params: 
+          publicAccess: true
+fonts:
+  - inputs: Presentation/Common/Common/Resources/Fonts
+    outputs:
+      - templateName: swift5
+        output: Presentation/Common/Common/Helpers/Constants/Generated/SwiftGenFonts.swift
+        params: 
+          publicAccess: true
 strings:
   - inputs: TheFeels/Resources/Localizable.strings
     outputs:
@@ -23,3 +44,9 @@ strings:
     outputs:
       - templateName: structured-swift5
         output: Data/Storage/Storage/Helpers/Constants/Generated/SwiftGenStrings.swift
+  - inputs: Presentation/Common/Common/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Presentation/Common/Common/Helpers/Constants/Generated/SwiftGenStrings.swift
+        params: 
+          publicAccess: true
