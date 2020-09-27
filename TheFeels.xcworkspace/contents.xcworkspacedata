@@ -4,6 +4,9 @@
    <FileRef
       location = "group:TheFeels.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:AppNavigation/AppNavigation.xcodeproj">
+   </FileRef>
    <Group
       location = "container:"
       name = "Presentation">
