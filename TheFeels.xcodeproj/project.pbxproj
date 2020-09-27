@@ -18,6 +18,8 @@
 		E1693D78251FFE2C009D7F41 /* TheFeelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D77251FFE2C009D7F41 /* TheFeelsUITests.swift */; };
 		E1693E2A2520E099009D7F41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1693E292520E099009D7F41 /* Localizable.strings */; };
 		E1693E322520E0C5009D7F41 /* SwiftGenStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693E312520E0C5009D7F41 /* SwiftGenStrings.swift */; };
+		E1E272452520E85C001903B0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E272442520E85C001903B0 /* Domain.framework */; };
+		E1E272462520E85C001903B0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1E272442520E85C001903B0 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,20 @@
 			remoteInfo = TheFeels;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1E272472520E85C001903B0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E1E272462520E85C001903B0 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		657D2B3B76406E2D6CC1EA51 /* Pods_TheFeelsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFeelsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +75,7 @@
 		E1693D79251FFE2C009D7F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1693E292520E099009D7F41 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E1693E312520E0C5009D7F41 /* SwiftGenStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGenStrings.swift; sourceTree = "<group>"; };
+		E1E272442520E85C001903B0 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E272452520E85C001903B0 /* Domain.framework in Frameworks */,
 				011E3A3961CE098E1902D738 /* Pods_TheFeelsTargets_TheFeels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +207,7 @@
 		F089DC444FF926EDF72B73E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1E272442520E85C001903B0 /* Domain.framework */,
 				A8C13D53D844812902F8AECB /* Pods_TheFeelsTargets_TheFeels.framework */,
 				657D2B3B76406E2D6CC1EA51 /* Pods_TheFeelsTests.framework */,
 			);
@@ -208,6 +227,7 @@
 				E1693D50251FFE29009D7F41 /* Resources */,
 				99FEB7A507C5A4FCC0E79E15 /* [CP] Embed Pods Frameworks */,
 				E1693DD02520DAA1009D7F41 /* swiftlint */,
+				E1E272472520E85C001903B0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

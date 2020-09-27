@@ -3,3 +3,9 @@ strings:
     outputs:
       - templateName: structured-swift5
         output: TheFeels/Helpers/Constants/Generated/SwiftGenStrings.swift
+  - inputs: Domain/Domain/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Domain/Domain/Helpers/Constants/Generated/SwiftGenStrings.swift
+        params: 
+          publicAccess: true
