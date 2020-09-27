@@ -17,8 +17,6 @@
 		E14F811B25212781003075F9 /* DI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14F811925212781003075F9 /* DI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E14F824625212CCC003075F9 /* SetupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F824525212CCC003075F9 /* SetupConstants.swift */; };
 		E1693D56251FFE29009D7F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D55251FFE29009D7F41 /* AppDelegate.swift */; };
-		E1693D5A251FFE29009D7F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D59251FFE29009D7F41 /* ViewController.swift */; };
-		E1693D5D251FFE29009D7F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1693D5B251FFE29009D7F41 /* Main.storyboard */; };
 		E1693D5F251FFE2C009D7F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1693D5E251FFE2C009D7F41 /* Assets.xcassets */; };
 		E1693D62251FFE2C009D7F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1693D60251FFE2C009D7F41 /* LaunchScreen.storyboard */; };
 		E1693D6D251FFE2C009D7F41 /* TheFeelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D6C251FFE2C009D7F41 /* TheFeelsTests.swift */; };
@@ -89,8 +87,6 @@
 		E14F824525212CCC003075F9 /* SetupConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupConstants.swift; sourceTree = "<group>"; };
 		E1693D52251FFE29009D7F41 /* TheFeels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693D55251FFE29009D7F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1693D59251FFE29009D7F41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E1693D5C251FFE29009D7F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1693D5E251FFE2C009D7F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1693D61251FFE2C009D7F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1693D63251FFE2C009D7F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +150,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E14F82CA25213795003075F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E14F824425212C4B003075F9 /* TheFeels.entitlements */,
+				E1693D63251FFE2C009D7F41 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E1693D49251FFE29009D7F41 = {
 			isa = PBXGroup;
 			children = (
@@ -179,14 +184,11 @@
 		E1693D54251FFE29009D7F41 /* TheFeels */ = {
 			isa = PBXGroup;
 			children = (
-				E14F824425212C4B003075F9 /* TheFeels.entitlements */,
 				E1693E2E2520E0C5009D7F41 /* Helpers */,
 				E1693E282520E099009D7F41 /* Resources */,
+				E14F82CA25213795003075F9 /* Supporting Files */,
 				E1693D55251FFE29009D7F41 /* AppDelegate.swift */,
-				E1693D59251FFE29009D7F41 /* ViewController.swift */,
-				E1693D5B251FFE29009D7F41 /* Main.storyboard */,
 				E1693D60251FFE2C009D7F41 /* LaunchScreen.storyboard */,
-				E1693D63251FFE2C009D7F41 /* Info.plist */,
 			);
 			path = TheFeels;
 			sourceTree = "<group>";
@@ -372,7 +374,6 @@
 				E1693D62251FFE2C009D7F41 /* LaunchScreen.storyboard in Resources */,
 				E1693E2A2520E099009D7F41 /* Localizable.strings in Resources */,
 				E1693D5F251FFE2C009D7F41 /* Assets.xcassets in Resources */,
-				E1693D5D251FFE29009D7F41 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +480,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1693D5A251FFE29009D7F41 /* ViewController.swift in Sources */,
 				E14F824625212CCC003075F9 /* SetupConstants.swift in Sources */,
 				E1693D56251FFE29009D7F41 /* AppDelegate.swift in Sources */,
 				E1693E322520E0C5009D7F41 /* SwiftGenStrings.swift in Sources */,
@@ -518,14 +518,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E1693D5B251FFE29009D7F41 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1693D5C251FFE29009D7F41 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E1693D60251FFE2C009D7F41 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -659,10 +651,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TheFeels/TheFeels.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "TheFeels/Supporting Files/TheFeels.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KYWC2RHW78;
-				INFOPLIST_FILE = TheFeels/Info.plist;
+				INFOPLIST_FILE = "TheFeels/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,10 +672,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TheFeels/TheFeels.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "TheFeels/Supporting Files/TheFeels.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KYWC2RHW78;
-				INFOPLIST_FILE = TheFeels/Info.plist;
+				INFOPLIST_FILE = "TheFeels/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
