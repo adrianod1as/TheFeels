@@ -93,6 +93,14 @@ target 'Common' do
   target 'CommonTests'
 end
 
+target 'User' do
+  project 'Presentation/User/User'
+  sharedPods
+  presentationPods
+  diPods
+  target 'UserTests'
+end
+
 target 'Domain' do
   project 'Domain/Domain'
   sharedPods
