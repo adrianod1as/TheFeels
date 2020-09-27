@@ -25,6 +25,7 @@ def sharedPods
 end
 
 def presentationPods
+  pod 'SwiftGen', '~> 6.0'
 end
 
 def diPods
@@ -56,6 +57,14 @@ abstract_target 'TheFeelsTargets' do
   target 'TheFeels' do
     target 'TheFeelsTests' do
 	   inherit! :search_paths
+    end
+  end
+end
+
+post_install do |pi|
+  pi.pods_project.targets.each do |t|
+    t.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
     end
   end
 end

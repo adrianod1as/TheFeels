@@ -1,0 +1,74 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Pods
+
+force_cast: warning # implicitly
+  
+cyclomatic_complexity: 12
+file_length: 550
+function_body_length: 80
+function_parameter_count: 8
+line_length: 150
+type_body_length: 300
+variable_name:
+  min_length:
+    error: 1
+    warning: 1
+  excluded:
+    - N
+
+custom_rules:
+
+  # From https://github.com/Twigz/Game
+  force_https:
+    name: "Force HTTPS over HTTP"
+    regex: "((?i)http(?!s))"
+    match_kinds: string
+    message: "HTTPS should be favored over HTTP"
+    severity: warning
+
+  # From https://github.com/onelittlefish/ObjectiveSet
+  trailing_whitespace_permissive:
+    name: Trailing Whitespace (excluding whitespace-only lines)
+    # This will only catch some trailing whitespace due to swiftlint's custom regex
+    # implementation and how it filters for match_kinds.
+    # This alternative regex will catch more (but still not all) cases:
+    # "\S+[\S\t\f\p{Z}]+[\t\f\p{Z}]+\n" but it is much less performant.
+    # Examples that won't be caught:
+    # closing brace by itself followed by space (not caught by either regex),
+    # func declaration followed by space after the opening brace (would be caught by
+    # less performant regex)
+    regex: '\S+[\t\f\p{Z}]+\n'
+    message: "Lines should not have trailing whitespace."
+
+  # From https://github.com/brandenr/swiftlintconfig
+  comments_space:
+    name: "Space After Comment"
+    regex: '(^ *//\w+)'
+    message: "There should be a space after //"
+    severity: error
+  empty_first_line:
+    name: "Empty First Line"
+    regex: '(^[ a-zA-Z ]*(?:protocol|extension|class|struct) (?!(?:var|let))[ a-zA-Z:]*\{\n *\S+)'
+    message: "There should be an empty line after a declaration"
+    severity: error
+  empty_line_after_guard:
+    name: "Empty Line After Guard"
+    regex: '(^ *guard[ a-zA-Z0-9=?.\(\),><!]*\{[ a-zA-Z0-9=?.\(\),><!]*\}\n *(?!(?:return|guard))\S+)'
+    message: "There should be an empty line after a guard"
+    severity: error
+  empty_line_after_super:
+    name: "Empty Line After Super"
+    regex: '(^ *super\.[ a-zA-Z0-9=?.\(\)\{\}:,><!]*\n *(?!(?:\}|return))\S+)'
+    message: "There should be an empty line after super"
+    severity: error
+  multiple_empty_lines:
+    name: "Multiple Empty Lines"
+    regex: '((?:\s*\n){3,})'
+    message: "There are too many line breaks"
+    severity: error
+  unnecessary_type:
+    name: "Unnecessary Type"
+    regex: '[ a-zA-Z0-9]*(?:let|var) [ a-zA-Z0-9]*: ([a-zA-Z0-9]*)[\? ]*= \1'
+    message: "Type Definition Not Needed"
+    severity: error
+
