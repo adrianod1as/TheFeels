@@ -5,3 +5,13 @@
   Created by Adriano Dias on 27/09/20.
   Copyright © 2020 dias. All rights reserved.
 */
+
+"Headers.Keys.Accept" = "accept";
+"Headers.Keys.ContentType" = "Content-Type";
+"Headers.Keys.Authorization" = "Authorization";
+"SpecificHeaders.Keys.tmdb" = "tmdb";
+"Headers.Values.JsonApplication" = "application/json";
+"Headers.Values.Bearer" = "Bearer %@";
+"Headers.Values.JsonContentType" = "application/json;charset=utf-8";
+"App.group" = "group.br.com.dias.TheFeels";
+"App.identifier" = "br.com.dias.TheFeels";
