@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		011E3A3961CE098E1902D738 /* Pods_TheFeelsTargets_TheFeels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C13D53D844812902F8AECB /* Pods_TheFeelsTargets_TheFeels.framework */; };
 		4BA1D7A1F86948DA565AAC86 /* Pods_TheFeelsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657D2B3B76406E2D6CC1EA51 /* Pods_TheFeelsTests.framework */; };
+		E14F7F1925211D1D003075F9 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F7D822521199D003075F9 /* Common.framework */; };
+		E14F7F1A25211D1D003075F9 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14F7D822521199D003075F9 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1693D56251FFE29009D7F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D55251FFE29009D7F41 /* AppDelegate.swift */; };
 		E1693D5A251FFE29009D7F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D59251FFE29009D7F41 /* ViewController.swift */; };
 		E1693D5D251FFE29009D7F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1693D5B251FFE29009D7F41 /* Main.storyboard */; };
@@ -56,6 +58,7 @@
 				E1E2730C2521058E001903B0 /* AppData.framework in Embed Frameworks */,
 				E1E272462520E85C001903B0 /* Domain.framework in Embed Frameworks */,
 				E1E2754C252111F7001903B0 /* Storage.framework in Embed Frameworks */,
+				E14F7F1A25211D1D003075F9 /* Common.framework in Embed Frameworks */,
 				E1E273F625210A9C001903B0 /* Networking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -70,6 +73,9 @@
 		8CB4433E74839EEF564E406E /* Pods-TheFeelsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFeelsTests.release.xcconfig"; path = "Target Support Files/Pods-TheFeelsTests/Pods-TheFeelsTests.release.xcconfig"; sourceTree = "<group>"; };
 		8DA800B6AF46CEF5EEEE681A /* Pods-TheFeelsTargets-TheFeels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFeelsTargets-TheFeels.release.xcconfig"; path = "Target Support Files/Pods-TheFeelsTargets-TheFeels/Pods-TheFeelsTargets-TheFeels.release.xcconfig"; sourceTree = "<group>"; };
 		A8C13D53D844812902F8AECB /* Pods_TheFeelsTargets_TheFeels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFeelsTargets_TheFeels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14F7D822521199D003075F9 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14F7E1925211AFC003075F9 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14F7E8425211BF7003075F9 /* AppCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693D52251FFE29009D7F41 /* TheFeels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693D55251FFE29009D7F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1693D59251FFE29009D7F41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 				E1E272452520E85C001903B0 /* Domain.framework in Frameworks */,
 				E1E2754B252111F7001903B0 /* Storage.framework in Frameworks */,
 				011E3A3961CE098E1902D738 /* Pods_TheFeelsTargets_TheFeels.framework in Frameworks */,
+				E14F7F1925211D1D003075F9 /* Common.framework in Frameworks */,
 				E1E273F525210A9C001903B0 /* Networking.framework in Frameworks */,
 				E1E2730B2521058E001903B0 /* AppData.framework in Frameworks */,
 			);
@@ -224,6 +231,9 @@
 		F089DC444FF926EDF72B73E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E14F7E8425211BF7003075F9 /* AppCommon.framework */,
+				E14F7E1925211AFC003075F9 /* Common.framework */,
+				E14F7D822521199D003075F9 /* Common.framework */,
 				E1E2754A252111F7001903B0 /* Storage.framework */,
 				E1E273F425210A9C001903B0 /* Networking.framework */,
 				E1E2730A2521058E001903B0 /* AppData.framework */,

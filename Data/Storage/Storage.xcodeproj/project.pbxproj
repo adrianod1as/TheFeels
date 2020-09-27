@@ -21,9 +21,7 @@
 		E1E27538252111A1001903B0 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E27529252111A1001903B0 /* FileReader.swift */; };
 		E1E2753A252111A1001903B0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1E27530252111A1001903B0 /* Localizable.strings */; };
 		E1E27544252111D0001903B0 /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E27543252111D0001903B0 /* AppData.framework */; };
-		E1E27545252111D0001903B0 /* AppData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1E27543252111D0001903B0 /* AppData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1E27548252111D5001903B0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E27547252111D5001903B0 /* Domain.framework */; };
-		E1E27549252111D5001903B0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1E27547252111D5001903B0 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,21 +33,6 @@
 			remoteInfo = Storage;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		E1E27546252111D0001903B0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E1E27549252111D5001903B0 /* Domain.framework in Embed Frameworks */,
-				E1E27545252111D0001903B0 /* AppData.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		38FC18298756A3F1C001C499 /* Pods_Storage_StorageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storage_StorageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,7 +270,6 @@
 				E1E274CD25211085001903B0 /* Sources */,
 				E1E274CE25211085001903B0 /* Frameworks */,
 				E1E274CF25211085001903B0 /* Resources */,
-				E1E27546252111D0001903B0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

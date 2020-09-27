@@ -18,6 +18,6 @@ public enum Certificates: Certificate, CaseIterable {
     }
 
     public var evaluatorKey: String {
-        return ""
+        return String()
     }
 }
