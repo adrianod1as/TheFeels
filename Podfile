@@ -86,6 +86,15 @@ target 'Networking' do
   end
 end
 
+target 'Storage' do
+  project 'Data/Storage/Storage'
+  sharedPods
+  storagePods
+  target 'StorageTests' do
+    diPods
+  end
+end
+
 post_install do |pi|
   pi.pods_project.targets.each do |t|
     t.build_configurations.each do |config|

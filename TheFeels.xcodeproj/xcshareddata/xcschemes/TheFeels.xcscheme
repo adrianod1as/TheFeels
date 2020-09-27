@@ -79,6 +79,16 @@
                ReferencedContainer = "container:Data/Networking/Networking.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E1E274D925211085001903B0"
+               BuildableName = "StorageTests.xctest"
+               BlueprintName = "StorageTests"
+               ReferencedContainer = "container:Data/Storage/Storage.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

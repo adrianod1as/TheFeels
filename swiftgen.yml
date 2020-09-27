@@ -19,3 +19,7 @@ strings:
     outputs:
       - templateName: structured-swift5
         output: Data/Networking/Networking/Helpers/Constants/Generated/SwiftGenStrings.swift
+  - inputs: Data/Storage/Storage/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Data/Storage/Storage/Helpers/Constants/Generated/SwiftGenStrings.swift
