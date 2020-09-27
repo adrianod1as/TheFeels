@@ -64,6 +64,16 @@ abstract_target 'TheFeelsTargets' do
   end
 end
 
+target 'DI' do
+  project 'DI/DI'
+  sharedPods
+  presentationPods
+  diPods
+  networkingPods
+  storagePods
+  target 'DITests'
+end
+
 target 'AppNavigation' do
   project 'AppNavigation/AppNavigation'
   use_frameworks!

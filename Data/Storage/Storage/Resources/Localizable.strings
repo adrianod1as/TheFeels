@@ -7,9 +7,7 @@
 */
 
 "LaunchStorage.ValueKey.hasLaunched" = "hasLaunched";
-"Error.Descriction.balance" = "Não foi possível recuperar o saldo da conta.";
 "Error.Descriction.biometric" = "Não foi possível recuperar os dados via biometria.";
-"Error.Descriction.cpf" = "Não foi possível recuperar seu CPF.";
 "Error.Descriction.Token.saving" = "Não foi possível recuperar o token.";
 "Error.Descriction.Token.retrieving" = "Não foi possível salvar o token.";
 "Error.Descriction.Localized.saving" = "Não foi possível salvar as mensagens.";

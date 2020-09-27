@@ -109,6 +109,16 @@
                ReferencedContainer = "container:AppNavigation/AppNavigation.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E14F80EF2521270B003075F9"
+               BuildableName = "DITests.xctest"
+               BlueprintName = "DITests"
+               ReferencedContainer = "container:DI/DI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

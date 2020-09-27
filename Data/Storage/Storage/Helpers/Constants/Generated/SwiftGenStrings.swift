@@ -20,12 +20,8 @@ internal enum L10n {
 
   internal enum Error {
     internal enum Descriction {
-      /// Não foi possível recuperar o saldo da conta.
-      internal static let balance = L10n.tr("Localizable", "Error.Descriction.balance")
       /// Não foi possível recuperar os dados via biometria.
       internal static let biometric = L10n.tr("Localizable", "Error.Descriction.biometric")
-      /// Não foi possível recuperar seu CPF.
-      internal static let cpf = L10n.tr("Localizable", "Error.Descriction.cpf")
       internal enum Localized {
         /// Não foi possível recuperar as mensagens.
         internal static let retrieving = L10n.tr("Localizable", "Error.Descriction.Localized.retrieving")

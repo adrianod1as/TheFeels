@@ -5,6 +5,9 @@
       location = "group:TheFeels.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:DI/DI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AppNavigation/AppNavigation.xcodeproj">
    </FileRef>
    <Group
