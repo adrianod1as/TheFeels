@@ -1,0 +1,5 @@
+strings:
+  - inputs: TheFeels/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: TheFeels/Helpers/Constants/Generated/SwiftGenStrings.swift

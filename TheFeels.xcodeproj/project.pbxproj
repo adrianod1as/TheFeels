@@ -17,6 +17,8 @@
 		E1693D62251FFE2C009D7F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1693D60251FFE2C009D7F41 /* LaunchScreen.storyboard */; };
 		E1693D6D251FFE2C009D7F41 /* TheFeelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D6C251FFE2C009D7F41 /* TheFeelsTests.swift */; };
 		E1693D78251FFE2C009D7F41 /* TheFeelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D77251FFE2C009D7F41 /* TheFeelsUITests.swift */; };
+		E1693E2A2520E099009D7F41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1693E292520E099009D7F41 /* Localizable.strings */; };
+		E1693E322520E0C5009D7F41 /* SwiftGenStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693E312520E0C5009D7F41 /* SwiftGenStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		E1693D73251FFE2C009D7F41 /* TheFeelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheFeelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693D77251FFE2C009D7F41 /* TheFeelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFeelsUITests.swift; sourceTree = "<group>"; };
 		E1693D79251FFE2C009D7F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1693E292520E099009D7F41 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E1693E312520E0C5009D7F41 /* SwiftGenStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGenStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +126,12 @@
 		E1693D54251FFE29009D7F41 /* TheFeels */ = {
 			isa = PBXGroup;
 			children = (
+				E1693E2E2520E0C5009D7F41 /* Helpers */,
+				E1693E282520E099009D7F41 /* Resources */,
 				E1693D55251FFE29009D7F41 /* AppDelegate.swift */,
 				E1693D57251FFE29009D7F41 /* SceneDelegate.swift */,
 				E1693D59251FFE29009D7F41 /* ViewController.swift */,
 				E1693D5B251FFE29009D7F41 /* Main.storyboard */,
-				E1693D5E251FFE2C009D7F41 /* Assets.xcassets */,
 				E1693D60251FFE2C009D7F41 /* LaunchScreen.storyboard */,
 				E1693D63251FFE2C009D7F41 /* Info.plist */,
 			);
@@ -149,6 +154,39 @@
 				E1693D79251FFE2C009D7F41 /* Info.plist */,
 			);
 			path = TheFeelsUITests;
+			sourceTree = "<group>";
+		};
+		E1693E282520E099009D7F41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1693D5E251FFE2C009D7F41 /* Assets.xcassets */,
+				E1693E292520E099009D7F41 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1693E2E2520E0C5009D7F41 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1693E2F2520E0C5009D7F41 /* Constants */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E1693E2F2520E0C5009D7F41 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E1693E302520E0C5009D7F41 /* Generated */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E1693E302520E0C5009D7F41 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E1693E312520E0C5009D7F41 /* SwiftGenStrings.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		F089DC444FF926EDF72B73E8 /* Frameworks */ = {
@@ -267,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1693D62251FFE2C009D7F41 /* LaunchScreen.storyboard in Resources */,
+				E1693E2A2520E099009D7F41 /* Localizable.strings in Resources */,
 				E1693D5F251FFE2C009D7F41 /* Assets.xcassets in Resources */,
 				E1693D5D251FFE29009D7F41 /* Main.storyboard in Resources */,
 			);
@@ -359,7 +398,11 @@
 			files = (
 				E1693D5A251FFE29009D7F41 /* ViewController.swift in Sources */,
 				E1693D56251FFE29009D7F41 /* AppDelegate.swift in Sources */,
+<<<<<<< Updated upstream
 				E1693D58251FFE29009D7F41 /* SceneDelegate.swift in Sources */,
+=======
+				E1693E322520E0C5009D7F41 /* SwiftGenStrings.swift in Sources */,
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

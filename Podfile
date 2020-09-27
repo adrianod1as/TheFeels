@@ -25,6 +25,7 @@ def sharedPods
 end
 
 def presentationPods
+  pod 'SwiftGen', '~> 6.0'
 end
 
 def diPods
