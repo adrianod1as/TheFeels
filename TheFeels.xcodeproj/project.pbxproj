@@ -10,7 +10,6 @@
 		011E3A3961CE098E1902D738 /* Pods_TheFeelsTargets_TheFeels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C13D53D844812902F8AECB /* Pods_TheFeelsTargets_TheFeels.framework */; };
 		4BA1D7A1F86948DA565AAC86 /* Pods_TheFeelsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657D2B3B76406E2D6CC1EA51 /* Pods_TheFeelsTests.framework */; };
 		E1693D56251FFE29009D7F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D55251FFE29009D7F41 /* AppDelegate.swift */; };
-		E1693D58251FFE29009D7F41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D57251FFE29009D7F41 /* SceneDelegate.swift */; };
 		E1693D5A251FFE29009D7F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D59251FFE29009D7F41 /* ViewController.swift */; };
 		E1693D5D251FFE29009D7F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1693D5B251FFE29009D7F41 /* Main.storyboard */; };
 		E1693D5F251FFE2C009D7F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1693D5E251FFE2C009D7F41 /* Assets.xcassets */; };
@@ -47,7 +46,6 @@
 		A8C13D53D844812902F8AECB /* Pods_TheFeelsTargets_TheFeels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFeelsTargets_TheFeels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693D52251FFE29009D7F41 /* TheFeels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693D55251FFE29009D7F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1693D57251FFE29009D7F41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1693D59251FFE29009D7F41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E1693D5C251FFE29009D7F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1693D5E251FFE2C009D7F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				E1693E2E2520E0C5009D7F41 /* Helpers */,
 				E1693E282520E099009D7F41 /* Resources */,
 				E1693D55251FFE29009D7F41 /* AppDelegate.swift */,
-				E1693D57251FFE29009D7F41 /* SceneDelegate.swift */,
 				E1693D59251FFE29009D7F41 /* ViewController.swift */,
 				E1693D5B251FFE29009D7F41 /* Main.storyboard */,
 				E1693D60251FFE2C009D7F41 /* LaunchScreen.storyboard */,
@@ -210,6 +207,7 @@
 				E1693D4F251FFE29009D7F41 /* Frameworks */,
 				E1693D50251FFE29009D7F41 /* Resources */,
 				99FEB7A507C5A4FCC0E79E15 /* [CP] Embed Pods Frameworks */,
+				E1693DD02520DAA1009D7F41 /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -389,6 +387,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TheFeelsTargets-TheFeels/Pods-TheFeelsTargets-TheFeels-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E1693DD02520DAA1009D7F41 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -398,11 +414,7 @@
 			files = (
 				E1693D5A251FFE29009D7F41 /* ViewController.swift in Sources */,
 				E1693D56251FFE29009D7F41 /* AppDelegate.swift in Sources */,
-<<<<<<< Updated upstream
-				E1693D58251FFE29009D7F41 /* SceneDelegate.swift in Sources */,
-=======
 				E1693E322520E0C5009D7F41 /* SwiftGenStrings.swift in Sources */,
->>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -563,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
