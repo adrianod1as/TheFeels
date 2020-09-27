@@ -77,6 +77,15 @@ target 'AppData' do
   end
 end
 
+target 'Networking' do
+  project 'Data/Networking/Networking'
+  sharedPods
+  networkingPods
+  target 'NetworkingTests' do
+    diPods
+  end
+end
+
 post_install do |pi|
   pi.pods_project.targets.each do |t|
     t.build_configurations.each do |config|

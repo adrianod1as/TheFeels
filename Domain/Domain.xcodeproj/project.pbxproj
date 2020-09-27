@@ -32,6 +32,7 @@
 		E1E272892520EDF0001903B0 /* ValidatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E2726A2520EDEF001903B0 /* ValidatableTests.swift */; };
 		E1E272AF2520EEC9001903B0 /* Validation+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E272AE2520EEC9001903B0 /* Validation+Collection.swift */; };
 		E1E272B32520EEF9001903B0 /* InteractionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E272B22520EEF9001903B0 /* InteractionError.swift */; };
+		E1E273F125210A4E001903B0 /* SignOutSceneCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E273F025210A4E001903B0 /* SignOutSceneCoordinating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E1E2726A2520EDEF001903B0 /* ValidatableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableTests.swift; sourceTree = "<group>"; };
 		E1E272AE2520EEC9001903B0 /* Validation+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validation+Collection.swift"; sourceTree = "<group>"; };
 		E1E272B22520EEF9001903B0 /* InteractionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionError.swift; sourceTree = "<group>"; };
+		E1E273F025210A4E001903B0 /* SignOutSceneCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutSceneCoordinating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				E1E271E72520E76B001903B0 /* Constants */,
 				E1E271EA2520E76B001903B0 /* Extensions */,
+				E1E273F025210A4E001903B0 /* SignOutSceneCoordinating.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E272B32520EEF9001903B0 /* InteractionError.swift in Sources */,
+				E1E273F125210A4E001903B0 /* SignOutSceneCoordinating.swift in Sources */,
 				E1E272352520E76B001903B0 /* Validatable.swift in Sources */,
 				E1E272162520E76B001903B0 /* SwiftGenStrings.swift in Sources */,
 				E1E272AF2520EEC9001903B0 /* Validation+Collection.swift in Sources */,

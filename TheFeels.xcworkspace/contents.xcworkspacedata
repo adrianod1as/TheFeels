@@ -13,6 +13,9 @@
       <FileRef
          location = "group:Data/AppData/AppData.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Data/Networking/Networking.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

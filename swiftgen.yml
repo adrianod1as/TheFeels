@@ -15,3 +15,7 @@ strings:
         output: Data/AppData/AppData/Helpers/Constants/Generated/SwiftGenStrings.swift
         params: 
           publicAccess: true
+  - inputs: Data/Networking/Networking/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Data/Networking/Networking/Helpers/Constants/Generated/SwiftGenStrings.swift
