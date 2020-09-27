@@ -11,6 +11,17 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
 
+  public enum Error {
+    public enum Message {
+      /// Campo obrigatório.
+      public static let requiment = L10n.tr("Localizable", "Error.Message.requiment")
+    }
+    public enum Title {
+      /// Ops!
+      public static let ops = L10n.tr("Localizable", "Error.Title.ops")
+    }
+  }
+
   public enum Symbol {
     /// pt_BR
     public static let locale = L10n.tr("Localizable", "Symbol.locale")

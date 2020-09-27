@@ -7,3 +7,5 @@
 */
 
 "Symbol.locale" = "pt_BR";
+"Error.Title.ops" = "Ops!";
+"Error.Message.requiment" = "Campo obrigatório.";
