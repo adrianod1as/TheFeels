@@ -9,7 +9,7 @@ import RxSwift
 
 public class SearchUserByNameUseCase {
 
-    private let repository: UserRepository
+    internal let repository: UserRepository
 
     public init(repository: UserRepository) {
         self.repository = repository
@@ -19,6 +19,9 @@ public class SearchUserByNameUseCase {
 extension SearchUserByNameUseCase: SearchUserByNameUseCaseable {
 
     public func execute(_ name: String) -> Observable<[User]> {
-        repository.searchUser(by: name)
+        guard !name.isEmpty else {
+            return .error(InteractionError.failedRequest(L10n.Error.Message.requiment))
+        }
+        return repository.searchUser(by: name)
     }
 }

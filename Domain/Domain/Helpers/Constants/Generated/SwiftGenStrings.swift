@@ -26,6 +26,13 @@ public enum L10n {
     /// pt_BR
     public static let locale = L10n.tr("Localizable", "Symbol.locale")
   }
+
+  public enum User {
+    public enum ProfileImageUrl {
+      /// https://pbs.twimg.com/profile_images/473550724433858560/tuHsaI2U_normal.png
+      public static let sample = L10n.tr("Localizable", "User.ProfileImageUrl.sample")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

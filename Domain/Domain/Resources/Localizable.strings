@@ -9,3 +9,4 @@
 "Symbol.locale" = "pt_BR";
 "Error.Title.ops" = "Ops!";
 "Error.Message.requiment" = "Campo obrigatório.";
+"User.ProfileImageUrl.sample" = "https://pbs.twimg.com/profile_images/473550724433858560/tuHsaI2U_normal.png";
