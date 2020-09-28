@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		54AB16351BB7F0D081CA34A0 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 004C2DE8C92DD4539412A6D7 /* Pods_Domain.framework */; };
 		6B0F7C21A5065DDE2435D163 /* Pods_Domain_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D894E03B098DD74FD6EACB /* Pods_Domain_DomainTests.framework */; };
+		E1622C1E25223B0D002204A7 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1622C1D25223B0D002204A7 /* UserRepository.swift */; };
+		E1622C5625223EE2002204A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1622C5525223EE2002204A7 /* User.swift */; };
+		E1622CA72522453D002204A7 /* SearchUserByNameUseCaseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1622CA62522453D002204A7 /* SearchUserByNameUseCaseable.swift */; };
+		E1622CAB252245A5002204A7 /* SearchUserByNameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1622CAA252245A5002204A7 /* SearchUserByNameUseCase.swift */; };
 		E1693DBE2520D538009D7F41 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1693DB42520D538009D7F41 /* Domain.framework */; };
 		E1693DC32520D538009D7F41 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693DC22520D538009D7F41 /* DomainTests.swift */; };
 		E1693DC52520D538009D7F41 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = E1693DB72520D538009D7F41 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +56,10 @@
 		942A5592E59C0847C557EFC7 /* Pods-Domain-DomainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain-DomainTests.release.xcconfig"; path = "Target Support Files/Pods-Domain-DomainTests/Pods-Domain-DomainTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7267D9EF38A1DC76760F721 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		DB78B5209CAE455EE47D35E8 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
+		E1622C1D25223B0D002204A7 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		E1622C5525223EE2002204A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E1622CA62522453D002204A7 /* SearchUserByNameUseCaseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserByNameUseCaseable.swift; sourceTree = "<group>"; };
+		E1622CAA252245A5002204A7 /* SearchUserByNameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserByNameUseCase.swift; sourceTree = "<group>"; };
 		E1693DB42520D538009D7F41 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693DB72520D538009D7F41 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		E1693DB82520D538009D7F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +170,8 @@
 		E1E271E42520E76A001903B0 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				E1622CA62522453D002204A7 /* SearchUserByNameUseCaseable.swift */,
+				E1622CAA252245A5002204A7 /* SearchUserByNameUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -237,6 +247,7 @@
 		E1E271FA2520E76B001903B0 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				E1622C5525223EE2002204A7 /* User.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -276,6 +287,7 @@
 		E1E2720D2520E76B001903B0 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				E1622C1D25223B0D002204A7 /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -548,13 +560,17 @@
 				E1E272162520E76B001903B0 /* SwiftGenStrings.swift in Sources */,
 				E1E272AF2520EEC9001903B0 /* Validation+Collection.swift in Sources */,
 				E1E2721D2520E76B001903B0 /* Array+Fakery.swift in Sources */,
+				E1622C1E25223B0D002204A7 /* UserRepository.swift in Sources */,
 				E1E272592520EA3E001903B0 /* Encodable+Ext.swift in Sources */,
 				E1E272372520E76B001903B0 /* Enforcer.swift in Sources */,
 				E1E2724B2520E897001903B0 /* Result+Ext.swift in Sources */,
+				E1622CA72522453D002204A7 /* SearchUserByNameUseCaseable.swift in Sources */,
 				E1E2721C2520E76B001903B0 /* Fakery+Extensions.swift in Sources */,
 				E1E2725D2520EA5F001903B0 /* SwiftyJSON+Ext.swift in Sources */,
 				E1E272552520EA0C001903B0 /* Numbers+Ext.swift in Sources */,
+				E1622CAB252245A5002204A7 /* SearchUserByNameUseCase.swift in Sources */,
 				E1E272612520EA79001903B0 /* Data+Ext.swift in Sources */,
+				E1622C5625223EE2002204A7 /* User.swift in Sources */,
 				E1E2722F2520E76B001903B0 /* DomainConvertibleType.swift in Sources */,
 				E1E2722E2520E76B001903B0 /* Fakeable.swift in Sources */,
 				E1E272342520E76B001903B0 /* Validation.swift in Sources */,
