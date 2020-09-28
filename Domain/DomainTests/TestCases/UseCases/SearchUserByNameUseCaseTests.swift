@@ -27,8 +27,7 @@ class SearchUserByNameUseCaseTests: XCTestCase {
     }
 
     func testExcutionSuccess() {
-        let result = try! sut.execute("SwiftLang").toBlocking(timeout: 0.1).first()
-        XCTAssertNotNil(result)
+        XCTAssertNotNil(try sut.execute("SwiftLang").toBlocking(timeout: 0.1).first())
         XCTAssert(spy.searchUserCalled)
     }
 

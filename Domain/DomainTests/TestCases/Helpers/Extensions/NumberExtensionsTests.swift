@@ -23,4 +23,3 @@ class NumberExtensionsTests: XCTestCase {
         XCTAssertEqual(ints.string, "92478")
     }
 }
-
