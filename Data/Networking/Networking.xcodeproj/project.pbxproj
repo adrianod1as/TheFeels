@@ -13,6 +13,8 @@
 		E162311625227C7A002204A7 /* RxDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162311525227C7A002204A7 /* RxDispatcher.swift */; };
 		E162311A2522858F002204A7 /* TwitterApiFriendly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16231192522858F002204A7 /* TwitterApiFriendly.swift */; };
 		E162311E252286F6002204A7 /* UsersTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162311D252286F6002204A7 /* UsersTarget.swift */; };
+		E162312225229351002204A7 /* UserRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162312125229351002204A7 /* UserRemoteDataSourceTests.swift */; };
+		E162312625229F68002204A7 /* UsersTargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162312525229F68002204A7 /* UsersTargetTests.swift */; };
 		E1E2735E25210873001903B0 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2735425210872001903B0 /* Networking.framework */; };
 		E1E2736325210873001903B0 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E2736225210873001903B0 /* NetworkingTests.swift */; };
 		E1E2736525210873001903B0 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E2735725210872001903B0 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +58,8 @@
 		E162311525227C7A002204A7 /* RxDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDispatcher.swift; sourceTree = "<group>"; };
 		E16231192522858F002204A7 /* TwitterApiFriendly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterApiFriendly.swift; sourceTree = "<group>"; };
 		E162311D252286F6002204A7 /* UsersTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTarget.swift; sourceTree = "<group>"; };
+		E162312125229351002204A7 /* UserRemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSourceTests.swift; sourceTree = "<group>"; };
+		E162312525229F68002204A7 /* UsersTargetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTargetTests.swift; sourceTree = "<group>"; };
 		E1E2735425210872001903B0 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E2735725210872001903B0 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		E1E2735825210872001903B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 		E1E273FE25210C0A001903B0 /* Datasources */ = {
 			isa = PBXGroup;
 			children = (
+				E162312125229351002204A7 /* UserRemoteDataSourceTests.swift */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 		E1E2740125210C0A001903B0 /* Targets */ = {
 			isa = PBXGroup;
 			children = (
+				E162312525229F68002204A7 /* UsersTargetTests.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -550,6 +556,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E2741525210C0A001903B0 /* UserSessionRequestHandlerTests.swift in Sources */,
+				E162312225229351002204A7 /* UserRemoteDataSourceTests.swift in Sources */,
+				E162312625229F68002204A7 /* UsersTargetTests.swift in Sources */,
 				E1E2741125210C0A001903B0 /* SignOutSceneCoordinatorSpy.swift in Sources */,
 				E1E2736325210873001903B0 /* NetworkingTests.swift in Sources */,
 				E1E2741B25210C0A001903B0 /* NetworkingReachabilityStub.swift in Sources */,

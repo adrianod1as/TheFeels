@@ -8,7 +8,4 @@
 import RxSwift
 import OxeNetworking
 
-public protocol RxDispatcher: Dispatcher where Self: ReactiveCompatible, ReactiveBase == Dispatcher {
-
-
-}
+public protocol RxDispatcher: Dispatcher where Self: ReactiveCompatible, ReactiveBase: Dispatcher {}
