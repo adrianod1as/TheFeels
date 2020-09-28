@@ -22,6 +22,17 @@ def sharedPods
   pod 'SwiftLint'
   pod 'Fakery', :git => 'https://github.com/vadymmarkov/Fakery', :branch => 'master'
   pod 'SwiftDate'
+  rxSharedPods
+end
+
+def rxSharedPods
+  pod 'RxSwift', '~> 5'
+  pod 'RxSwiftExt', '~> 5'
+end
+
+def rxTestingPods
+  pod 'RxTest'
+  pod 'RxBlocking'
 end
 
 def presentationPods
@@ -29,16 +40,24 @@ def presentationPods
   pod 'SwiftMessages'
   pod 'SwiftRichString'
   pod 'NVActivityIndicatorView/Extended'
+  rxPresentationPods
+end
+
+def rxPresentationPods
+  pod 'RxCocoa', '~> 5'
 end
 
 def diPods
-  oxeNetworking
   pod 'Swinject', '~> 2.7.0'
   pod 'SwinjectAutoregistration', '~> 2.7.0'
 end
 
 def oxeNetworking
-    pod 'OxeNetworking'
+    pod 'OxeNetworking/RxOxeNetworking'
+end
+
+def swiftyJSON
+  pod 'SwiftyJSON', '~> 5.0'
 end
 
 def networkingPods
@@ -60,6 +79,7 @@ abstract_target 'TheFeelsTargets' do
   target 'TheFeels' do
     target 'TheFeelsTests' do
 	   inherit! :search_paths
+     rxTestingPods
     end
   end
 end
@@ -71,7 +91,9 @@ target 'DI' do
   diPods
   networkingPods
   storagePods
-  target 'DITests'
+  target 'DITests' do
+    rxTestingPods
+  end
 end
 
 target 'AppNavigation' do
@@ -82,7 +104,9 @@ target 'AppNavigation' do
   diPods
   networkingPods
   storagePods
-  target 'AppNavigationTests'
+  target 'AppNavigationTests' do
+    rxTestingPods
+  end
 end
 
 target 'Common' do
@@ -90,7 +114,9 @@ target 'Common' do
   sharedPods
   presentationPods
   diPods
-  target 'CommonTests'
+  target 'CommonTests' do
+    rxTestingPods
+  end
 end
 
 target 'User' do
@@ -98,22 +124,27 @@ target 'User' do
   sharedPods
   presentationPods
   diPods
-  target 'UserTests'
+  target 'UserTests' do
+    rxTestingPods
+  end
 end
 
 target 'Domain' do
   project 'Domain/Domain'
   sharedPods
-  diPods
-  target 'DomainTests'
+  swiftyJSON
+  target 'DomainTests' do
+    rxTestingPods
+  end
 end
 
 target 'AppData' do
   project 'Data/AppData/AppData'
   use_frameworks!
   sharedPods
+  swiftyJSON
   target 'AppDataTests' do
-    diPods
+    rxTestingPods
   end
 end
 
@@ -122,7 +153,7 @@ target 'Networking' do
   sharedPods
   networkingPods
   target 'NetworkingTests' do
-    diPods
+    rxTestingPods
   end
 end
 
@@ -131,7 +162,7 @@ target 'Storage' do
   sharedPods
   storagePods
   target 'StorageTests' do
-    diPods
+    rxTestingPods
   end
 end
 

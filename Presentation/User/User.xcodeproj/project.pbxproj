@@ -596,7 +596,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DDC7BA864840FDB2214673CB /* Pods-User-UserTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KYWC2RHW78;
 				INFOPLIST_FILE = UserTests/Info.plist;
@@ -616,7 +615,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70824F34C434C8F5C7EDC480 /* Pods-User-UserTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KYWC2RHW78;
 				INFOPLIST_FILE = UserTests/Info.plist;
