@@ -48,13 +48,16 @@ def rxPresentationPods
 end
 
 def diPods
-  oxeNetworking
   pod 'Swinject', '~> 2.7.0'
   pod 'SwinjectAutoregistration', '~> 2.7.0'
 end
 
 def oxeNetworking
     pod 'OxeNetworking'
+end
+
+def swiftyJSON
+  pod 'SwiftyJSON', '~> 5.0'
 end
 
 def networkingPods
@@ -129,7 +132,7 @@ end
 target 'Domain' do
   project 'Domain/Domain'
   sharedPods
-  diPods
+  swiftyJSON
   target 'DomainTests' do
     rxTestingPods
   end
@@ -139,6 +142,7 @@ target 'AppData' do
   project 'Data/AppData/AppData'
   use_frameworks!
   sharedPods
+  swiftyJSON
   target 'AppDataTests' do
     rxTestingPods
   end

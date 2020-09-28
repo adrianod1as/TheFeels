@@ -11,6 +11,8 @@
 		D564B93F0C7DADE727829D73 /* Pods_AppData_AppDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D7BAE86DB0562D7444E6CB /* Pods_AppData_AppDataTests.framework */; };
 		E1622D5B25226B85002204A7 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1622D5A25226B85002204A7 /* UserRepository.swift */; };
 		E1622D5F25226B9F002204A7 /* UserRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1622D5E25226B9F002204A7 /* UserRemoteDataSource.swift */; };
+		E16230702522760A002204A7 /* UserRemoteDataSourceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162306F2522760A002204A7 /* UserRemoteDataSourceSpy.swift */; };
+		E1623080252276B5002204A7 /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162307F252276B5002204A7 /* UserRepositoryTests.swift */; };
 		E1E272CC2520F52A001903B0 /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E272C22520F52A001903B0 /* AppData.framework */; };
 		E1E272D12520F52A001903B0 /* AppDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E272D02520F52A001903B0 /* AppDataTests.swift */; };
 		E1E272D32520F52A001903B0 /* AppData.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E272C52520F52A001903B0 /* AppData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +37,8 @@
 		8FE0DFC3EFEB6BEFC0D38957 /* Pods-AppData-AppDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppData-AppDataTests.debug.xcconfig"; path = "Target Support Files/Pods-AppData-AppDataTests/Pods-AppData-AppDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1622D5A25226B85002204A7 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		E1622D5E25226B9F002204A7 /* UserRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSource.swift; sourceTree = "<group>"; };
+		E162306F2522760A002204A7 /* UserRemoteDataSourceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSourceSpy.swift; sourceTree = "<group>"; };
+		E162307F252276B5002204A7 /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
 		E1E272C22520F52A001903B0 /* AppData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E272C52520F52A001903B0 /* AppData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
 		E1E272C62520F52A001903B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +97,31 @@
 			path = ../../Pods;
 			sourceTree = "<group>";
 		};
+		E162306E252275F4002204A7 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				E162306F2522760A002204A7 /* UserRemoteDataSourceSpy.swift */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		E162307725227672002204A7 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				E162307A2522767B002204A7 /* Repositories */,
+				E1E272D02520F52A001903B0 /* AppDataTests.swift */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
+		E162307A2522767B002204A7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E162307F252276B5002204A7 /* UserRepositoryTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		E1E272B82520F52A001903B0 = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +157,8 @@
 		E1E272CF2520F52A001903B0 /* AppDataTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1E272D02520F52A001903B0 /* AppDataTests.swift */,
+				E162306E252275F4002204A7 /* Datasources */,
+				E162307725227672002204A7 /* TestCases */,
 				E1E272D22520F52A001903B0 /* Info.plist */,
 			);
 			path = AppDataTests;
@@ -393,6 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16230702522760A002204A7 /* UserRemoteDataSourceSpy.swift in Sources */,
+				E1623080252276B5002204A7 /* UserRepositoryTests.swift in Sources */,
 				E1E272D12520F52A001903B0 /* AppDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
