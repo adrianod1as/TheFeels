@@ -12,9 +12,9 @@
 		E14F8010252123F1003075F9 /* AppNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F800F252123F1003075F9 /* AppNavigationTests.swift */; };
 		E14F8012252123F1003075F9 /* AppNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = E14F8004252123F1003075F9 /* AppNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E14F802525212434003075F9 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F802425212434003075F9 /* Common.framework */; };
-		E14F802625212434003075F9 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14F802425212434003075F9 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E14F80682521251F003075F9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F80662521251F003075F9 /* AppCoordinator.swift */; };
 		E14F80692521251F003075F9 /* CoordinatorManufacturing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F80672521251F003075F9 /* CoordinatorManufacturing.swift */; };
+		E14F83752521555F003075F9 /* User.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F83742521555F003075F9 /* User.framework */; };
 		ED462241E98034A0DC76AA33 /* Pods_AppNavigation_AppNavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECEE10813D0FA054E3DC500 /* Pods_AppNavigation_AppNavigationTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,20 +27,6 @@
 			remoteInfo = AppNavigation;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		E14F802725212434003075F9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E14F802625212434003075F9 /* Common.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11B7608196091FE030956BEE /* Pods-AppNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNavigation.release.xcconfig"; path = "Target Support Files/Pods-AppNavigation/Pods-AppNavigation.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +44,7 @@
 		E14F802425212434003075F9 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F80662521251F003075F9 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E14F80672521251F003075F9 /* CoordinatorManufacturing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorManufacturing.swift; sourceTree = "<group>"; };
+		E14F83742521555F003075F9 /* User.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = User.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14F83752521555F003075F9 /* User.framework in Frameworks */,
 				E14F802525212434003075F9 /* Common.framework in Frameworks */,
 				8FAD0B68509CA3A50C193EF3 /* Pods_AppNavigation.framework in Frameworks */,
 			);
@@ -137,6 +125,7 @@
 		E14F802325212434003075F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E14F83742521555F003075F9 /* User.framework */,
 				E14F802425212434003075F9 /* Common.framework */,
 				89BA4BCE9DC488B045C2A78E /* Pods_AppNavigation.framework */,
 				DECEE10813D0FA054E3DC500 /* Pods_AppNavigation_AppNavigationTests.framework */,
@@ -167,7 +156,6 @@
 				E14F7FFD252123F1003075F9 /* Sources */,
 				E14F7FFE252123F1003075F9 /* Frameworks */,
 				E14F7FFF252123F1003075F9 /* Resources */,
-				E14F802725212434003075F9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

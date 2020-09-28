@@ -16,6 +16,8 @@
 		E14F811A25212781003075F9 /* DI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F811925212781003075F9 /* DI.framework */; };
 		E14F811B25212781003075F9 /* DI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14F811925212781003075F9 /* DI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E14F824625212CCC003075F9 /* SetupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F824525212CCC003075F9 /* SetupConstants.swift */; };
+		E14F8388252155EA003075F9 /* User.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F8387252155EA003075F9 /* User.framework */; };
+		E14F8389252155EA003075F9 /* User.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14F8387252155EA003075F9 /* User.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1693D56251FFE29009D7F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693D55251FFE29009D7F41 /* AppDelegate.swift */; };
 		E1693D5F251FFE2C009D7F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1693D5E251FFE2C009D7F41 /* Assets.xcassets */; };
 		E1693D62251FFE2C009D7F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1693D60251FFE2C009D7F41 /* LaunchScreen.storyboard */; };
@@ -59,6 +61,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E14F802B25212451003075F9 /* AppNavigation.framework in Embed Frameworks */,
+				E14F8389252155EA003075F9 /* User.framework in Embed Frameworks */,
 				E1E2730C2521058E001903B0 /* AppData.framework in Embed Frameworks */,
 				E1E272462520E85C001903B0 /* Domain.framework in Embed Frameworks */,
 				E14F811B25212781003075F9 /* DI.framework in Embed Frameworks */,
@@ -85,6 +88,7 @@
 		E14F811925212781003075F9 /* DI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F824425212C4B003075F9 /* TheFeels.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheFeels.entitlements; sourceTree = "<group>"; };
 		E14F824525212CCC003075F9 /* SetupConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupConstants.swift; sourceTree = "<group>"; };
+		E14F8387252155EA003075F9 /* User.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = User.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693D52251FFE29009D7F41 /* TheFeels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693D55251FFE29009D7F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1693D5E251FFE2C009D7F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				E14F802A25212451003075F9 /* AppNavigation.framework in Frameworks */,
 				E14F7F1925211D1D003075F9 /* Common.framework in Frameworks */,
 				E14F811A25212781003075F9 /* DI.framework in Frameworks */,
+				E14F8388252155EA003075F9 /* User.framework in Frameworks */,
 				E1E273F525210A9C001903B0 /* Networking.framework in Frameworks */,
 				E1E2730B2521058E001903B0 /* AppData.framework in Frameworks */,
 			);
@@ -248,6 +253,7 @@
 		F089DC444FF926EDF72B73E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E14F8387252155EA003075F9 /* User.framework */,
 				E14F811925212781003075F9 /* DI.framework */,
 				E14F802925212451003075F9 /* AppNavigation.framework */,
 				E14F7E8425211BF7003075F9 /* AppCommon.framework */,
