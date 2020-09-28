@@ -53,7 +53,7 @@ def diPods
 end
 
 def oxeNetworking
-    pod 'OxeNetworking'
+    pod 'OxeNetworking/RxOxeNetworking'
 end
 
 def swiftyJSON
