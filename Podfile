@@ -22,6 +22,7 @@ def sharedPods
   pod 'SwiftLint'
   pod 'Fakery', :git => 'https://github.com/vadymmarkov/Fakery', :branch => 'master'
   pod 'SwiftDate'
+  swiftyJSON
   rxSharedPods
 end
 
@@ -132,7 +133,6 @@ end
 target 'Domain' do
   project 'Domain/Domain'
   sharedPods
-  swiftyJSON
   target 'DomainTests' do
     rxTestingPods
   end
@@ -142,7 +142,6 @@ target 'AppData' do
   project 'Data/AppData/AppData'
   use_frameworks!
   sharedPods
-  swiftyJSON
   target 'AppDataTests' do
     rxTestingPods
   end
