@@ -46,6 +46,7 @@ end
 
 def rxPresentationPods
   pod 'RxCocoa', '~> 5'
+  pod "RxSwiftUtilities"
 end
 
 def diPods
