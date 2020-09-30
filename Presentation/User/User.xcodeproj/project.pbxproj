@@ -16,6 +16,11 @@
 		E148F6E52523FA910066210C /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F6E42523FA910066210C /* UsersView.swift */; };
 		E148F6ED2523FAD10066210C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F6EC2523FAD10066210C /* UsersViewController.swift */; };
 		E148F6F32523FB630066210C /* UsersManufactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F6F22523FB630066210C /* UsersManufactoring.swift */; };
+		E148F70625240E520066210C /* SearchUserByNameUseCaseableSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F70525240E520066210C /* SearchUserByNameUseCaseableSpy.swift */; };
+		E148F70D25240EC20066210C /* UsersSceneCoordinatingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F70C25240EC20066210C /* UsersSceneCoordinatingSpy.swift */; };
+		E148F715252414490066210C /* UsersDepartingCoordinatingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F714252414490066210C /* UsersDepartingCoordinatingSpy.swift */; };
+		E148F71A252414790066210C /* UserCoordiantorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F719252414790066210C /* UserCoordiantorTests.swift */; };
+		E148F7212524150C0066210C /* UsersManufacturingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F7202524150C0066210C /* UsersManufacturingSpy.swift */; };
 		E14F82E32521527D003075F9 /* User.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F82D92521527D003075F9 /* User.framework */; };
 		E14F82E82521527D003075F9 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F82E72521527D003075F9 /* UserTests.swift */; };
 		E14F82EA2521527D003075F9 /* User.h in Headers */ = {isa = PBXBuildFile; fileRef = E14F82DC2521527D003075F9 /* User.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +56,11 @@
 		E148F6E42523FA910066210C /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		E148F6EC2523FAD10066210C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		E148F6F22523FB630066210C /* UsersManufactoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersManufactoring.swift; sourceTree = "<group>"; };
+		E148F70525240E520066210C /* SearchUserByNameUseCaseableSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserByNameUseCaseableSpy.swift; sourceTree = "<group>"; };
+		E148F70C25240EC20066210C /* UsersSceneCoordinatingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSceneCoordinatingSpy.swift; sourceTree = "<group>"; };
+		E148F714252414490066210C /* UsersDepartingCoordinatingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDepartingCoordinatingSpy.swift; sourceTree = "<group>"; };
+		E148F719252414790066210C /* UserCoordiantorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordiantorTests.swift; sourceTree = "<group>"; };
+		E148F7202524150C0066210C /* UsersManufacturingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersManufacturingSpy.swift; sourceTree = "<group>"; };
 		E14F82D92521527D003075F9 /* User.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = User.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F82DC2521527D003075F9 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E14F82DD2521527D003075F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,9 +123,43 @@
 			isa = PBXGroup;
 			children = (
 				E14F82E72521527D003075F9 /* UserTests.swift */,
-				E148F6DA2523F7AD0066210C /* UserViewModelTests.swift */,
+				E148F718252414670066210C /* ViewModels */,
+				E148F719252414790066210C /* UserCoordiantorTests.swift */,
 			);
 			path = TestCases;
+			sourceTree = "<group>";
+		};
+		E148F70425240E420066210C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E148F70525240E520066210C /* SearchUserByNameUseCaseableSpy.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		E148F70B25240EA90066210C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E148F70C25240EC20066210C /* UsersSceneCoordinatingSpy.swift */,
+				E148F714252414490066210C /* UsersDepartingCoordinatingSpy.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		E148F718252414670066210C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E148F6DA2523F7AD0066210C /* UserViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E148F71F252414F80066210C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				E148F7202524150C0066210C /* UsersManufacturingSpy.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		E14F82CF2521527C003075F9 = {
@@ -156,6 +200,9 @@
 		E14F82E62521527D003075F9 /* UserTests */ = {
 			isa = PBXGroup;
 			children = (
+				E148F71F252414F80066210C /* Factories */,
+				E148F70B25240EA90066210C /* Coordinators */,
+				E148F70425240E420066210C /* UseCases */,
 				E148F6D92523F6860066210C /* TestCases */,
 				E14F82E92521527D003075F9 /* Info.plist */,
 			);
@@ -444,8 +491,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E148F715252414490066210C /* UsersDepartingCoordinatingSpy.swift in Sources */,
+				E148F7212524150C0066210C /* UsersManufacturingSpy.swift in Sources */,
+				E148F71A252414790066210C /* UserCoordiantorTests.swift in Sources */,
 				E14F82E82521527D003075F9 /* UserTests.swift in Sources */,
 				E148F6DB2523F7AD0066210C /* UserViewModelTests.swift in Sources */,
+				E148F70625240E520066210C /* SearchUserByNameUseCaseableSpy.swift in Sources */,
+				E148F70D25240EC20066210C /* UsersSceneCoordinatingSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
