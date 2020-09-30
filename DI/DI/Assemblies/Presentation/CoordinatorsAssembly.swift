@@ -9,6 +9,7 @@
 import Swinject
 import Common
 import AppNavigation
+import User
 
 class CoordinatorsAssembly: Assembly {
 
@@ -20,12 +21,22 @@ class CoordinatorsAssembly: Assembly {
 
     func assemble(container: Container) {
         assembleAppCoordinator(container: container)
+        assembleUsersCoordinator(container: container)
     }
 
     internal func assembleAppCoordinator(container: Container) {
         container.register(AppCoordinator.self) { resolver in
             return AppCoordinator(navigationController: self.navigationController,
                                   factory: resolver.safelyResolve(CoordinatorManufacturing.self))
+        }.implements(UsersDepartingCoordinating.self)
+    }
+
+    internal func assembleUsersCoordinator(container: Container) {
+        container.register(UsersCoordinator.self) { resolver in
+            return UsersCoordinator(navigationController: self.navigationController,
+                                   departingCoordinator: resolver.safelyResolve(UsersDepartingCoordinating.self),
+                                   factory: resolver.safelyResolve(UsersManufacturing.self))
         }
     }
+
 }

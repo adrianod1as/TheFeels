@@ -6,17 +6,18 @@
 //
 
 import RxSwift
+import Common
 
-public protocol UsersSceneCoordinating where Self: ReactiveCompatible, ReactiveBase: UsersSceneCoordinating   {
+public protocol UsersSceneCoordinating where Self: ReactiveCompatible, ReactiveBase: UsersSceneCoordinating {
 
-    func show(user: UserViewModel)
+    func showTweets(for user: UserViewModel)
 }
 
 public extension Reactive where Base: UsersSceneCoordinating {
 
     func show(user: UserViewModel) -> Observable<Void> {
         Observable.create { observer in
-            self.base.show(user: user)
+            self.base.showTweets(for: user)
             observer.onNext(())
             observer.onCompleted()
             return Disposables.create()
