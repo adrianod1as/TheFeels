@@ -16,4 +16,3 @@ class UsersDepartingCoordinatingSpy: UsersDepartingCoordinating {
         showTweetsForUserCalled.toggle()
     }
 }
-
