@@ -10,6 +10,10 @@ import Domain
 public struct UserViewModel {
 
     let user: User
+
+    public var name: String {
+        user.name
+    }
 }
 
 public extension User {

@@ -8,11 +8,14 @@
 import UIKit
 import SwiftMessages
 import Common
+import RxSwift
+import RxCocoa
 
 public class UsersViewController: UIViewController, UDTAnimatorViewable {
 
     // MARK: Properties
     private lazy var usersView = UsersView()
+    private let bag = DisposeBag()
     private let viewModel: UsersViewModeling
 
     // MARK: Init
@@ -50,8 +53,20 @@ extension UsersViewController {
 extension UsersViewController {
 
     func bind() {
+        usersView.tableView.rx
+            .setDelegate(self)
+            .disposed(by: bag)
+        let output = viewModel.transform(input: UsersViewModelInput(name: .just("AdrianoDias93"), selection: .just(0)))
+        output.didSucceed
+            .drive(usersView.tableView.rx
+                    .items(cellIdentifier: UITableViewCell.identifier,
+                           cellType: UITableViewCell.self)) { _, element, cell in
+                                cell.textLabel?.text = element.name
+            }.disposed(by: bag)
     }
 }
 
 // MARK: UsersViewDelegate
-extension UsersViewController: UsersViewDelegate {}
+extension UsersViewController: UsersViewDelegate {
+
+}
