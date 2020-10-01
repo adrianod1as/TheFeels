@@ -15,6 +15,6 @@ class UsersFlowAssembly: Assembly {
         container.register(UsersManufacturing.self) { resolver in
             return UsersFactory(resolver: resolver)
         }
-        container.autoregister(UsersViewModeling.self, initializer: UsersViewModel<UsersCoordinator>.init)
+        container.autoregister(UsersSearchViewModeling.self, initializer: UsersSearchViewModel<UsersCoordinator>.init)
     }
 }

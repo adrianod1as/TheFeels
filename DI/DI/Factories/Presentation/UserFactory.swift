@@ -20,7 +20,7 @@ class UsersFactory {
 
 extension UsersFactory: UsersManufacturing {
 
-    public func makeUsersViewController() -> UsersViewController {
-        UsersViewController(viewModel: resolver.safelyResolve(UsersViewModeling.self))
+    public func makeUsersSearchViewController() -> UsersSearchViewController {
+        UsersSearchViewController(viewModel: resolver.safelyResolve(UsersSearchViewModeling.self))
     }
 }

@@ -7,5 +7,5 @@
 
 public protocol UsersManufacturing {
 
-    func makeUsersViewController() -> UsersViewController
+    func makeUsersSearchViewController() -> UsersSearchViewController
 }

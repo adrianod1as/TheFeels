@@ -38,14 +38,14 @@ public class UsersCoordinator: Coordinator {
     }
 
     internal func showUsers() {
-        let viewController = factory.makeUsersViewController()
+        let viewController = factory.makeUsersSearchViewController()
         navigationController.setViewControllers([viewController], animated: true)
     }
 }
 
 extension UsersCoordinator: ReactiveCompatible {}
 
-extension UsersCoordinator: UsersSceneCoordinating {
+extension UsersCoordinator: UsersSearchSceneCoordinating {
 
     public func showTweets(for user: UserViewModel) {
         departingCoordinator.showTweets(for: user)

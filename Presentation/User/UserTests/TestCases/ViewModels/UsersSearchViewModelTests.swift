@@ -1,5 +1,5 @@
 //
-//  UserViewModelTests.swift
+//  UsersSearchViewModelTests.swift
 //  UserTests
 //
 //  Created by Adriano Dias on 29/09/20.
@@ -15,23 +15,23 @@ import RxSwiftUtilities
 @testable import Domain
 @testable import User
 
-class UsersPresenterTests: XCTestCase {
+class UsersSearchViewModelTests: XCTestCase {
 
     var bag: DisposeBag!
     var useCaseSpy: SearchUserByNameUseCaseableSpy!
-    var coordinatorSpy: UsersSceneCoordinatingSpy!
-    var sut: UsersViewModel<UsersSceneCoordinatingSpy>!
-    var input: UsersViewModeling.Input!
+    var coordinatorSpy: UsersSearchSceneCoordinatingSpy!
+    var sut: UsersSearchViewModel<UsersSearchSceneCoordinatingSpy>!
+    var input: UsersSearchViewModeling.Input!
 
     override func setUp() {
         super.setUp()
 
         bag = DisposeBag()
         useCaseSpy = SearchUserByNameUseCaseableSpy()
-        coordinatorSpy = UsersSceneCoordinatingSpy()
-        sut = UsersViewModel(useCase: useCaseSpy, coordinator: coordinatorSpy)
+        coordinatorSpy = UsersSearchSceneCoordinatingSpy()
+        sut = UsersSearchViewModel(useCase: useCaseSpy, coordinator: coordinatorSpy)
 
-        input = UsersViewModelInput(name: .just("name"), selection: .just(0))
+        input = UsersSearchViewModelInput(name: .just("name"), selection: .just(0))
     }
 
     override func tearDown() {

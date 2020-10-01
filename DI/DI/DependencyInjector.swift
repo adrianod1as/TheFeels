@@ -18,10 +18,16 @@ public class DependencyInjector {
     private let group: String
     private let identifier: String
 
+    private lazy var navigationController: UINavigationController = {
+        let navigationController = UINavigationController()
+        navigationController.asTheFeels()
+        return navigationController
+    }()
+
     private lazy var assembler: Assembler = {
         Assembler([
             CoordinatorFactoryAssembly(),
-            CoordinatorsAssembly(navigationController: UINavigationController()),
+            CoordinatorsAssembly(navigationController: navigationController),
             UsersFlowAssembly(),
             DomainAssembly(),
             DataAssembly(),

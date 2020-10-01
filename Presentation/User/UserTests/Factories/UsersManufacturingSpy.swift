@@ -9,12 +9,12 @@
 
 class UsersManufacturingSpy: UsersManufacturing {
 
-    var makeUsersViewControllerCalled = false
+    var makeUsersSearchViewControllerCalled = false
 
-    func makeUsersViewController() -> UsersViewController {
-        makeUsersViewControllerCalled.toggle()
-        return UsersViewController(viewModel: UsersViewModel(useCase: SearchUserByNameUseCaseableSpy(),
-                                                             coordinator: UsersSceneCoordinatingSpy()))
+    func makeUsersSearchViewController() -> UsersSearchViewController {
+        makeUsersSearchViewControllerCalled.toggle()
+        return UsersSearchViewController(viewModel: UsersSearchViewModel(useCase: SearchUserByNameUseCaseableSpy(),
+                                                             coordinator: UsersSearchSceneCoordinatingSpy()))
     }
 
 }

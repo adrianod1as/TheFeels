@@ -31,7 +31,7 @@ class UserCoordiantorTests: XCTestCase {
 
     func testShowUsers() {
         sut.start()
-        XCTAssert(factorySpy.makeUsersViewControllerCalled)
+        XCTAssert(factorySpy.makeUsersSearchViewControllerCalled)
     }
 
     func testShowTweetsForUsers() {

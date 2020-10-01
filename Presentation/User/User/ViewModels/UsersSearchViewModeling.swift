@@ -1,5 +1,5 @@
 //
-//  UsersViewModeling.swift
+//  UsersSearchViewModeling.swift
 //  User
 //
 //  Created by Adriano Dias on 29/09/20.
@@ -9,32 +9,32 @@ import RxSwift
 import RxCocoa
 import Common
 
-public protocol UsersViewModeling {
+public protocol UsersSearchViewModeling {
 
-    typealias Input = UsersViewModelingInput
-    typealias Output = UsersViewModelOutput
+    typealias Input = UsersSearchViewModelingInput
+    typealias Output = UsersSearchViewModelOutput
 
     func transform(input: Input) -> Output
 }
 
-public protocol UsersViewModelingInput {
+public protocol UsersSearchViewModelingInput {
 
     var name: Driver<String> { get }
     var selection: Driver<Int> { get }
 }
 
-public struct UsersViewModelInput: UsersViewModelingInput {
+public struct UsersSearchViewModelInput: UsersSearchViewModelingInput {
 
     public let name: Driver<String>
     public let selection: Driver<Int>
 }
 
-public protocol UsersViewModelingOutput: CommonSceneOutput where Success == [UserViewModel] {
+public protocol UsersSearchViewModelingOutput: CommonSceneOutput where Success == [UserViewModel] {
 
     var didNavigate: Driver<Void> { get }
 }
 
-public struct UsersViewModelOutput: UsersViewModelingOutput {
+public struct UsersSearchViewModelOutput: UsersSearchViewModelingOutput {
 
     public let isLoading: Driver<Bool>
 
