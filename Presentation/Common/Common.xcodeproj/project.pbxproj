@@ -44,6 +44,7 @@
 		E14F7F6825211D9A003075F9 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E14F7F4625211D9A003075F9 /* Rubik-BoldItalic.ttf */; };
 		E14F7F6925211D9A003075F9 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = E14F7F4725211D9A003075F9 /* colors.json */; };
 		E14F7F6A25211D9A003075F9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F4925211D9A003075F9 /* Coordinator.swift */; };
+		E16D367B25261F5E00275329 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16D367A25261F5E00275329 /* ProfileView.swift */; };
 		F5A563A54E7FC182E422877D /* Pods_Common_CommonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABD40F7019048D5BAFD6217 /* Pods_Common_CommonTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		E14F7F4625211D9A003075F9 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E14F7F4725211D9A003075F9 /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
 		E14F7F4925211D9A003075F9 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E16D367A25261F5E00275329 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		E14F7F1F25211D99003075F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E16D367A25261F5E00275329 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				E148F63225239A6C0066210C /* ViewModeling.swift in Sources */,
 				E14F7F5925211D9A003075F9 /* UIWindow+Ext.swift in Sources */,
 				E14F7F5225211D9A003075F9 /* UIApplication+Ext.swift in Sources */,
+				E16D367B25261F5E00275329 /* ProfileView.swift in Sources */,
 				E14F7F6A25211D9A003075F9 /* Coordinator.swift in Sources */,
 				E148F6F72523FC880066210C /* UserViewModel.swift in Sources */,
 				E14F7F5725211D9A003075F9 /* SwiftMessages+Ext.swift in Sources */,

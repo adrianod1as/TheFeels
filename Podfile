@@ -41,6 +41,7 @@ def presentationPods
   pod 'SwiftMessages'
   pod 'SwiftRichString'
   pod 'NVActivityIndicatorView/Extended'
+  pod 'Kingfisher', '~> 5.0'
   rxPresentationPods
 end
 

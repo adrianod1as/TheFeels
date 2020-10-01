@@ -1,5 +1,5 @@
 //
-//  UsersViewModel.swift
+//  UsersSearchViewModel.swift
 //  User
 //
 //  Created by Adriano Dias on 29/09/20.
@@ -11,15 +11,15 @@ import RxSwiftUtilities
 import Domain
 import Common
 
-protocol UsersViewModelHolding {
+protocol UsersSearchViewModelHolding {
 
-    associatedtype SceneCoordinating: UsersSceneCoordinating
+    associatedtype SceneCoordinating: UsersSearchSceneCoordinating
     var coordinator: SceneCoordinating { get }
     var useCase: SearchUserByNameUseCaseable { get }
     init(useCase: SearchUserByNameUseCaseable, coordinator: SceneCoordinating)
 }
 
-public class UsersViewModel<SceneCoordinating: UsersSceneCoordinating> {
+public class UsersSearchViewModel<SceneCoordinating: UsersSearchSceneCoordinating> {
 
     internal let coordinator: SceneCoordinating
     internal let useCase: SearchUserByNameUseCaseable
@@ -30,16 +30,20 @@ public class UsersViewModel<SceneCoordinating: UsersSceneCoordinating> {
     }
 }
 
-extension UsersViewModel: UsersViewModeling {
+extension UsersSearchViewModel: UsersSearchViewModeling {
 
     internal func users(in input: Input, _ indicator: ActivityIndicator) -> Driver<[UserViewModel]> {
         input.name
-            .throttle(.milliseconds(5))
+            .throttle(.milliseconds(500))
             .distinctUntilChanged()
             .flatMapLatest {
                 self.useCase.execute($0)
                     .trackActivity(indicator)
                     .map({ $0.asViewModels})
+                    .flatMapLatest({ array -> Driver<[UserViewModel]> in
+                        let items = (0...20).flatMap({ _ in array })
+                        return Driver.just(items)
+                    })
                     .asDriver(onErrorJustReturn: [])
             }
     }

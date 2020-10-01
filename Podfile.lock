@@ -70,6 +70,9 @@ PODS:
   - GoogleUtilities/UserDefaults (6.7.2):
     - GoogleUtilities/Logger
   - Keys (1.0.1)
+  - Kingfisher (5.15.5):
+    - Kingfisher/Core (= 5.15.5)
+  - Kingfisher/Core (5.15.5)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -130,6 +133,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Keys (from `Pods/CocoaPodsKeys`)
+  - Kingfisher (~> 5.0)
   - NVActivityIndicatorView/Extended
   - OxeNetworking/RxOxeNetworking
   - RxBlocking
@@ -160,6 +164,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - Kingfisher
     - Moya
     - nanopb
     - NVActivityIndicatorView
@@ -207,6 +212,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: b7f406340a291370045a270c599e53c6fa6ec20f
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  Kingfisher: e3ec347a5ab8817b7585ef46923a2d2b9a7d8fbe
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
@@ -228,6 +234,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 70ba76565fee1815cd61891fe914bf38253e21d3
+PODFILE CHECKSUM: de6d8a6482e9e16f6ec16efc2664eabc550553ac
 
 COCOAPODS: 1.9.3

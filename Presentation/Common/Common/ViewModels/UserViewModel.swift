@@ -14,6 +14,14 @@ public struct UserViewModel {
     public var name: String {
         user.name
     }
+
+    public var username: String {
+        "@\(user.screenName)"
+    }
+
+    public var profileImageUrl: URL? {
+        URL(string: user.profileImageUrl)
+    }
 }
 
 public extension User {
