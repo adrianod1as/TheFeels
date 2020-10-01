@@ -10,6 +10,7 @@ import SwiftMessages
 import Common
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 public class UsersSearchViewController: UIViewController, UDTAnimatorViewable {
 
@@ -89,10 +90,9 @@ extension UsersSearchViewController {
         let output = viewModel.transform(input: viewModelInput())
         output.didSucceed
             .do(onNext: { self.setSubViewsVisibility(isDataSourceEmpty: $0.isEmpty) })
-            .drive(usersSearchView.tableView.rx
-                    .items(cellIdentifier: UserCell.identifier, cellType: UserCell.self)) { _, element, cell in
-                        cell.bind(viewModel: element)
-            }.disposed(by: bag)
+            .map { [UsersSection(header: "", items: $0)] }
+            .drive(usersSearchView.tableView.rx.items(dataSource: tableDataSource))
+            .disposed(by: bag)
     }
 
     private func selectionInput() -> Driver<Int> {
@@ -139,5 +139,21 @@ extension UsersSearchViewController: UsersSearchViewDelegate {
 
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         searchController.searchBar.endEditing(true)
+    }
+}
+
+extension UsersSearchViewController: RxTableViewable {
+
+    public var cellConfiguration: (TableViewSectionedDataSource<UsersSection>,
+                            UITableView, IndexPath, UserViewModel) -> UserCell {
+        return { _, tableView, indexPath, viewModel in
+            guard let cell = tableView
+                .dequeueReusableCell(withIdentifier: UserCell.identifier,
+                                     for: indexPath) as? UserCell else {
+                return UserCell()
+            }
+            cell.bind(viewModel: viewModel)
+            return cell
+        }
     }
 }

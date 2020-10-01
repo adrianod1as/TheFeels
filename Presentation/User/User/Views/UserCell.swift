@@ -8,7 +8,7 @@
 import UIKit
 import Common
 
-class UserCell: UITableViewCell {
+public class UserCell: UITableViewCell {
 
     internal lazy var profileView: ProfileView = {
         let view = ProfileView()
@@ -26,7 +26,7 @@ class UserCell: UITableViewCell {
         super.init(coder: coder)
     }
 
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         super.prepareForReuse()
 
         profileView.imgAvatar.image = Asset.twitter.image.withRenderingMode(.alwaysOriginal)

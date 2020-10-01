@@ -39,11 +39,7 @@ extension UsersSearchViewModel: UsersSearchViewModeling {
             .flatMapLatest {
                 self.useCase.execute($0)
                     .trackActivity(indicator)
-                    .map({ $0.asViewModels})
-                    .flatMapLatest({ array -> Driver<[UserViewModel]> in
-                        let items = (0...20).flatMap({ _ in array })
-                        return Driver.just(items)
-                    })
+                    .map({ $0.asViewModels })
                     .asDriver(onErrorJustReturn: [])
             }
     }

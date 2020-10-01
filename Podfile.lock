@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.0.5)
   - AlamofireNetworkActivityLogger (3.0.0):
     - Alamofire (~> 5.0.0-rc.2)
+  - Differentiator (4.0.1)
   - Fakery (4.1.2)
   - Firebase/Analytics (6.33.0):
     - Firebase/Core
@@ -99,6 +100,10 @@ PODS:
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -138,6 +143,7 @@ DEPENDENCIES:
   - OxeNetworking/RxOxeNetworking
   - RxBlocking
   - RxCocoa (~> 5)
+  - RxDataSources (from `https://github.com/RxSwiftCommunity/RxDataSources`, branch `master`)
   - RxSwift (~> 5)
   - RxSwiftExt (~> 5)
   - RxSwiftUtilities
@@ -155,6 +161,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireNetworkActivityLogger
+    - Differentiator
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -192,15 +199,22 @@ EXTERNAL SOURCES:
     :git: https://github.com/vadymmarkov/Fakery
   Keys:
     :path: Pods/CocoaPodsKeys
+  RxDataSources:
+    :branch: master
+    :git: https://github.com/RxSwiftCommunity/RxDataSources
 
 CHECKOUT OPTIONS:
   Fakery:
     :commit: 121ec594c957b4e65bc828d71bd890fcbf8212e1
     :git: https://github.com/vadymmarkov/Fakery
+  RxDataSources:
+    :commit: e4ffaafe76f21f149c90ea5fac8255d9778beff3
+    :git: https://github.com/RxSwiftCommunity/RxDataSources
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Fakery: eae1f41e41c7fef040b247a3817ca6a64bfcf6c3
   Firebase: 8db6f2d1b2c5e2984efba4949a145875a8f65fe5
   FirebaseAnalytics: 5dd088bd2e67bb9d13dbf792d1164ceaf3052193
@@ -220,6 +234,7 @@ SPEC CHECKSUMS:
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: 468907bf48f9599d49ea05743b36a9e7703a2ed4
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
@@ -234,6 +249,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: de6d8a6482e9e16f6ec16efc2664eabc550553ac
+PODFILE CHECKSUM: acaf8735ead9e33aa0a5d4b3159be343a6ba2c2c
 
 COCOAPODS: 1.9.3

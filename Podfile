@@ -48,6 +48,7 @@ end
 def rxPresentationPods
   pod 'RxCocoa', '~> 5'
   pod "RxSwiftUtilities"
+  pod 'RxDataSources', :git => 'https://github.com/RxSwiftCommunity/RxDataSources', :branch => 'master'
 end
 
 def diPods

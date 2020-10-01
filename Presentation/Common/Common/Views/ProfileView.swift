@@ -81,7 +81,7 @@ public class ProfileView: UIView {
         stkUser.leftAnchor.constraint(equalTo: imgAvatar.rightAnchor, constant: 8).isActive = true
         stkUser.rightAnchor.constraint(equalTo: rightAnchor, constant: -32).isActive = true
         stkUser.centerYAnchor.constraint(equalTo: imgAvatar.centerYAnchor).isActive = true
-        stkUser.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        stkUser.heightAnchor.constraint(equalToConstant: 44).isActive = true
     }
 
     private func setupViews() {
