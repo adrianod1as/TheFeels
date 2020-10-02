@@ -10,21 +10,34 @@ import UIKit
 
 public extension UINavigationController {
 
-    func asTranslucentWithImageNavigationController() {
-        self.navigationBar.asTranslucentWithImageNavigationBar()
+    func asTranslucent() {
+        navigationBar.asTranslucent()
+    }
+
+    func asTheFeels() {
+        navigationBar.asTheFeels()
     }
 }
 
 public extension UINavigationBar {
 
-    func asTranslucentWithImageNavigationBar() {
+    func asTheFeels() {
+        self.tintColor = ColorName.twitterBlue
+        self.backgroundColor = ColorName.twitterBlack
+        self.isTranslucent = false
+        self.barTintColor = ColorName.twitterBlack
+        self.setBackgroundImage(UIImage(), for: .default)
+        self.shadowImage = UIImage()
+        let font = FontFamily.RubikMedium.regular.font(size: UIScreen.isLarge ? 20 : 16)
+        self.titleTextAttributes = [.foregroundColor: UIColor.white, .font: font]
+    }
+
+    func asTranslucent() {
         self.setBackgroundImage(UIImage(), for: .default)
         self.shadowImage = UIImage()
         self.isTranslucent = true
         self.backgroundColor = .clear
-//        self.backIndicatorImage = Asset.back.image.alwaysTemplate
-//        self.backIndicatorTransitionMaskImage = Asset.back.image.alwaysTemplate
-        self.tintColor = .white
+        self.tintColor = ColorName.twitterBlue
         let font = FontFamily.RubikMedium.regular.font(size: UIScreen.isLarge ? 20 : 16)
         self.titleTextAttributes = [.foregroundColor: UIColor.white, .font: font]
     }

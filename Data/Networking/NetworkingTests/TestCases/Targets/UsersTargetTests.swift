@@ -77,4 +77,3 @@ class UsersTargetTests: XCTestCase {
         }
     }
 }
-

@@ -30,10 +30,11 @@ class NetworkingAssembly: Assembly {
         container.register(UserSessionRequestHandler.self) { _ in
             UserSessionRequestHandler(environment: self.environment, coordinator: nil)
         }.implements(ResultHandler.self, RequestInterceptor.self, ErrorFilter.self)
-        container.autoregister(Dispatcher.self, initializer: CommonMoyaDispatcher.init)
+        container.autoregister(CommonMoyaDispatcher.self, initializer: CommonMoyaDispatcher.init).implements(Dispatcher.self)
     }
 
     func assembleDatasources(for containter: Container) {
-
+        containter.autoregister(AppData.UserRemoteDataSource.self,
+                                initializer: Networking.UserRemoteDataSource<CommonMoyaDispatcher>.init)
     }
 }

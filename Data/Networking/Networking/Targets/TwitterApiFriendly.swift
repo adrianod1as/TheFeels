@@ -8,10 +8,6 @@
 import OxeNetworking
 import Moya
 
-import Foundation
-import Moya
-import OxeNetworking
-
 public protocol TwitterApiFriendly: SampleHeadersReturning, HigherLayerHeadersSpecifyable, KeyPathable {
 
 }

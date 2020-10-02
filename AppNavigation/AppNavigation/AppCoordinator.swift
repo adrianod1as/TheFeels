@@ -8,6 +8,7 @@
 
 import UIKit
 import Common
+import User
 
 public class AppCoordinator: Coordinator {
 
@@ -24,5 +25,18 @@ public class AppCoordinator: Coordinator {
         self.factory = factory
     }
 
-    public func start() {}
+    public func start() {
+        showUsersSearch()
+    }
+
+    internal func showUsersSearch() {
+        factory.makeUsersCoordinator().start()
+    }
+}
+
+extension AppCoordinator: UsersDepartingCoordinating {
+
+    public func showTweets(for user: UserViewModel) {
+
+    }
 }

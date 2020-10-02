@@ -22,6 +22,7 @@ def sharedPods
   pod 'SwiftLint'
   pod 'Fakery', :git => 'https://github.com/vadymmarkov/Fakery', :branch => 'master'
   pod 'SwiftDate'
+  swiftyJSON
   rxSharedPods
 end
 
@@ -40,11 +41,14 @@ def presentationPods
   pod 'SwiftMessages'
   pod 'SwiftRichString'
   pod 'NVActivityIndicatorView/Extended'
+  pod 'Kingfisher', '~> 5.0'
   rxPresentationPods
 end
 
 def rxPresentationPods
   pod 'RxCocoa', '~> 5'
+  pod "RxSwiftUtilities"
+  pod 'RxDataSources', :git => 'https://github.com/RxSwiftCommunity/RxDataSources', :branch => 'master'
 end
 
 def diPods
@@ -132,7 +136,6 @@ end
 target 'Domain' do
   project 'Domain/Domain'
   sharedPods
-  swiftyJSON
   target 'DomainTests' do
     rxTestingPods
   end
@@ -142,7 +145,6 @@ target 'AppData' do
   project 'Data/AppData/AppData'
   use_frameworks!
   sharedPods
-  swiftyJSON
   target 'AppDataTests' do
     rxTestingPods
   end

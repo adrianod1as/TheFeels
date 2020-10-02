@@ -29,8 +29,13 @@ struct SetupConstants {
         return [L10n.Headers.Keys.accept: L10n.Headers.Values.jsonApplication]
     }()
 
+    static let twitterHeaders: Headers = {
+        return [L10n.Headers.Keys.contentType: L10n.Headers.Values.jsonContentType,
+                L10n.Headers.Keys.authorization: L10n.Headers.Values.bearer(TheFeelsKeys().twitterBearerToken)]
+    }()
+
     static let specificHeaders: SpecificHeaders = {
-        return [:]
+        return [SpecificHeaderType.twitter.key: twitterHeaders]
     }()
 
     static let environment: Environment = {
