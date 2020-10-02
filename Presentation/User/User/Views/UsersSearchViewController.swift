@@ -49,12 +49,6 @@ public class UsersSearchViewController: UIViewController, UDTAnimatorViewable {
         setupUI()
         bind()
     }
-
-    public override func viewSafeAreaInsetsDidChange() {
-        super.viewSafeAreaInsetsDidChange()
-
-        setTableFooter()
-    }
 }
 
 // MARK: UI
@@ -69,13 +63,6 @@ extension UsersSearchViewController {
     private func setSubViewsVisibility(isDataSourceEmpty: Bool) {
         usersSearchView.imgEmpty.isHidden = !isDataSourceEmpty
         usersSearchView.tableView.isHidden = isDataSourceEmpty
-    }
-
-    private func setTableFooter() {
-        let footer = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width,
-                                          height: view.safeAreaInsets.bottom))
-        footer.backgroundColor = .black
-        usersSearchView.tableView.tableFooterView = footer
     }
 
 }
@@ -120,13 +107,23 @@ extension UsersSearchViewController {
 // MARK: UsersSearchViewDelegate
 extension UsersSearchViewController: UsersSearchViewDelegate {
 
-    var bottomPadding: CGFloat {
-        view.safeAreaInsets.bottom
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        .leastNormalMagnitude
     }
 
     public func tableView(_ tableView: UITableView,
                           heightForRowAt indexPath: IndexPath) -> CGFloat {
         80
+    }
+
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        view.safeAreaInsets.bottom
+    }
+
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .black
+        return view
     }
 
     public func tableView(_ tableView: UITableView,

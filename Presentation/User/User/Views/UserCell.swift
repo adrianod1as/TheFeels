@@ -10,7 +10,7 @@ import Common
 
 public class UserCell: UITableViewCell {
 
-    internal lazy var profileView: ProfileView = {
+    private lazy var profileView: ProfileView = {
         let view = ProfileView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -41,6 +41,7 @@ public class UserCell: UITableViewCell {
     }
 
     private func setupViews() {
+        contentView.backgroundColor = .black
         addSubviews()
         activateProfileViewConstraints()
     }

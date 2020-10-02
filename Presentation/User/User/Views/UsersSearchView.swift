@@ -26,12 +26,15 @@ public class UsersSearchView: UIView {
     }()
 
     lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UserCell.self, forCellReuseIdentifier: UserCell.identifier)
-        tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 16))
+        tableView.tableFooterView = UIView(frame: .zero)
         tableView.separatorInset = .zero
-        tableView.backgroundColor = ColorName.twitterBlack
+        tableView.separatorColor = ColorName.twitterDarkGray
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.backgroundColor = .black
         return tableView
     }()
 
