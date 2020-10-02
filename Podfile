@@ -66,6 +66,7 @@ end
 def networkingPods
   oxeNetworking
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
+  pod 'OAuthSwift', '~> 2.0.0'
 end
 
 def storagePods

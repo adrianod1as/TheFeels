@@ -9,15 +9,19 @@
 import Moya
 import Alamofire
 import OxeNetworking
+import OAuthSwift
 
 public class UserSessionRequestHandler: Dispatcher, RequestInterceptor {
 
     public var environment: Environment
     private let errorFilter: ErrorFilter
+    private let oauthSwift: OAuthSwift
     private let lock = NSLock()
     private var isRefreshing = false
     private var requestsToRetry: [(RetryResult) -> Void] = []
-    private var retryCount: Int = 0
+    public var paramsLocation: OAuthSwiftHTTPRequest.ParamsLocation = .authorizationHeader
+    public var dataEncoding: String.Encoding = .utf8
+    public var retryCount: Int = 0
 
     internal lazy var session: Alamofire.Session = {
         let configuration = URLSessionConfiguration.default
@@ -35,15 +39,26 @@ public class UserSessionRequestHandler: Dispatcher, RequestInterceptor {
     }()
 
     // MARK: - Initialization
-    public init(environment: Environment, errorFilter: ErrorFilter) {
+    public init(environment: Environment, errorFilter: ErrorFilter, oauthSwift: OAuthSwift) {
         self.environment = environment
         self.errorFilter = errorFilter
+        self.oauthSwift = oauthSwift
     }
 
     // MARK: - RequestAdapter
     public func adapt(_ urlRequest: URLRequest, for session: Session,
                       completion: @escaping GenericCompletion<URLRequest>) {
-        completion(.success(urlRequest))
+        var config = OAuthSwiftHTTPRequest.Config(
+            urlRequest: urlRequest,
+            paramsLocation: paramsLocation,
+            dataEncoding: dataEncoding
+        )
+        config.updateRequest(credential: oauthSwift.client.credential)
+        do {
+            completion(.success(try OAuthSwiftHTTPRequest.makeRequest(config: config)))
+        } catch {
+            completion(.failure(error))
+        }
     }
 
     // MARK: - RequestRetrier
@@ -59,6 +74,22 @@ public class UserSessionRequestHandler: Dispatcher, RequestInterceptor {
             self.session.setSharedCookies(for: filtered.success?.response?.url)
             completion(filtered)
         }
+    }
+
+}
+
+public extension Alamofire.HTTPMethod {
+
+    var oauth: OAuthSwiftHTTPRequest.Method {
+        return OAuthSwiftHTTPRequest.Method(rawValue: self.rawValue)!
+    }
+
+}
+
+public extension OAuthSwiftHTTPRequest.Method {
+
+    var alamofire: Alamofire.HTTPMethod {
+        return Alamofire.HTTPMethod(rawValue: self.rawValue)
     }
 
 }

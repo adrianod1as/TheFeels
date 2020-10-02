@@ -11,6 +11,7 @@ import Networking
 import OxeNetworking
 import Alamofire
 import AppData
+import OAuthSwift
 
 class NetworkingAssembly: Assembly {
 
@@ -28,6 +29,15 @@ class NetworkingAssembly: Assembly {
     func assembleServices(for container: Container) {
         container.register(Environment.self) { _ in self.environment }
         container.autoregister(ErrorFilter.self, initializer: TFErrorFilter.init)
+        container.register(OAuthSwift.self) { resolver in
+            guard let auth = resolver.safelyResolve(Environment.self)
+                    .specificHeaders[SpecificHeaderType.apiKeyAndSecret.key] as? [String: String],
+                let key = auth[TwitterAuhHeaders.key.rawValue],
+                let secret = auth[TwitterAuhHeaders.secret.rawValue] else {
+                preconditionFailure()
+            }
+            return OAuth1Swift(consumerKey: key, consumerSecret: secret)
+        }
         container.autoregister(RequestInterceptor.self, initializer: UserSessionRequestHandler.init)
         container.register(ResultHandler.self) { _ in
             TFResultHandler(coordinator: nil)

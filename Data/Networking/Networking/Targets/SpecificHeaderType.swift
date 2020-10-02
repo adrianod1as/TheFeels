@@ -10,9 +10,15 @@ import Foundation
 import OxeNetworking
 
 public enum SpecificHeaderType: String, HeaderSpecifying {
-    case twitter
+    case apiKeyAndSecret
+    case token
 
     public var key: String {
         return rawValue
     }
+}
+
+public enum TwitterAuhHeaders: String {
+    case key
+    case secret
 }

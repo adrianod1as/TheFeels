@@ -86,6 +86,7 @@ PODS:
   - NVActivityIndicatorView/Base (5.0.1)
   - NVActivityIndicatorView/Extended (5.0.1):
     - NVActivityIndicatorView/Base
+  - OAuthSwift (2.0.0)
   - OxeNetworking/OxeNetworking (0.2.0):
     - Moya (~> 14.0)
     - SwiftyJSON (~> 5.0)
@@ -139,6 +140,7 @@ DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
   - Kingfisher (~> 5.0)
   - NVActivityIndicatorView/Extended
+  - OAuthSwift (~> 2.0.0)
   - OxeNetworking/RxOxeNetworking
   - RxBlocking
   - RxCocoa (~> 5)
@@ -173,6 +175,7 @@ SPEC REPOS:
     - Moya
     - nanopb
     - NVActivityIndicatorView
+    - OAuthSwift
     - OxeNetworking
     - PromisesObjC
     - RxBlocking
@@ -227,6 +230,7 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
+  OAuthSwift: 6805456763cf1c7ae0c16765257ed430b7aacae7
   OxeNetworking: 15f44757b83899cf773a30e202feb69f66d6cc41
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
@@ -245,6 +249,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 9b19b1febdaf1ad042bfa830aff58f69387f9df8
+PODFILE CHECKSUM: fcaddef7f2ad8929c279bf130a2137ddf328ba3c
 
 COCOAPODS: 1.9.3
