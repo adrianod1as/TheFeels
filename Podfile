@@ -21,7 +21,6 @@ end
 def sharedPods
   pod 'SwiftLint'
   pod 'Fakery', :git => 'https://github.com/vadymmarkov/Fakery', :branch => 'master'
-  pod 'SwiftDate'
   swiftyJSON
   rxSharedPods
 end
