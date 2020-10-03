@@ -27,7 +27,6 @@
 		E1693E322520E0C5009D7F41 /* SwiftGenStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693E312520E0C5009D7F41 /* SwiftGenStrings.swift */; };
 		E1E272452520E85C001903B0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E272442520E85C001903B0 /* Domain.framework */; };
 		E1E272462520E85C001903B0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1E272442520E85C001903B0 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E1E2730B2521058E001903B0 /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2730A2521058E001903B0 /* AppData.framework */; };
 		E1E2730C2521058E001903B0 /* AppData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2730A2521058E001903B0 /* AppData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1E273EB252109CF001903B0 /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2730A2521058E001903B0 /* AppData.framework */; };
 		E1E273F525210A9C001903B0 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E273F425210A9C001903B0 /* Networking.framework */; };
@@ -122,7 +121,6 @@
 				E14F811A25212781003075F9 /* DI.framework in Frameworks */,
 				E14F8388252155EA003075F9 /* User.framework in Frameworks */,
 				E1E273F525210A9C001903B0 /* Networking.framework in Frameworks */,
-				E1E2730B2521058E001903B0 /* AppData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
