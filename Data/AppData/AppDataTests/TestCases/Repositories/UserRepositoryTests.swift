@@ -27,7 +27,7 @@ class UserRepositoryTests: XCTestCase {
     }
 
     func testUserSearch() {
-        XCTAssertNotNil(try sut.searchUser(by: "SwiftLang").toBlocking(timeout: 0.1).first())
+        XCTAssertEqual(try sut.searchUser(by: "SwiftLang").toBlocking(timeout: 0.1).first(), spy.users)
         XCTAssert(spy.searchUserCalled)
     }
 }
