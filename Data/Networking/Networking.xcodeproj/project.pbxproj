@@ -17,6 +17,9 @@
 		E162311E252286F6002204A7 /* UsersTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162311D252286F6002204A7 /* UsersTarget.swift */; };
 		E162312225229351002204A7 /* UserRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162312125229351002204A7 /* UserRemoteDataSourceTests.swift */; };
 		E162312625229F68002204A7 /* UsersTargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162312525229F68002204A7 /* UsersTargetTests.swift */; };
+		E18B42082527F220003AEEF1 /* TwitterAuhHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B42072527F220003AEEF1 /* TwitterAuhHeaders.swift */; };
+		E18B420C2527F243003AEEF1 /* SpecificHeaderType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B420B2527F243003AEEF1 /* SpecificHeaderType+Ext.swift */; };
+		E18B42102527F5F3003AEEF1 /* Environment+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B420F2527F5F3003AEEF1 /* Environment+Ext.swift */; };
 		E1E2735E25210873001903B0 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2735425210872001903B0 /* Networking.framework */; };
 		E1E2736325210873001903B0 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E2736225210873001903B0 /* NetworkingTests.swift */; };
 		E1E2736525210873001903B0 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E2735725210872001903B0 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +67,9 @@
 		E162311D252286F6002204A7 /* UsersTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTarget.swift; sourceTree = "<group>"; };
 		E162312125229351002204A7 /* UserRemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSourceTests.swift; sourceTree = "<group>"; };
 		E162312525229F68002204A7 /* UsersTargetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTargetTests.swift; sourceTree = "<group>"; };
+		E18B42072527F220003AEEF1 /* TwitterAuhHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuhHeaders.swift; sourceTree = "<group>"; };
+		E18B420B2527F243003AEEF1 /* SpecificHeaderType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecificHeaderType+Ext.swift"; sourceTree = "<group>"; };
+		E18B420F2527F5F3003AEEF1 /* Environment+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Ext.swift"; sourceTree = "<group>"; };
 		E1E2735425210872001903B0 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E2735725210872001903B0 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		E1E2735825210872001903B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -254,6 +260,8 @@
 		E1E273C92521097F001903B0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E18B420B2527F243003AEEF1 /* SpecificHeaderType+Ext.swift */,
+				E18B420F2527F5F3003AEEF1 /* Environment+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +272,7 @@
 				E1E273CC2521097F001903B0 /* SpecificHeaderType.swift */,
 				E16231192522858F002204A7 /* TwitterApiFriendly.swift */,
 				E162311D252286F6002204A7 /* UsersTarget.swift */,
+				E18B42072527F220003AEEF1 /* TwitterAuhHeaders.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -544,8 +553,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E273CE2521097F001903B0 /* UserSessionRequestHandler.swift in Sources */,
+				E18B42102527F5F3003AEEF1 /* Environment+Ext.swift in Sources */,
 				E10986B7252782610055C9B9 /* TFErrorFilter.swift in Sources */,
 				E1E273D02521097F001903B0 /* FixturesType.swift in Sources */,
+				E18B420C2527F243003AEEF1 /* SpecificHeaderType+Ext.swift in Sources */,
+				E18B42082527F220003AEEF1 /* TwitterAuhHeaders.swift in Sources */,
 				E1E273CF2521097F001903B0 /* EnvironmentType.swift in Sources */,
 				E1623084252278F1002204A7 /* UserRemoteDataSource.swift in Sources */,
 				E1E273D62521097F001903B0 /* SpecificHeaderType.swift in Sources */,

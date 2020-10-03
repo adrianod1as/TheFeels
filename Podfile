@@ -10,6 +10,8 @@ plugin 'cocoapods-keys', {
   :keys => [
   "TwitterApiKey",
   "TwitterApiKeySecret",
+  "TwitterAcessToken",
+  "TwitterAcessTokenSecret",
   "TwitterBearerToken",
   ]}
 

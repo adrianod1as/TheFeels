@@ -78,7 +78,7 @@ public class UserSessionRequestHandler: Dispatcher, RequestInterceptor {
 
 }
 
-public extension Alamofire.HTTPMethod {
+fileprivate extension Alamofire.HTTPMethod {
 
     var oauth: OAuthSwiftHTTPRequest.Method {
         return OAuthSwiftHTTPRequest.Method(rawValue: self.rawValue)!
@@ -86,7 +86,7 @@ public extension Alamofire.HTTPMethod {
 
 }
 
-public extension OAuthSwiftHTTPRequest.Method {
+fileprivate extension OAuthSwiftHTTPRequest.Method {
 
     var alamofire: Alamofire.HTTPMethod {
         return Alamofire.HTTPMethod(rawValue: self.rawValue)

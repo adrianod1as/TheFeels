@@ -30,13 +30,10 @@ class NetworkingAssembly: Assembly {
         container.register(Environment.self) { _ in self.environment }
         container.autoregister(ErrorFilter.self, initializer: TFErrorFilter.init)
         container.register(OAuthSwift.self) { resolver in
-            guard let auth = resolver.safelyResolve(Environment.self)
-                    .specificHeaders[SpecificHeaderType.apiKeyAndSecret.key] as? [String: String],
-                let key = auth[TwitterAuhHeaders.key.rawValue],
-                let secret = auth[TwitterAuhHeaders.secret.rawValue] else {
+            guard let oauth = resolver.safelyResolve(Environment.self).oauth1Swift else {
                 preconditionFailure()
             }
-            return OAuth1Swift(consumerKey: key, consumerSecret: secret)
+            return oauth
         }
         container.autoregister(RequestInterceptor.self, initializer: UserSessionRequestHandler.init)
         container.register(ResultHandler.self) { _ in

@@ -35,8 +35,10 @@ struct SetupConstants {
     }()
 
     static let authHeaders: Headers = {
-        [TwitterAuhHeaders.key.rawValue: TheFeelsKeys().twitterApiKey,
-         TwitterAuhHeaders.secret.rawValue: TheFeelsKeys().twitterApiKeySecret]
+        [TwitterAuhHeaders.apiKey.rawValue: TheFeelsKeys().twitterApiKey,
+         TwitterAuhHeaders.apiSecret.rawValue: TheFeelsKeys().twitterApiKeySecret,
+         TwitterAuhHeaders.accessToken.rawValue: TheFeelsKeys().twitterAcessToken,
+         TwitterAuhHeaders.accessTokenSecret.rawValue: TheFeelsKeys().twitterAcessTokenSecret]
     }()
 
     static let specificHeaders: SpecificHeaders = {

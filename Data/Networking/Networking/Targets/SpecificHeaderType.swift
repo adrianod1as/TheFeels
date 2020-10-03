@@ -6,7 +6,6 @@
 //  Copyright © 2020 dias. All rights reserved.
 //
 
-import Foundation
 import OxeNetworking
 
 public enum SpecificHeaderType: String, HeaderSpecifying {
@@ -16,9 +15,4 @@ public enum SpecificHeaderType: String, HeaderSpecifying {
     public var key: String {
         return rawValue
     }
-}
-
-public enum TwitterAuhHeaders: String {
-    case key
-    case secret
 }
