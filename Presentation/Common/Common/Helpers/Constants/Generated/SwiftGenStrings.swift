@@ -24,6 +24,15 @@ public enum L10n {
     /// \b
     public static let backspace = L10n.tr("Localizable", "Symbol.backspace")
   }
+
+  public enum UISearchBar {
+    /// cancelButton
+    public static let cancelButton = L10n.tr("Localizable", "UISearchBar.cancelButton")
+    /// clearButton
+    public static let clearButton = L10n.tr("Localizable", "UISearchBar.clearButton")
+    /// searchField
+    public static let searchField = L10n.tr("Localizable", "UISearchBar.searchField")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

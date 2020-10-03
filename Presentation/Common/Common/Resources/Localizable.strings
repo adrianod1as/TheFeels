@@ -8,3 +8,6 @@
 
 "Resolver.SafelyResolve.preconditionFailure" = "%@ is nil";
 "Symbol.backspace" = "\\b";
+"UISearchBar.searchField" = "searchField";
+"UISearchBar.clearButton" = "clearButton";
+"UISearchBar.cancelButton" = "cancelButton";

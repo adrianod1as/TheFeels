@@ -21,9 +21,8 @@ public class UsersSearchViewController: UIViewController, UDTAnimatorViewable {
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.barTintColor = .clear
-        searchController.searchBar.backgroundImage = UIImage()
-        searchController.searchBar.isTranslucent = true
+        searchController.definesPresentationContext = true
+        searchController.setTFStyle()
         return searchController
     }()
 
@@ -55,6 +54,7 @@ public class UsersSearchViewController: UIViewController, UDTAnimatorViewable {
 extension UsersSearchViewController {
 
     private func setupUI() {
+        title = L10n.UsersSearchViewController.title
         usersSearchView.tableView.isHidden = true
         navigationController?.asTranslucent()
         navigationItem.searchController = searchController
