@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		011E3A3961CE098E1902D738 /* Pods_TheFeelsTargets_TheFeels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C13D53D844812902F8AECB /* Pods_TheFeelsTargets_TheFeels.framework */; };
 		4BA1D7A1F86948DA565AAC86 /* Pods_TheFeelsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657D2B3B76406E2D6CC1EA51 /* Pods_TheFeelsTests.framework */; };
+		E103B2EA25288DBD00282E9E /* Tweet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E103B2E925288DBD00282E9E /* Tweet.framework */; };
+		E103B2EB25288DBD00282E9E /* Tweet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E103B2E925288DBD00282E9E /* Tweet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E14F7F1925211D1D003075F9 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F7D822521199D003075F9 /* Common.framework */; };
 		E14F7F1A25211D1D003075F9 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E14F7D822521199D003075F9 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E14F802A25212451003075F9 /* AppNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F802925212451003075F9 /* AppNavigation.framework */; };
@@ -61,6 +63,7 @@
 			files = (
 				E14F802B25212451003075F9 /* AppNavigation.framework in Embed Frameworks */,
 				E14F8389252155EA003075F9 /* User.framework in Embed Frameworks */,
+				E103B2EB25288DBD00282E9E /* Tweet.framework in Embed Frameworks */,
 				E1E2730C2521058E001903B0 /* AppData.framework in Embed Frameworks */,
 				E1E272462520E85C001903B0 /* Domain.framework in Embed Frameworks */,
 				E14F811B25212781003075F9 /* DI.framework in Embed Frameworks */,
@@ -80,6 +83,7 @@
 		8CB4433E74839EEF564E406E /* Pods-TheFeelsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFeelsTests.release.xcconfig"; path = "Target Support Files/Pods-TheFeelsTests/Pods-TheFeelsTests.release.xcconfig"; sourceTree = "<group>"; };
 		8DA800B6AF46CEF5EEEE681A /* Pods-TheFeelsTargets-TheFeels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheFeelsTargets-TheFeels.release.xcconfig"; path = "Target Support Files/Pods-TheFeelsTargets-TheFeels/Pods-TheFeelsTargets-TheFeels.release.xcconfig"; sourceTree = "<group>"; };
 		A8C13D53D844812902F8AECB /* Pods_TheFeelsTargets_TheFeels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheFeelsTargets_TheFeels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E103B2E925288DBD00282E9E /* Tweet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tweet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F7D822521199D003075F9 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F7E1925211AFC003075F9 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F7E8425211BF7003075F9 /* AppCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,7 @@
 				E14F7F1925211D1D003075F9 /* Common.framework in Frameworks */,
 				E14F811A25212781003075F9 /* DI.framework in Frameworks */,
 				E14F8388252155EA003075F9 /* User.framework in Frameworks */,
+				E103B2EA25288DBD00282E9E /* Tweet.framework in Frameworks */,
 				E1E273F525210A9C001903B0 /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +256,7 @@
 		F089DC444FF926EDF72B73E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E103B2E925288DBD00282E9E /* Tweet.framework */,
 				E14F8387252155EA003075F9 /* User.framework */,
 				E14F811925212781003075F9 /* DI.framework */,
 				E14F802925212451003075F9 /* AppNavigation.framework */,

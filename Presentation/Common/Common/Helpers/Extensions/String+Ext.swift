@@ -8,7 +8,6 @@
 
 import Swinject
 import Domain
-import SwiftRichString
 
 public extension String {
 
@@ -167,17 +166,4 @@ public extension NSAttributedString {
         return ceil(boundingBox.width)
     }
 
-}
-
-public extension NSMutableAttributedString {
-
-    func set(style: Style, in substrings: [String], within string: String) -> NSMutableAttributedString {
-        var attributedStr = self
-        substrings.filter({ !$0.isEmpty }).forEach {
-            string.ranges(of: $0, options: .caseInsensitive).forEach {
-                attributedStr = attributedStr.set(style: style, range: NSRange($0, in: string))
-            }
-        }
-        return attributedStr
-    }
 }

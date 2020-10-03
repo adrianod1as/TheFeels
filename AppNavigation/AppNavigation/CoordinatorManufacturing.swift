@@ -7,8 +7,10 @@
 //
 
 import User
+import Tweet
 
 public protocol CoordinatorManufacturing {
 
     func makeUsersCoordinator() -> UsersCoordinator
+    func makeTweetsCoordinator() -> TweetsCoordinator
 }

@@ -47,7 +47,9 @@ public class UserCell: UITableViewCell {
     }
 
     func bind(viewModel: UserViewModel) {
-        profileView.bind(viewModel: viewModel)
+        profileView.lblUsername.text = viewModel.username
+        profileView.lblTitle.text = viewModel.name
+        profileView.setProfileImage(url: viewModel.profileImageUrl)
     }
 
     func cancelProfileImageRequest() {
