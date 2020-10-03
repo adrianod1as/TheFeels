@@ -40,7 +40,6 @@ end
 def presentationPods
   pod 'SwiftGen', '~> 6.0'
   pod 'SwiftMessages'
-  pod 'SwiftRichString'
   pod 'NVActivityIndicatorView/Extended'
   pod 'Kingfisher', '~> 5.0'
   rxPresentationPods

@@ -90,13 +90,7 @@ public class ProfileView: UIView {
         activateStkUserConstraints()
     }
 
-    public func bind(viewModel: UserViewModel) {
-        lblUsername.text = viewModel.username
-        lblTitle.text = viewModel.name
-        setProfileImage(url: viewModel.profileImageUrl)
-    }
-
-    func setProfileImage(url: URL?) {
+    public func setProfileImage(url: URL?) {
         if let url = url {
             imgAvatar.kf.setImage(with: url)
         }

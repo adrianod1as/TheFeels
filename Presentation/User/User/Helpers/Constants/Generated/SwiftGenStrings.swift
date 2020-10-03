@@ -10,6 +10,17 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+
+  internal enum Twitter {
+    internal enum ProfileImage {
+      internal enum Size {
+        /// _bigger
+        internal static let bigger = L10n.tr("Localizable", "Twitter.ProfileImage.Size.bigger")
+        /// _normal
+        internal static let normal = L10n.tr("Localizable", "Twitter.ProfileImage.Size.normal")
+      }
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

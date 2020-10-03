@@ -1,8 +1,8 @@
 //
 //  UserViewModel.swift
-//  Common
+//  User
 //
-//  Created by Adriano Dias on 29/09/20.
+//  Created by Adriano Dias on 03/10/20.
 //
 
 import Domain
@@ -26,8 +26,8 @@ public struct UserViewModel: IdentifiableType, Equatable {
 
     public var profileImageUrl: URL? {
         URL(string: user.profileImageUrl
-                    .replacingOccurrences(of: L10n.Twitter.ProfileImage.Size.normal,
-                                          with: L10n.Twitter.ProfileImage.Size.bigger))
+                .replacingOccurrences(of: L10n.Twitter.ProfileImage.Size.normal,
+                                      with: L10n.Twitter.ProfileImage.Size.bigger))
     }
 }
 

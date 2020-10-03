@@ -8,5 +8,3 @@
 
 "Resolver.SafelyResolve.preconditionFailure" = "%@ is nil";
 "Symbol.backspace" = "\\b";
-"Twitter.ProfileImage.Size.normal" = "_normal";
-"Twitter.ProfileImage.Size.bigger" = "_bigger";

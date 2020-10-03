@@ -11,7 +11,6 @@
 		E105A308252667D100A20184 /* RxTableViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E105A307252667D100A20184 /* RxTableViewable.swift */; };
 		E148F63225239A6C0066210C /* ViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F63125239A6C0066210C /* ViewModeling.swift */; };
 		E148F63E2523A9E50066210C /* CommonSceneOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F63D2523A9E50066210C /* CommonSceneOutput.swift */; };
-		E148F6F72523FC880066210C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F6F62523FC880066210C /* UserViewModel.swift */; };
 		E14F7F0225211CCE003075F9 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F7EF825211CCD003075F9 /* Common.framework */; };
 		E14F7F0725211CCE003075F9 /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F0625211CCE003075F9 /* CommonTests.swift */; };
 		E14F7F0925211CCE003075F9 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = E14F7EFB25211CCD003075F9 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,7 +68,6 @@
 		E105A307252667D100A20184 /* RxTableViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTableViewable.swift; sourceTree = "<group>"; };
 		E148F63125239A6C0066210C /* ViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModeling.swift; sourceTree = "<group>"; };
 		E148F63D2523A9E50066210C /* CommonSceneOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSceneOutput.swift; sourceTree = "<group>"; };
-		E148F6F62523FC880066210C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		E14F7EF825211CCD003075F9 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F7EFB25211CCD003075F9 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		E14F7EFC25211CCD003075F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 			children = (
 				E148F63125239A6C0066210C /* ViewModeling.swift */,
 				E148F63D2523A9E50066210C /* CommonSceneOutput.swift */,
-				E148F6F62523FC880066210C /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -556,7 +553,6 @@
 				E14F7F5225211D9A003075F9 /* UIApplication+Ext.swift in Sources */,
 				E16D367B25261F5E00275329 /* ProfileView.swift in Sources */,
 				E14F7F6A25211D9A003075F9 /* Coordinator.swift in Sources */,
-				E148F6F72523FC880066210C /* UserViewModel.swift in Sources */,
 				E14F7F5725211D9A003075F9 /* SwiftMessages+Ext.swift in Sources */,
 				E14F7F5625211D9A003075F9 /* UIColor+Ext.swift in Sources */,
 				E14F7F5425211D9A003075F9 /* String+Ext.swift in Sources */,

@@ -6,3 +6,5 @@
   Copyright © 2020 dias. All rights reserved.
 */
 
+"Twitter.ProfileImage.Size.normal" = "_normal";
+"Twitter.ProfileImage.Size.bigger" = "_bigger";
