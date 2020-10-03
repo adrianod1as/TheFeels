@@ -38,7 +38,7 @@ public class AppCoordinator: Coordinator {
 extension AppCoordinator: UsersDepartingCoordinating {
 
     public func showTweets(for user: UserViewModel) {
-
+        factory.makeTweetsCoordinator().start()
     }
 }
 

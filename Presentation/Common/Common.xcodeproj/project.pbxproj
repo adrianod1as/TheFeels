@@ -46,6 +46,7 @@
 		E14F7F6A25211D9A003075F9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F4925211D9A003075F9 /* Coordinator.swift */; };
 		E16D367B25261F5E00275329 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16D367A25261F5E00275329 /* ProfileView.swift */; };
 		E19C861A252903430004657B /* SearchBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C8619252903430004657B /* SearchBar+Ext.swift */; };
+		E19C86202529202A0004657B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C861F2529202A0004657B /* UserViewModel.swift */; };
 		F5A563A54E7FC182E422877D /* Pods_Common_CommonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABD40F7019048D5BAFD6217 /* Pods_Common_CommonTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		E14F7F4925211D9A003075F9 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E16D367A25261F5E00275329 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E19C8619252903430004657B /* SearchBar+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBar+Ext.swift"; sourceTree = "<group>"; };
+		E19C861F2529202A0004657B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			children = (
 				E148F63125239A6C0066210C /* ViewModeling.swift */,
 				E148F63D2523A9E50066210C /* CommonSceneOutput.swift */,
+				E19C861F2529202A0004657B /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14F7F5025211D9A003075F9 /* SwiftGenColors.swift in Sources */,
+				E19C86202529202A0004657B /* UserViewModel.swift in Sources */,
 				E14F7F5525211D9A003075F9 /* UIScreen+Ext.swift in Sources */,
 				E14F7F5B25211D9A003075F9 /* UIView+Ext.swift in Sources */,
 				E14F7F5A25211D9A003075F9 /* UIViewController+Ext.swift in Sources */,

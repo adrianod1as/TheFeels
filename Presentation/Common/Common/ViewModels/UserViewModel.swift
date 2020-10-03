@@ -1,6 +1,6 @@
 //
 //  UserViewModel.swift
-//  User
+//  Common
 //
 //  Created by Adriano Dias on 03/10/20.
 //

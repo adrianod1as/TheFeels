@@ -9,5 +9,5 @@
 "Resolver.SafelyResolve.preconditionFailure" = "%@ is nil";
 "Symbol.backspace" = "\\b";
 "UISearchBar.searchField" = "searchField";
-"UISearchBar.clearButton" = "clearButton";
-"UISearchBar.cancelButton" = "cancelButton";
+"Twitter.ProfileImage.Size.normal" = "_normal";
+"Twitter.ProfileImage.Size.bigger" = "_bigger";

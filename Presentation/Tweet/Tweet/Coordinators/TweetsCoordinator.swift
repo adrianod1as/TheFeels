@@ -38,7 +38,7 @@ public class TweetsCoordinator: Coordinator {
 
     internal func showTweets() {
         let viewController = factory.makeUserTweetsViewController()
-        navigationController.setViewControllers([viewController], animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 

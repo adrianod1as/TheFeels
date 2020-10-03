@@ -16,7 +16,7 @@
 		E103B2D925288D9300282E9E /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E103B2D825288D9300282E9E /* Common.framework */; };
 		E103B35625288ECA00282E9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E103B34025288EC900282E9E /* Localizable.strings */; };
 		E103B35725288ECA00282E9E /* UserTweetsSceneCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34225288EC900282E9E /* UserTweetsSceneCoordinating.swift */; };
-		E103B35825288ECA00282E9E /* UsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34325288EC900282E9E /* UsersCoordinator.swift */; };
+		E103B35825288ECA00282E9E /* TweetsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34325288EC900282E9E /* TweetsCoordinator.swift */; };
 		E103B35925288ECA00282E9E /* SwiftGenStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34825288EC900282E9E /* SwiftGenStrings.swift */; };
 		E103B35A25288ECA00282E9E /* UserTweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34B25288ECA00282E9E /* UserTweetsViewModel.swift */; };
 		E103B35B25288ECA00282E9E /* UserTweetsViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34C25288ECA00282E9E /* UserTweetsViewModeling.swift */; };
@@ -54,7 +54,7 @@
 		E103B2D825288D9300282E9E /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E103B34025288EC900282E9E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E103B34225288EC900282E9E /* UserTweetsSceneCoordinating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTweetsSceneCoordinating.swift; sourceTree = "<group>"; };
-		E103B34325288EC900282E9E /* UsersCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersCoordinator.swift; sourceTree = "<group>"; };
+		E103B34325288EC900282E9E /* TweetsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsCoordinator.swift; sourceTree = "<group>"; };
 		E103B34825288EC900282E9E /* SwiftGenStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGenStrings.swift; sourceTree = "<group>"; };
 		E103B34B25288ECA00282E9E /* UserTweetsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTweetsViewModel.swift; sourceTree = "<group>"; };
 		E103B34C25288ECA00282E9E /* UserTweetsViewModeling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTweetsViewModeling.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				E103B34225288EC900282E9E /* UserTweetsSceneCoordinating.swift */,
-				E103B34325288EC900282E9E /* UsersCoordinator.swift */,
+				E103B34325288EC900282E9E /* TweetsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -428,7 +428,7 @@
 				E103B35E25288ECA00282E9E /* UserTweetsViewController.swift in Sources */,
 				E103B35A25288ECA00282E9E /* UserTweetsViewModel.swift in Sources */,
 				E103B36025288ECA00282E9E /* UserTweetsView.swift in Sources */,
-				E103B35825288ECA00282E9E /* UsersCoordinator.swift in Sources */,
+				E103B35825288ECA00282E9E /* TweetsCoordinator.swift in Sources */,
 				E103B35B25288ECA00282E9E /* UserTweetsViewModeling.swift in Sources */,
 				E103B3772528936E00282E9E /* TweetViewModel.swift in Sources */,
 				E103B36125288ECA00282E9E /* UsersManufactoring.swift in Sources */,

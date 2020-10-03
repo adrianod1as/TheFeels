@@ -25,11 +25,18 @@ public enum L10n {
     public static let backspace = L10n.tr("Localizable", "Symbol.backspace")
   }
 
+  public enum Twitter {
+    public enum ProfileImage {
+      public enum Size {
+        /// _bigger
+        public static let bigger = L10n.tr("Localizable", "Twitter.ProfileImage.Size.bigger")
+        /// _normal
+        public static let normal = L10n.tr("Localizable", "Twitter.ProfileImage.Size.normal")
+      }
+    }
+  }
+
   public enum UISearchBar {
-    /// cancelButton
-    public static let cancelButton = L10n.tr("Localizable", "UISearchBar.cancelButton")
-    /// clearButton
-    public static let clearButton = L10n.tr("Localizable", "UISearchBar.clearButton")
     /// searchField
     public static let searchField = L10n.tr("Localizable", "UISearchBar.searchField")
   }

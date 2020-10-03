@@ -61,8 +61,10 @@ extension UsersSearchViewController {
     }
 
     private func setSubViewsVisibility(isDataSourceEmpty: Bool) {
-        usersSearchView.imgEmpty.isHidden = !isDataSourceEmpty
-        usersSearchView.tableView.isHidden = isDataSourceEmpty
+        UIView.animate(withDuration: 0.1) {
+            self.usersSearchView.imgEmpty.isHidden = !isDataSourceEmpty
+            self.usersSearchView.tableView.isHidden = isDataSourceEmpty
+        }
     }
 
 }
@@ -80,10 +82,17 @@ extension UsersSearchViewController {
             .map { [UsersSection(header: "", items: $0)] }
             .drive(usersSearchView.tableView.rx.items(dataSource: tableDataSource))
             .disposed(by: bag)
+        output.didNavigate
+            .drive()
+            .disposed(by: bag)
     }
 
     private func selectionInput() -> Driver<Int> {
-        .empty()
+        usersSearchView.tableView.rx
+            .itemSelected
+            .map({ $0.row })
+            .do(onNext: { debugPrint($0) })
+            .asDriver(onErrorDriveWith: .empty())
     }
 
     private func nameInput() -> Driver<String> {
