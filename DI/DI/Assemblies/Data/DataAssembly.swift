@@ -14,5 +14,6 @@ class DataAssembly: Assembly {
 
     func assemble(container: Container) {
         container.autoregister(Domain.UserRepository.self, initializer: AppData.UserRepository.init)
+        container.autoregister(Domain.TweetRepository.self, initializer: AppData.TweetRepository.init)
     }
 }

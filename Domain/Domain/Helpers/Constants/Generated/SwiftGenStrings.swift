@@ -15,6 +15,10 @@ public enum L10n {
     public enum Message {
       /// Campo obrigatório.
       public static let requiment = L10n.tr("Localizable", "Error.Message.requiment")
+      public enum Username {
+        /// Usuário inválido: múltiplas palavras
+        public static let multipleWords = L10n.tr("Localizable", "Error.Message.Username.multipleWords")
+      }
     }
     public enum Title {
       /// Ops!
@@ -25,6 +29,15 @@ public enum L10n {
   public enum Symbol {
     /// pt_BR
     public static let locale = L10n.tr("Localizable", "Symbol.locale")
+  }
+
+  public enum Twitter {
+    public enum Date {
+      /// EEE MMM dd HH:mm:ss Z yyyy
+      public static let format = L10n.tr("Localizable", "Twitter.Date.format")
+      /// en_US_POSIX
+      public static let locale = L10n.tr("Localizable", "Twitter.Date.locale")
+    }
   }
 
   public enum User {
