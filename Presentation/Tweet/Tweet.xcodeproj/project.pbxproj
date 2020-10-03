@@ -632,7 +632,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36CE2D1C5ACCB695B079BCC8 /* Pods-Tweet-TweetTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KYWC2RHW78;
 				INFOPLIST_FILE = TweetTests/Info.plist;
@@ -652,7 +651,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5383BA4D90B1059939865CFF /* Pods-Tweet-TweetTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KYWC2RHW78;
 				INFOPLIST_FILE = TweetTests/Info.plist;
