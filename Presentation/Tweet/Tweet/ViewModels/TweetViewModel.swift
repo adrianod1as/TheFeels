@@ -39,4 +39,3 @@ extension TweetsSection: AnimatableSectionModelType {
         self.items = items
     }
 }
-

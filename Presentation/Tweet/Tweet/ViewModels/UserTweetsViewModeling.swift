@@ -17,11 +17,9 @@ public protocol UserTweetsViewModeling {
     func transform(input: Input) -> Output
 }
 
-public protocol UserTweetsViewModelingInput {
-}
+public protocol UserTweetsViewModelingInput {}
 
-public struct UserTweetsViewModelInput: UserTweetsViewModelingInput {
-}
+public struct UserTweetsViewModelInput: UserTweetsViewModelingInput {}
 
 public protocol UserTweetsViewModelingOutput: CommonSceneOutput where Success == [TweetViewModel] {
 

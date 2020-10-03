@@ -34,6 +34,10 @@ strings:
     outputs:
       - templateName: structured-swift5
         output: Presentation/User/User/Helpers/Constants/Generated/SwiftGenStrings.swift
+  - inputs: Presentation/Tweet/Tweet/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Presentation/Tweet/Tweet/Helpers/Constants/Generated/SwiftGenStrings.swift
   - inputs: Domain/Domain/Resources/Localizable.strings
     outputs:
       - templateName: structured-swift5

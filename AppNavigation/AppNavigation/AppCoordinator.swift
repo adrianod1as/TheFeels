@@ -9,6 +9,7 @@
 import UIKit
 import Common
 import User
+import Tweet
 
 public class AppCoordinator: Coordinator {
 
@@ -40,3 +41,5 @@ extension AppCoordinator: UsersDepartingCoordinating {
 
     }
 }
+
+extension AppCoordinator: TweetsDepartingCoordinating {}

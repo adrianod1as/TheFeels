@@ -29,3 +29,11 @@ public class UserTweetsViewModel<SceneCoordinating: UserTweetsSceneCoordinating>
         self.coordinator = coordinator
     }
 }
+
+extension UserTweetsViewModel: UserTweetsViewModeling {
+
+    public func transform(input: Input) -> Output {
+        Output(isLoading: .empty(), didSucceed: .empty(), didFail: .empty(), didNavigate: .empty())
+    }
+
+}
