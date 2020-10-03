@@ -22,6 +22,6 @@ public class UserRemoteDataSource<T: RxDispatcher> {
 extension UserRemoteDataSource: AppData.UserRemoteDataSource {
 
     public func searchUser(by name: String) -> Observable<[User]> {
-        dispatcher.rx.getDecodable([User].self, from: UsersTarget.lookup(username: name)).asObservable()
+        dispatcher.rx.getDecodable([User].self, from: UsersTarget.search(username: name)).asObservable()
     }
 }
