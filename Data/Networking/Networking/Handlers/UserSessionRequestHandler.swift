@@ -6,22 +6,19 @@
 //  Copyright © 2020 dias. All rights reserved.
 //
 
-import Foundation
 import Moya
 import Alamofire
-import SwiftyJSON
-import Domain
-import AppData
 import OxeNetworking
 
-public class UserSessionRequestHandler: RequestHandler {
+public class UserSessionRequestHandler: Dispatcher, RequestInterceptor {
 
     public var environment: Environment
-    internal weak var coordinator: SignOutSceneCoordinating?
+    private let errorFilter: ErrorFilter
+    private let oauthHandler: OAuthHandling
     private let lock = NSLock()
     private var isRefreshing = false
     private var requestsToRetry: [(RetryResult) -> Void] = []
-    private var retryCount: Int = 0
+    public var retryCount: Int = 0
 
     internal lazy var session: Alamofire.Session = {
         let configuration = URLSessionConfiguration.default
@@ -39,38 +36,20 @@ public class UserSessionRequestHandler: RequestHandler {
     }()
 
     // MARK: - Initialization
-    public init(environment: Environment, coordinator: SignOutSceneCoordinating?) {
+    public init(environment: Environment, errorFilter: ErrorFilter, oauthHandler: OAuthHandling) {
         self.environment = environment
-        self.coordinator = coordinator
-    }
-
-    // MARK: - RequestHandler
-    public func handleRequest(response: Response?, completion: @escaping GenericCompletion<Void>) {
-        completion(.success(()))
-    }
-
-    public func handleRequest(error: Error?, completion: @escaping GenericCompletion<Void>) {
-        guard let interactionError = error as? InteractionError else {
-            completion(.success(()))
-            return
-        }
-        switch interactionError {
-        case .expiredUserSession:
-            handleExpiredUserSession()
-            completion(.success(()))
-        default:
-            completion(.success(()))
-        }
-    }
-
-    private func handleExpiredUserSession() {
-        coordinator?.didSignOut()
+        self.errorFilter = errorFilter
+        self.oauthHandler = oauthHandler
     }
 
     // MARK: - RequestAdapter
     public func adapt(_ urlRequest: URLRequest, for session: Session,
                       completion: @escaping GenericCompletion<URLRequest>) {
-        completion(.success(urlRequest))
+        do {
+            completion(.success(try oauthHandler.authorize(request: urlRequest)))
+        } catch {
+            completion(.failure(error))
+        }
     }
 
     // MARK: - RequestRetrier
@@ -79,27 +58,10 @@ public class UserSessionRequestHandler: RequestHandler {
         completion(.doNotRetry)
     }
 
-    // MARK: - ErrorFilter
-    public func getDefaultError() -> Error {
-        InteractionError.failedRequest(L10n.Error.Description.unexpected)
-    }
-
-    public func filter(error: Error) -> Error {
-        error
-    }
-
-    public func filterForErrors(in result: MoyaDispatcherResult) -> MoyaResult {
-        result.result
-    }
-
-    public func filterForErrors(in response: MoyaDispatcherResponse) throws -> Response {
-        response.moyaResponse
-    }
-
     // MARK: - Dispatcher
     public func call(endpoint: TargetType, completion: @escaping Completion) {
         provider.request(MultiTarget(endpoint)) { result in
-            let filtered = self.filterForErrors(in: result)
+            let filtered = self.errorFilter.filterForErrors(in: result)
             self.session.setSharedCookies(for: filtered.success?.response?.url)
             completion(filtered)
         }

@@ -12,9 +12,9 @@ import Foundation
 internal enum L10n {
 
   internal enum App {
-    /// group.br.com.dias.thefeels
+    /// group.br.com.dias.TheFeels
     internal static let group = L10n.tr("Localizable", "App.group")
-    /// br.com.dias.thefeels
+    /// br.com.dias.TheFeels
     internal static let identifier = L10n.tr("Localizable", "App.identifier")
   }
 

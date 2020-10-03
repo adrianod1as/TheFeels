@@ -24,6 +24,16 @@ strings:
     outputs:
       - templateName: structured-swift5
         output: TheFeels/Helpers/Constants/Generated/SwiftGenStrings.swift
+  - inputs: Presentation/Common/Common/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Presentation/Common/Common/Helpers/Constants/Generated/SwiftGenStrings.swift
+        params: 
+          publicAccess: true
+  - inputs: Presentation/User/User/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Presentation/User/User/Helpers/Constants/Generated/SwiftGenStrings.swift
   - inputs: Domain/Domain/Resources/Localizable.strings
     outputs:
       - templateName: structured-swift5
@@ -44,9 +54,3 @@ strings:
     outputs:
       - templateName: structured-swift5
         output: Data/Storage/Storage/Helpers/Constants/Generated/SwiftGenStrings.swift
-  - inputs: Presentation/Common/Common/Resources/Localizable.strings
-    outputs:
-      - templateName: structured-swift5
-        output: Presentation/Common/Common/Helpers/Constants/Generated/SwiftGenStrings.swift
-        params: 
-          publicAccess: true

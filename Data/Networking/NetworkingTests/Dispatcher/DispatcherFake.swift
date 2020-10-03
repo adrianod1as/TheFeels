@@ -8,10 +8,11 @@
 
 import OxeNetworking
 import Moya
+import RxSwift
 @testable import Domain
 @testable import Networking
 
-class DispacherFake: Dispatcher {
+class DispacherFake: ReactiveCompatible, RxDispatcher {
 
     let environment: Environment
     private let responseData: Data

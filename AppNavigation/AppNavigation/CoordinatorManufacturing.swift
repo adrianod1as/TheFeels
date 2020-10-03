@@ -6,6 +6,9 @@
 //  Copyright © 2020 dias. All rights reserved.
 //
 
+import User
+
 public protocol CoordinatorManufacturing {
 
+    func makeUsersCoordinator() -> UsersCoordinator
 }

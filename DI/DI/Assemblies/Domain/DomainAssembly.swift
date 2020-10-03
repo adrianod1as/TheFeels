@@ -12,5 +12,7 @@ import Domain
 class DomainAssembly: Assembly {
 
     func assemble(container: Container) {
+        container.autoregister(SearchUserByNameUseCaseable.self,
+                               initializer: SearchUserByNameUseCase.init)
     }
 }

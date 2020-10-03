@@ -13,5 +13,6 @@ import Domain
 class DataAssembly: Assembly {
 
     func assemble(container: Container) {
+        container.autoregister(Domain.UserRepository.self, initializer: AppData.UserRepository.init)
     }
 }
