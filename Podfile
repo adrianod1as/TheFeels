@@ -134,6 +134,16 @@ target 'User' do
   end
 end
 
+target 'Tweet' do
+  project 'Presentation/Tweet/Tweet'
+  sharedPods
+  presentationPods
+  diPods
+  target 'TweetTests' do
+    rxTestingPods
+  end
+end
+
 target 'Domain' do
   project 'Domain/Domain'
   sharedPods

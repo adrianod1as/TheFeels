@@ -27,7 +27,80 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E14F8000252123F1003075F9"
+            BuildableName = "AppNavigation.framework"
+            BlueprintName = "AppNavigation"
+            ReferencedContainer = "container:AppNavigation/AppNavigation.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E1E2735325210872001903B0"
+            BuildableName = "Networking.framework"
+            BlueprintName = "Networking"
+            ReferencedContainer = "container:Data/Networking/Networking.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E1E274D025211085001903B0"
+            BuildableName = "Storage.framework"
+            BlueprintName = "Storage"
+            ReferencedContainer = "container:Data/Storage/Storage.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E14F80E62521270A003075F9"
+            BuildableName = "DI.framework"
+            BlueprintName = "DI"
+            ReferencedContainer = "container:DI/DI.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E1693D51251FFE29009D7F41"
+            BuildableName = "TheFeels.app"
+            BlueprintName = "TheFeels"
+            ReferencedContainer = "container:TheFeels.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E1E272C12520F52A001903B0"
+            BuildableName = "AppData.framework"
+            BlueprintName = "AppData"
+            ReferencedContainer = "container:Data/AppData/AppData.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E14F82D82521527D003075F9"
+            BuildableName = "User.framework"
+            BlueprintName = "User"
+            ReferencedContainer = "container:Presentation/User/User.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E14F7EF725211CCD003075F9"
+            BuildableName = "Common.framework"
+            BlueprintName = "Common"
+            ReferencedContainer = "container:Presentation/Common/Common.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E103B26925288D5000282E9E"
+            BuildableName = "Tweet.framework"
+            BlueprintName = "Tweet"
+            ReferencedContainer = "container:Presentation/Tweet/Tweet.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E1693DB32520D538009D7F41"
+            BuildableName = "Domain.framework"
+            BlueprintName = "Domain"
+            ReferencedContainer = "container:Domain/Domain.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -117,6 +190,16 @@
                BuildableName = "DITests.xctest"
                BlueprintName = "DITests"
                ReferencedContainer = "container:DI/DI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E103B27225288D5100282E9E"
+               BuildableName = "TweetTests.xctest"
+               BlueprintName = "TweetTests"
+               ReferencedContainer = "container:Presentation/Tweet/Tweet.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
