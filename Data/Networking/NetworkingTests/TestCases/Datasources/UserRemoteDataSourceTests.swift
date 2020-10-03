@@ -14,13 +14,13 @@ import RxBlocking
 class UserRemoteDataSourceTests: XCTestCase {
 
     private var sut: UserRemoteDataSource<DispacherFake>!
-    private let usersStub = User.getFakedArray(amount: 4)
+    private let stub = User.getFakedArray(amount: 4)
     private var dispatcherFake: DispacherFake!
 
     override func setUp() {
         super.setUp()
 
-        dispatcherFake = DispacherFake(model: usersStub)
+        dispatcherFake = DispacherFake(model: stub)
         sut = UserRemoteDataSource(dispatcher: dispatcherFake)
     }
 
@@ -29,7 +29,7 @@ class UserRemoteDataSourceTests: XCTestCase {
     }
 
     func testSearchUser() {
-        XCTAssertEqual(try sut.searchUser(by: "SwiftLang").toBlocking(timeout: 0.1).first(), usersStub)
+        XCTAssertEqual(try sut.searchUser(by: "SwiftLang").toBlocking(timeout: 0.1).first(), stub)
     }
 
 }

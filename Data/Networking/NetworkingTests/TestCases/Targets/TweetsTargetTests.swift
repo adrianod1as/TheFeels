@@ -1,17 +1,17 @@
 //
-//  UserTargetTests.swift
+//  TweetsTargetTests.swift
 //  NetworkingTests
 //
-//  Created by Adriano Dias on 28/09/20.
+//  Created by Adriano Dias on 03/10/20.
 //
 
 import XCTest
 import Moya
 @testable import Networking
 
-class UsersTargetTests: XCTestCase {
+class TweetsTargetTests: XCTestCase {
 
-    private var sut: UsersTarget!
+    private var sut: TweetsTarget!
     private let usernameStub = "SwiftLang"
 
     override func setUp() {
@@ -29,7 +29,7 @@ class UsersTargetTests: XCTestCase {
     }
 
     func testApi() {
-        XCTAssertEqual(sut.api, "users")
+        XCTAssertEqual(sut.api, "statuses")
     }
 
     func testVersion() {
@@ -37,11 +37,11 @@ class UsersTargetTests: XCTestCase {
     }
 
     func testPath() {
-        XCTAssertEqual(sut.path, "\(sut.version)/\(sut.api)/search.json")
+        XCTAssertEqual(sut.path, "\(sut.version)/\(sut.api)/user_timeline.json")
     }
 
     func testSpecificHeaderTypes() {
-        XCTAssert(sut.specificHeaderTypes.isEmpty)
+        XCTAssertEqual(sut.specificHeaderTypes.map({ $0.key }), [SpecificHeaderType.token.key])
     }
 
     func testKeyPathForData() {
@@ -65,7 +65,7 @@ class UsersTargetTests: XCTestCase {
     }
 
     func testTask() {
-        let task = Task.requestParameters(parameters: ["q": usernameStub], encoding: URLEncoding.default)
+        let task = Task.requestParameters(parameters: ["screen_name": usernameStub], encoding: URLEncoding.default)
         switch (sut.task, task) {
         case (.requestParameters(let parametersA, let encodingA),
               .requestParameters(let parametersB, let encodingB)):

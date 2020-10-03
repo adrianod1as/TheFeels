@@ -15,16 +15,16 @@ protocol UserTweetsViewModelHolding {
 
     associatedtype SceneCoordinating: UserTweetsSceneCoordinating
     var coordinator: SceneCoordinating { get }
-    var useCase: SearchUserByNameUseCaseable { get }
+    var useCase: SearchTweetsByUsernameUseCaseable { get }
     init(useCase: SearchUserByNameUseCaseable, coordinator: SceneCoordinating)
 }
 
 public class UserTweetsViewModel<SceneCoordinating: UserTweetsSceneCoordinating> {
 
     internal let coordinator: SceneCoordinating
-    internal let useCase: SearchUserByNameUseCaseable
+    internal let useCase: SearchTweetsByUsernameUseCaseable
 
-    public init(useCase: SearchUserByNameUseCaseable, coordinator: SceneCoordinating) {
+    public init(useCase: SearchTweetsByUsernameUseCaseable, coordinator: SceneCoordinating) {
         self.useCase = useCase
         self.coordinator = coordinator
     }

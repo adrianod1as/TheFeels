@@ -48,5 +48,7 @@ class NetworkingAssembly: Assembly {
     func assembleDatasources(for containter: Container) {
         containter.autoregister(AppData.UserRemoteDataSource.self,
                                 initializer: Networking.UserRemoteDataSource<CommonMoyaDispatcher>.init)
+        containter.autoregister(AppData.TweetRemoteDataSource.self,
+                                initializer: Networking.TweetRemoteDataSource<CommonMoyaDispatcher>.init)
     }
 }
