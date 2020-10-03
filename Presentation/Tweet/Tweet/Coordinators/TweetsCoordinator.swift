@@ -32,12 +32,10 @@ public class TweetsCoordinator: Coordinator {
         self.factory = factory
     }
 
-    public func start() {
-        showTweets()
-    }
+    public func start() {}
 
-    internal func showTweets() {
-        let viewController = factory.makeUserTweetsViewController()
+    public func showTweets(for user: UserViewModel) {
+        let viewController = factory.makeUserTweetsViewController(user: user.user)
         navigationController.pushViewController(viewController, animated: true)
     }
 }

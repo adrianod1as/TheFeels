@@ -17,9 +17,17 @@ public protocol UserTweetsViewModeling {
     func transform(input: Input) -> Output
 }
 
-public protocol UserTweetsViewModelingInput {}
+public protocol UserTweetsViewModelingInput {
 
-public struct UserTweetsViewModelInput: UserTweetsViewModelingInput {}
+    var viewDidLoad: Driver<Void> { get }
+    var selection: Driver<Int> { get }
+}
+
+public struct UserTweetsViewModelInput: UserTweetsViewModelingInput {
+
+    public let viewDidLoad: Driver<Void>
+    public let selection: Driver<Int>
+}
 
 public protocol UserTweetsViewModelingOutput: CommonSceneOutput where Success == [TweetViewModel] {
 

@@ -91,7 +91,6 @@ extension UsersSearchViewController {
         usersSearchView.tableView.rx
             .itemSelected
             .map({ $0.row })
-            .do(onNext: { debugPrint($0) })
             .asDriver(onErrorDriveWith: .empty())
     }
 

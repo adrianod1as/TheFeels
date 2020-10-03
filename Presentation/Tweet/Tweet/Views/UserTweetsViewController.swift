@@ -47,21 +47,81 @@ public class UserTweetsViewController: UIViewController, UDTAnimatorViewable {
 extension UserTweetsViewController {
 
     private func setupUI() {
-
+        navigationController?.asTranslucent()
+        userTweetsView.tableView.isHidden = true
     }
 
+    private func setSubViewsVisibility(isDataSourceEmpty: Bool) {
+        UIView.animate(withDuration: 0.1) {
+            self.userTweetsView.imgEmpty.isHidden = !isDataSourceEmpty
+            self.userTweetsView.tableView.isHidden = isDataSourceEmpty
+        }
+    }
 }
 
 // MARK: Binding
 extension UserTweetsViewController {
 
+    private func selectionInput() -> Driver<Int> {
+        userTweetsView.tableView.rx
+            .itemSelected
+            .map({ $0.row })
+            .asDriver(onErrorDriveWith: .empty())
+    }
+
+    private func viewDidLoadInput() -> Driver<Void> {
+        .just(())
+    }
+
+    private func viewModelInput() -> UserTweetsViewModeling.Input {
+        UserTweetsViewModelInput(viewDidLoad: viewDidLoadInput(), selection: selectionInput())
+    }
+
     private func bind() {
+        userTweetsView.tableView.rx
+            .setDelegate(self)
+            .disposed(by: bag)
+        let output = viewModel.transform(input: viewModelInput())
+        output.didSucceed
+            .do(onNext: { self.setSubViewsVisibility(isDataSourceEmpty: $0.isEmpty) })
+            .map { [TweetsSection(header: "", items: $0)] }
+            .drive(userTweetsView.tableView.rx.items(dataSource: tableDataSource))
+            .disposed(by: bag)
+        output.didNavigate
+            .drive()
+            .disposed(by: bag)
     }
 }
 
 // MARK: UserTweetsViewDelegate
 extension UserTweetsViewController: UserTweetsViewDelegate {
 
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        .leastNormalMagnitude
+    }
+
+    public func tableView(_ tableView: UITableView,
+                          heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
+    }
+
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        view.safeAreaInsets.bottom
+    }
+
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .black
+        return view
+    }
+
+    public func tableView(_ tableView: UITableView,
+                          didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? TweetCell else {
+            return
+        }
+        cell.cancelProfileImageRequest()
+    }
 }
 
 // MARK: RxTableViewable
@@ -75,6 +135,7 @@ extension UserTweetsViewController: RxTableViewable {
                                      for: indexPath) as? TweetCell else {
                 return TweetCell()
             }
+            cell.bind(viewModel: viewModel)
             return cell
         }
     }

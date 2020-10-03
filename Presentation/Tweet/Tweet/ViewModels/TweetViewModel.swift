@@ -7,11 +7,36 @@
 
 import Domain
 import RxDataSources
+import Common
 
 public struct TweetViewModel: IdentifiableType, Equatable {
 
+    public let tweet: Tweet
+
+    public var userViewModel: UserViewModel {
+        tweet.user.asViewModel
+    }
+
+    public var subTitle: String {
+        "\(userViewModel)"
+    }
+
     public var identity: String {
         String()
+    }
+}
+
+public extension Tweet {
+
+    var asViewModel: TweetViewModel {
+        TweetViewModel(tweet: self)
+    }
+}
+
+public extension Array where Element == Tweet {
+
+    var asViewModels: [TweetViewModel] {
+        map({ $0.asViewModel })
     }
 }
 

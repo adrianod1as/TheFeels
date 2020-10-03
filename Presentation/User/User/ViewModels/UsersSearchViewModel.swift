@@ -47,7 +47,7 @@ extension UsersSearchViewModel: UsersSearchViewModeling {
     internal func navigation(in input: Input, withLatestFrom users: Driver<[UserViewModel]>) -> Driver<Void> {
         input.selection
             .withLatestFrom(users) { $1[$0] }
-            .flatMapLatest { self.coordinator.rx.show(user: $0).asDriver(onErrorJustReturn: ()) }
+            .flatMapLatest { self.coordinator.rx.showTweets(for: $0).asDriver(onErrorJustReturn: ()) }
     }
 
     public func transform(input: Input) -> Output {

@@ -10,7 +10,7 @@ import RxDataSources
 
 public struct UserViewModel: IdentifiableType, Equatable {
 
-    let user: User
+    public let user: User
 
     public var identity: String {
         user.id.description
