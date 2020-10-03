@@ -35,6 +35,9 @@ class NetworkingAssembly: Assembly {
             }
             return oauth
         }
+        container.register(OAuthHandling.self) { resolver in
+            OAuthHandler(oauthSwift: resolver.safelyResolve(OAuthSwift.self))
+        }
         container.autoregister(RequestInterceptor.self, initializer: UserSessionRequestHandler.init)
         container.register(ResultHandler.self) { _ in
             TFResultHandler(coordinator: nil)
