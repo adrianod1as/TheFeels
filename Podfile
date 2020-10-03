@@ -10,6 +10,8 @@ plugin 'cocoapods-keys', {
   :keys => [
   "TwitterApiKey",
   "TwitterApiKeySecret",
+  "TwitterAcessToken",
+  "TwitterAcessTokenSecret",
   "TwitterBearerToken",
   ]}
 
@@ -21,7 +23,6 @@ end
 def sharedPods
   pod 'SwiftLint'
   pod 'Fakery', :git => 'https://github.com/vadymmarkov/Fakery', :branch => 'master'
-  pod 'SwiftDate'
   swiftyJSON
   rxSharedPods
 end
@@ -67,6 +68,7 @@ end
 def networkingPods
   oxeNetworking
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
+  pod 'OAuthSwift', '~> 2.0.0'
 end
 
 def storagePods

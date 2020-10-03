@@ -10,7 +10,7 @@ import Moya
 import Domain
 
 public enum UsersTarget {
-    case lookup(username: String)
+    case search(username: String)
 }
 
 extension UsersTarget: TwitterApiFriendly {
@@ -25,14 +25,14 @@ extension UsersTarget: TwitterApiFriendly {
 
     public var path: String {
         switch self {
-        case .lookup:
-            return "\(version)/\(api)/lookup.json"
+        case .search:
+            return "\(version)/\(api)/search.json"
         }
     }
 
     public var method: Moya.Method {
         switch self {
-        case .lookup:
+        case .search:
             return .get
         }
     }
@@ -43,8 +43,12 @@ extension UsersTarget: TwitterApiFriendly {
 
     public var task: Task {
         switch self {
-        case .lookup(let username):
-            return .requestParameters(parameters: ["screen_name": username], encoding: URLEncoding.default)
+        case .search(let username):
+            return .requestParameters(parameters: ["q": username], encoding: URLEncoding.default)
         }
+    }
+
+    public var specificHeaderTypes: [HeaderSpecifying] {
+        []
     }
 }

@@ -30,12 +30,20 @@ struct SetupConstants {
     }()
 
     static let twitterHeaders: Headers = {
-        return [L10n.Headers.Keys.contentType: L10n.Headers.Values.jsonContentType,
-                L10n.Headers.Keys.authorization: L10n.Headers.Values.bearer(TheFeelsKeys().twitterBearerToken)]
+        [L10n.Headers.Keys.contentType: L10n.Headers.Values.jsonContentType,
+         L10n.Headers.Keys.authorization: L10n.Headers.Values.bearer(TheFeelsKeys().twitterBearerToken)]
+    }()
+
+    static let authHeaders: Headers = {
+        [TwitterAuhHeaders.apiKey.rawValue: TheFeelsKeys().twitterApiKey,
+         TwitterAuhHeaders.apiSecret.rawValue: TheFeelsKeys().twitterApiKeySecret,
+         TwitterAuhHeaders.accessToken.rawValue: TheFeelsKeys().twitterAcessToken,
+         TwitterAuhHeaders.accessTokenSecret.rawValue: TheFeelsKeys().twitterAcessTokenSecret]
     }()
 
     static let specificHeaders: SpecificHeaders = {
-        return [SpecificHeaderType.twitter.key: twitterHeaders]
+        return [SpecificHeaderType.token.key: twitterHeaders,
+                SpecificHeaderType.apiKeyAndSecret.key: authHeaders]
     }()
 
     static let environment: Environment = {

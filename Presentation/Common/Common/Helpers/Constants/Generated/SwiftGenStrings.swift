@@ -24,6 +24,17 @@ public enum L10n {
     /// \b
     public static let backspace = L10n.tr("Localizable", "Symbol.backspace")
   }
+
+  public enum Twitter {
+    public enum ProfileImage {
+      public enum Size {
+        /// _bigger
+        public static let bigger = L10n.tr("Localizable", "Twitter.ProfileImage.Size.bigger")
+        /// _normal
+        public static let normal = L10n.tr("Localizable", "Twitter.ProfileImage.Size.normal")
+      }
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

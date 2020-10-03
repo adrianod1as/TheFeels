@@ -25,7 +25,9 @@ public struct UserViewModel: IdentifiableType, Equatable {
     }
 
     public var profileImageUrl: URL? {
-        URL(string: user.profileImageUrl)
+        URL(string: user.profileImageUrl
+                    .replacingOccurrences(of: L10n.Twitter.ProfileImage.Size.normal,
+                                          with: L10n.Twitter.ProfileImage.Size.bigger))
     }
 }
 

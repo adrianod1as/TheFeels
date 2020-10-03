@@ -11,6 +11,7 @@ import Networking
 import OxeNetworking
 import Alamofire
 import AppData
+import OAuthSwift
 
 class NetworkingAssembly: Assembly {
 
@@ -27,9 +28,20 @@ class NetworkingAssembly: Assembly {
 
     func assembleServices(for container: Container) {
         container.register(Environment.self) { _ in self.environment }
-        container.register(UserSessionRequestHandler.self) { _ in
-            UserSessionRequestHandler(environment: self.environment, coordinator: nil)
-        }.implements(ResultHandler.self, RequestInterceptor.self, ErrorFilter.self)
+        container.autoregister(ErrorFilter.self, initializer: TFErrorFilter.init)
+        container.register(OAuthSwift.self) { resolver in
+            guard let oauth = resolver.safelyResolve(Environment.self).oauth1Swift else {
+                preconditionFailure()
+            }
+            return oauth
+        }
+        container.register(OAuthHandling.self) { resolver in
+            OAuthHandler(oauthSwift: resolver.safelyResolve(OAuthSwift.self))
+        }
+        container.autoregister(RequestInterceptor.self, initializer: UserSessionRequestHandler.init)
+        container.register(ResultHandler.self) { _ in
+            TFResultHandler(coordinator: nil)
+        }
         container.autoregister(CommonMoyaDispatcher.self, initializer: CommonMoyaDispatcher.init).implements(Dispatcher.self)
     }
 

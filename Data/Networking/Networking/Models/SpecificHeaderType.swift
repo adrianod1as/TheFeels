@@ -6,11 +6,11 @@
 //  Copyright © 2020 dias. All rights reserved.
 //
 
-import Foundation
 import OxeNetworking
 
 public enum SpecificHeaderType: String, HeaderSpecifying {
-    case twitter
+    case apiKeyAndSecret
+    case token
 
     public var key: String {
         return rawValue

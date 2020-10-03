@@ -68,7 +68,7 @@ public class UsersSearchView: UIView {
         imgEmpty.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         imgEmpty.centerXAnchor.constraint(equalTo: centerXAnchor,
                                           constant: -UIScreen.width * 0.05).isActive = true
-        imgEmpty.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5).isActive = true
+        imgEmpty.widthAnchor.constraint(equalToConstant: UIScreen.minLenght * 0.5).isActive = true
         imgEmpty.heightAnchor.constraint(equalTo: imgEmpty.widthAnchor).isActive = true
     }
 

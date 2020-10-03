@@ -20,7 +20,7 @@ extension TwitterApiFriendly {
     }
 
     public var specificHeaderTypes: [HeaderSpecifying] {
-        return [SpecificHeaderType.twitter]
+        return [SpecificHeaderType.token]
     }
 
     public var keyPathForData: String? {
