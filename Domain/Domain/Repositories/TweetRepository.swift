@@ -10,4 +10,5 @@ import RxSwift
 public protocol TweetRepository {
 
     func searchTweets(by username: String) -> Observable<[Tweet]>
+    func analyzeTweet(text: String) -> Observable<SentimentAnalysis>
 }
