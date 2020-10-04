@@ -19,6 +19,13 @@ public extension Date {
     var asTwitterDateString: String? {
         DateFormatter.twitter.string(from: self)
     }
+
+    func with(formart: String, locale: Locale = .current) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = formart
+        dateFormatter.locale = locale
+        return dateFormatter.string(from: self)
+    }
 }
 
 public extension DateFormatter {

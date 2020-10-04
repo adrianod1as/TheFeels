@@ -41,7 +41,8 @@ public class UserCell: UITableViewCell {
     }
 
     private func setupViews() {
-        contentView.backgroundColor = .black
+        selectionStyle = .blue
+        backgroundColor = .black
         addSubviews()
         activateProfileViewConstraints()
     }

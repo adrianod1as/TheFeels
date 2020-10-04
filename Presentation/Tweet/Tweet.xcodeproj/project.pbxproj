@@ -16,7 +16,7 @@
 		E103B2D925288D9300282E9E /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E103B2D825288D9300282E9E /* Common.framework */; };
 		E103B35625288ECA00282E9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E103B34025288EC900282E9E /* Localizable.strings */; };
 		E103B35725288ECA00282E9E /* UserTweetsSceneCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34225288EC900282E9E /* UserTweetsSceneCoordinating.swift */; };
-		E103B35825288ECA00282E9E /* UsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34325288EC900282E9E /* UsersCoordinator.swift */; };
+		E103B35825288ECA00282E9E /* TweetsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34325288EC900282E9E /* TweetsCoordinator.swift */; };
 		E103B35925288ECA00282E9E /* SwiftGenStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34825288EC900282E9E /* SwiftGenStrings.swift */; };
 		E103B35A25288ECA00282E9E /* UserTweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34B25288ECA00282E9E /* UserTweetsViewModel.swift */; };
 		E103B35B25288ECA00282E9E /* UserTweetsViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B34C25288ECA00282E9E /* UserTweetsViewModeling.swift */; };
@@ -25,6 +25,13 @@
 		E103B36025288ECA00282E9E /* UserTweetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B35325288ECA00282E9E /* UserTweetsView.swift */; };
 		E103B36125288ECA00282E9E /* UsersManufactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B35525288ECA00282E9E /* UsersManufactoring.swift */; };
 		E103B3772528936E00282E9E /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B3762528936E00282E9E /* TweetViewModel.swift */; };
+		E18B7B01252A083100C758CB /* TweetsManufacturingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B00252A083100C758CB /* TweetsManufacturingSpy.swift */; };
+		E18B7B08252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B07252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift */; };
+		E18B7B13252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B12252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift */; };
+		E18B7B70252A0B2500C758CB /* UserTweetsSceneCoordinatingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B6F252A0B2500C758CB /* UserTweetsSceneCoordinatingSpy.swift */; };
+		E18B7B78252A0BB300C758CB /* UserTweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B77252A0BB300C758CB /* UserTweetsViewModel.swift */; };
+		E18B7B86252A0D6800C758CB /* TweetCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B85252A0D6800C758CB /* TweetCoordinatorTests.swift */; };
+		E18B7B8C252A0E4A00C758CB /* TweetViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B8B252A0E4A00C758CB /* TweetViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +61,7 @@
 		E103B2D825288D9300282E9E /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E103B34025288EC900282E9E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E103B34225288EC900282E9E /* UserTweetsSceneCoordinating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTweetsSceneCoordinating.swift; sourceTree = "<group>"; };
-		E103B34325288EC900282E9E /* UsersCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersCoordinator.swift; sourceTree = "<group>"; };
+		E103B34325288EC900282E9E /* TweetsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsCoordinator.swift; sourceTree = "<group>"; };
 		E103B34825288EC900282E9E /* SwiftGenStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGenStrings.swift; sourceTree = "<group>"; };
 		E103B34B25288ECA00282E9E /* UserTweetsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTweetsViewModel.swift; sourceTree = "<group>"; };
 		E103B34C25288ECA00282E9E /* UserTweetsViewModeling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTweetsViewModeling.swift; sourceTree = "<group>"; };
@@ -63,6 +70,13 @@
 		E103B35325288ECA00282E9E /* UserTweetsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTweetsView.swift; sourceTree = "<group>"; };
 		E103B35525288ECA00282E9E /* UsersManufactoring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersManufactoring.swift; sourceTree = "<group>"; };
 		E103B3762528936E00282E9E /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		E18B7B00252A083100C758CB /* TweetsManufacturingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsManufacturingSpy.swift; sourceTree = "<group>"; };
+		E18B7B07252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTweetsByUsernameUseCaseSpy.swift; sourceTree = "<group>"; };
+		E18B7B12252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsDepartingCoordinatingStub.swift; sourceTree = "<group>"; };
+		E18B7B6F252A0B2500C758CB /* UserTweetsSceneCoordinatingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTweetsSceneCoordinatingSpy.swift; sourceTree = "<group>"; };
+		E18B7B77252A0BB300C758CB /* UserTweetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTweetsViewModel.swift; sourceTree = "<group>"; };
+		E18B7B85252A0D6800C758CB /* TweetCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCoordinatorTests.swift; sourceTree = "<group>"; };
+		E18B7B8B252A0E4A00C758CB /* TweetViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +163,10 @@
 		E103B27725288D5100282E9E /* TweetTests */ = {
 			isa = PBXGroup;
 			children = (
-				E103B27825288D5100282E9E /* TweetTests.swift */,
+				E18B7B0F252A08F700C758CB /* Coordinators */,
+				E18B7B06252A088D00C758CB /* UseCases */,
+				E18B7AFF252A081600C758CB /* Factories */,
+				E18B7B73252A0B3B00C758CB /* TestCases */,
 				E103B27A25288D5100282E9E /* Info.plist */,
 			);
 			path = TweetTests;
@@ -167,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E103B34225288EC900282E9E /* UserTweetsSceneCoordinating.swift */,
-				E103B34325288EC900282E9E /* UsersCoordinator.swift */,
+				E103B34325288EC900282E9E /* TweetsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -246,6 +263,58 @@
 				E103B35525288ECA00282E9E /* UsersManufactoring.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		E18B7AFF252A081600C758CB /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				E18B7B00252A083100C758CB /* TweetsManufacturingSpy.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		E18B7B06252A088D00C758CB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E18B7B07252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		E18B7B0F252A08F700C758CB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E18B7B12252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift */,
+				E18B7B6F252A0B2500C758CB /* UserTweetsSceneCoordinatingSpy.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		E18B7B73252A0B3B00C758CB /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				E18B7B80252A0D5300C758CB /* Coordinators */,
+				E18B7B76252A0BA600C758CB /* ViewModels */,
+				E103B27825288D5100282E9E /* TweetTests.swift */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
+		E18B7B76252A0BA600C758CB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E18B7B77252A0BB300C758CB /* UserTweetsViewModel.swift */,
+				E18B7B8B252A0E4A00C758CB /* TweetViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E18B7B80252A0D5300C758CB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E18B7B85252A0D6800C758CB /* TweetCoordinatorTests.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +497,7 @@
 				E103B35E25288ECA00282E9E /* UserTweetsViewController.swift in Sources */,
 				E103B35A25288ECA00282E9E /* UserTweetsViewModel.swift in Sources */,
 				E103B36025288ECA00282E9E /* UserTweetsView.swift in Sources */,
-				E103B35825288ECA00282E9E /* UsersCoordinator.swift in Sources */,
+				E103B35825288ECA00282E9E /* TweetsCoordinator.swift in Sources */,
 				E103B35B25288ECA00282E9E /* UserTweetsViewModeling.swift in Sources */,
 				E103B3772528936E00282E9E /* TweetViewModel.swift in Sources */,
 				E103B36125288ECA00282E9E /* UsersManufactoring.swift in Sources */,
@@ -442,6 +511,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E103B27925288D5100282E9E /* TweetTests.swift in Sources */,
+				E18B7B86252A0D6800C758CB /* TweetCoordinatorTests.swift in Sources */,
+				E18B7B78252A0BB300C758CB /* UserTweetsViewModel.swift in Sources */,
+				E18B7B01252A083100C758CB /* TweetsManufacturingSpy.swift in Sources */,
+				E18B7B8C252A0E4A00C758CB /* TweetViewModelTests.swift in Sources */,
+				E18B7B13252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift in Sources */,
+				E18B7B70252A0B2500C758CB /* UserTweetsSceneCoordinatingSpy.swift in Sources */,
+				E18B7B08252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,6 @@ import XCTest
 
 class UserCoordiantorTests: XCTestCase {
 
-    var useCaseSpy: SearchUserByNameUseCaseableSpy!
     var departingCoordinatorSpy: UsersDepartingCoordinatingSpy!
     var sut: UsersCoordinator!
     var factorySpy: UsersManufacturingSpy!

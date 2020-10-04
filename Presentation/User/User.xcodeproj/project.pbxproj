@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3913AFF2518C630A37AE50F2 /* Pods_User_UserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0D6DF37294D3E50B898115 /* Pods_User_UserTests.framework */; };
-		E103B3812528946800282E9E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B3802528946800282E9E /* UserViewModel.swift */; };
 		E148F5EC25237B720066210C /* UsersSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F5EB25237B720066210C /* UsersSearchViewModel.swift */; };
 		E148F63625239B000066210C /* UsersSearchViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F63525239B000066210C /* UsersSearchViewModeling.swift */; };
 		E148F68D2523B30C0066210C /* UsersSearchSceneCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F68C2523B30C0066210C /* UsersSearchSceneCoordinating.swift */; };
@@ -50,7 +49,6 @@
 		786C2F0B3BAF767E1C9A9846 /* Pods_User.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_User.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EEF1A74618999AF004ADFC /* Pods-User.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-User.release.xcconfig"; path = "Target Support Files/Pods-User/Pods-User.release.xcconfig"; sourceTree = "<group>"; };
 		DDC7BA864840FDB2214673CB /* Pods-User-UserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-User-UserTests.debug.xcconfig"; path = "Target Support Files/Pods-User-UserTests/Pods-User-UserTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E103B3802528946800282E9E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		E148F5EB25237B720066210C /* UsersSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSearchViewModel.swift; sourceTree = "<group>"; };
 		E148F63525239B000066210C /* UsersSearchViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSearchViewModeling.swift; sourceTree = "<group>"; };
 		E148F68C2523B30C0066210C /* UsersSearchSceneCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSearchSceneCoordinating.swift; sourceTree = "<group>"; };
@@ -128,7 +126,7 @@
 			children = (
 				E14F82E72521527D003075F9 /* UserTests.swift */,
 				E148F718252414670066210C /* ViewModels */,
-				E148F719252414790066210C /* UserCoordiantorTests.swift */,
+				E18B7B7D252A0D4700C758CB /* Coordinators */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -218,7 +216,6 @@
 			children = (
 				E148F5EB25237B720066210C /* UsersSearchViewModel.swift */,
 				E148F63525239B000066210C /* UsersSearchViewModeling.swift */,
-				E103B3802528946800282E9E /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -304,6 +301,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E18B7B7D252A0D4700C758CB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E148F719252414790066210C /* UserCoordiantorTests.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,7 +490,6 @@
 				E14F83512521532D003075F9 /* SwiftGenStrings.swift in Sources */,
 				E148F6E12523FA470066210C /* UsersCoordinator.swift in Sources */,
 				E148F63625239B000066210C /* UsersSearchViewModeling.swift in Sources */,
-				E103B3812528946800282E9E /* UserViewModel.swift in Sources */,
 				E148F5EC25237B720066210C /* UsersSearchViewModel.swift in Sources */,
 				E148F6ED2523FAD10066210C /* UsersSearchViewController.swift in Sources */,
 				E190F91E2525126800607C0F /* UserCell.swift in Sources */,

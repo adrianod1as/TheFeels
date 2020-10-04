@@ -21,9 +21,8 @@ public class UsersSearchViewController: UIViewController, UDTAnimatorViewable {
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.barTintColor = .clear
-        searchController.searchBar.backgroundImage = UIImage()
-        searchController.searchBar.isTranslucent = true
+        searchController.definesPresentationContext = true
+        searchController.setTFStyle()
         return searchController
     }()
 
@@ -55,14 +54,17 @@ public class UsersSearchViewController: UIViewController, UDTAnimatorViewable {
 extension UsersSearchViewController {
 
     private func setupUI() {
+        title = L10n.UsersSearchViewController.title
         usersSearchView.tableView.isHidden = true
         navigationController?.asTranslucent()
         navigationItem.searchController = searchController
     }
 
     private func setSubViewsVisibility(isDataSourceEmpty: Bool) {
-        usersSearchView.imgEmpty.isHidden = !isDataSourceEmpty
-        usersSearchView.tableView.isHidden = isDataSourceEmpty
+        UIView.animate(withDuration: 0.1) {
+            self.usersSearchView.imgEmpty.isHidden = !isDataSourceEmpty
+            self.usersSearchView.tableView.isHidden = isDataSourceEmpty
+        }
     }
 
 }
@@ -77,13 +79,20 @@ extension UsersSearchViewController {
         let output = viewModel.transform(input: viewModelInput())
         output.didSucceed
             .do(onNext: { self.setSubViewsVisibility(isDataSourceEmpty: $0.isEmpty) })
-            .map { [UsersSection(header: "", items: $0)] }
+            .map { [UsersSection(header: String(), items: $0)] }
             .drive(usersSearchView.tableView.rx.items(dataSource: tableDataSource))
+            .disposed(by: bag)
+        output.didNavigate
+            .drive()
             .disposed(by: bag)
     }
 
     private func selectionInput() -> Driver<Int> {
-        .empty()
+        usersSearchView.tableView.rx
+            .itemSelected
+            .do(onNext: { self.usersSearchView.tableView.deselectRow(at: $0, animated: true) })
+            .map({ $0.row })
+            .asDriver(onErrorDriveWith: .empty())
     }
 
     private func nameInput() -> Driver<String> {

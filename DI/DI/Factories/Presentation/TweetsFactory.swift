@@ -8,6 +8,7 @@
 import Tweet
 import Swinject
 import Common
+import Domain
 
 class TweetsFactory {
 
@@ -20,7 +21,9 @@ class TweetsFactory {
 
 extension TweetsFactory: TweetsManufacturing {
 
-    func makeUserTweetsViewController() -> UserTweetsViewController {
-        UserTweetsViewController(viewModel: resolver.safelyResolve(UserTweetsViewModeling.self))
+    func makeUserTweetsViewController(user: User?) -> UserTweetsViewController {
+        let viewModel = resolver.safelyResolve(UserTweetsViewModeling.self)
+        (viewModel as? UserTweetsViewModel<TweetsCoordinator>)?.user = user
+        return UserTweetsViewController(viewModel: viewModel)
     }
 }

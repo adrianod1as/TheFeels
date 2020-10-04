@@ -11,6 +11,13 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
 
+  public enum Brazil {
+    public enum Date {
+      /// dd/MM/yyyy
+      public static let format = L10n.tr("Localizable", "Brazil.Date.format")
+    }
+  }
+
   public enum Error {
     public enum Message {
       /// Campo obrigatório.

@@ -1,6 +1,6 @@
 //
 //  UserViewModel.swift
-//  User
+//  Common
 //
 //  Created by Adriano Dias on 03/10/20.
 //
@@ -10,7 +10,7 @@ import RxDataSources
 
 public struct UserViewModel: IdentifiableType, Equatable {
 
-    let user: User
+    public let user: User
 
     public var identity: String {
         user.id.description
