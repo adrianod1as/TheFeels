@@ -15,6 +15,7 @@ class TweetsManufacturingSpy: TweetsManufacturing {
     func makeUserTweetsViewController(user: User?) -> UserTweetsViewController {
         makeUserTweetsViewControllerCalled.toggle()
         let viewModel = UserTweetsViewModel(useCase: SearchTweetsByUsernameUseCaseSpy(),
+                                            analysisCase: AnalyzeSentimentForTextUseCaseableSpy(),
                                             coordinator: UserTweetsSceneCoordinatingSpy())
         viewModel.user = user
         return UserTweetsViewController(viewModel: viewModel)

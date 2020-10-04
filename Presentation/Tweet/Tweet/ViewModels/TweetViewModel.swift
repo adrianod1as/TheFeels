@@ -9,9 +9,14 @@ import Domain
 import RxDataSources
 import Common
 
-public struct TweetViewModel: IdentifiableType, Equatable {
+public struct TweetViewModel: IdentifiableType {
 
     public let tweet: Tweet
+    public var analysis: SentimentAnalysis?
+
+    public init(tweet: Tweet) {
+        self.tweet = tweet
+    }
 
     public var userViewModel: UserViewModel {
         tweet.user.asViewModel
@@ -29,8 +34,34 @@ public struct TweetViewModel: IdentifiableType, Equatable {
         tweet.text
     }
 
+    public var photoUrl: URL? {
+        analysis == nil ? userViewModel.profileImageUrl : nil
+    }
+
+    public var avatar: UIImage? {
+        guard let analysis = analysis else {
+            return nil
+        }
+        switch analysis.type {
+        case .positive:
+            return Asset.positive.image
+        case .neutral:
+            return Asset.neutral.image
+        case .negative:
+            return Asset.negative.image
+        }
+    }
+
     public var identity: String {
         tweet.id.description
+    }
+}
+
+extension TweetViewModel: Equatable {
+
+    static public func == (lhs: TweetViewModel, rhs: TweetViewModel) -> Bool {
+        return lhs.tweet == rhs.tweet
+                && lhs.analysis?.type.rawValue == rhs.analysis?.type.rawValue
     }
 }
 

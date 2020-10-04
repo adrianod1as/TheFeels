@@ -17,18 +17,30 @@ import RxSwiftUtilities
 
 class UserTweetsViewModelTests: XCTestCase {
 
-    var useCaseSpy: SearchTweetsByUsernameUseCaseSpy!
+    var bag: DisposeBag!
+    var scheduler: TestScheduler!
+    var tweetsUseCaseSpy: SearchTweetsByUsernameUseCaseSpy!
+    var analysisUseCaseSpy: AnalyzeSentimentForTextUseCaseableSpy!
     var coordinatorSpy: UserTweetsSceneCoordinatingSpy!
     var sut: UserTweetsViewModel<UserTweetsSceneCoordinatingSpy>!
+    var viewDidLoad: PublishSubject<Void>!
+    var selection: PublishSubject<Int>!
     var input: UserTweetsViewModeling.Input!
 
     override func setUp() {
         super.setUp()
 
-        useCaseSpy = SearchTweetsByUsernameUseCaseSpy()
+        bag = DisposeBag()
+        scheduler = TestScheduler(initialClock: 0)
+        tweetsUseCaseSpy = SearchTweetsByUsernameUseCaseSpy()
         coordinatorSpy = UserTweetsSceneCoordinatingSpy()
-        sut = UserTweetsViewModel(useCase: useCaseSpy, coordinator: coordinatorSpy)
-        input = UserTweetsViewModelInput(viewDidLoad: .just(()), selection: .just(0))
+        analysisUseCaseSpy = AnalyzeSentimentForTextUseCaseableSpy()
+        viewDidLoad = PublishSubject<Void>()
+        selection = PublishSubject<Int>()
+        sut = UserTweetsViewModel(useCase: tweetsUseCaseSpy,
+                                  analysisCase: analysisUseCaseSpy, coordinator: coordinatorSpy)
+        input = UserTweetsViewModelInput(viewDidLoad: viewDidLoad.startWith(()).asDriver(onErrorJustReturn: ()),
+                                         selection: selection.asDriver(onErrorJustReturn: 0))
     }
 
     override func tearDown() {
@@ -36,13 +48,24 @@ class UserTweetsViewModelTests: XCTestCase {
     }
 
     func testTweets() {
-        XCTAssertEqual(try getTweets().toBlocking(timeout: 0.1).first(), useCaseSpy.tweets.asViewModels)
-        XCTAssert(useCaseSpy.executionCalled)
+        XCTAssertEqual(try sut.tweets(in: input, ActivityIndicator()).toBlocking(timeout: 0.1).first(),
+                       tweetsUseCaseSpy.tweets.asViewModels)
     }
 
-    private func getTweets() -> Driver<[TweetViewModel]> {
+    func testEvaluation() {
+        let nonEvaluation = scheduler.createObserver([TweetViewModel].self)
+        let evaluation = scheduler.createObserver([TweetViewModel].self)
         let indicator = ActivityIndicator()
-        return sut.tweets(in: input, indicator)
+        sut.tweets(in: input, indicator).drive(nonEvaluation).disposed(by: bag)
+        sut.evaluation(in: input, indicator).drive(evaluation).disposed(by: bag)
+        scheduler.createColdObservable([.next(0, ())])
+            .bind(to: viewDidLoad)
+            .disposed(by: bag)
+        scheduler.createColdObservable([.next(10, 0)])
+            .bind(to: selection)
+            .disposed(by: bag)
+        scheduler.start()
+        XCTAssertFalse(evaluation.events.isEmpty)
+        XCTAssertNotNil(evaluation.events.first?.value.element?.first?.analysis)
     }
 }
-

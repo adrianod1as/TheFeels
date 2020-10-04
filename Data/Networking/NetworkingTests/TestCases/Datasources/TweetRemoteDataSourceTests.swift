@@ -14,14 +14,12 @@ import RxBlocking
 class TweetRemoteDataSourceTests: XCTestCase {
 
     private var sut: TweetRemoteDataSource<DispacherFake>!
-    private let stub = Tweet.getFakedArray(amount: 4)
+    private let tweetStub = Tweet.getFakedArray(amount: 4)
+    private let analysisStub = SentimentAnalysis.getFakedItem()
     private var dispatcherFake: DispacherFake!
 
     override func setUp() {
         super.setUp()
-
-        dispatcherFake = DispacherFake(model: stub)
-        sut = TweetRemoteDataSource(dispatcher: dispatcherFake)
     }
 
     override func tearDown() {
@@ -29,7 +27,14 @@ class TweetRemoteDataSourceTests: XCTestCase {
     }
 
     func testSearchTweet() {
-        XCTAssertEqual(try sut.searchTweets(by: "SwiftLang").toBlocking(timeout: 0.1).first(), stub)
+        dispatcherFake = DispacherFake(model: tweetStub)
+        sut = TweetRemoteDataSource(dispatcher: dispatcherFake)
+        XCTAssertEqual(try sut.searchTweets(by: "SwiftLang").toBlocking(timeout: 0.1).first(), tweetStub)
     }
 
+    func testAnalyzeText() {
+        dispatcherFake = DispacherFake(data: ["result": analysisStub].data)
+        sut = TweetRemoteDataSource(dispatcher: dispatcherFake)
+        XCTAssertEqual(try sut.analyzeTweet(text: "Some random thing").toBlocking(timeout: 0.1).first(), analysisStub)
+    }
 }

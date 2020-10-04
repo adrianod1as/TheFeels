@@ -9,8 +9,9 @@
 import OxeNetworking
 
 public enum SpecificHeaderType: String, HeaderSpecifying {
-    case apiKeyAndSecret
-    case token
+    case twiiterKeyAndSecret
+    case twiiterBearerToken
+    case sentimKey
 
     public var key: String {
         return rawValue
