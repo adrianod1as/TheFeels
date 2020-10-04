@@ -79,7 +79,7 @@ extension UsersSearchViewController {
         let output = viewModel.transform(input: viewModelInput())
         output.didSucceed
             .do(onNext: { self.setSubViewsVisibility(isDataSourceEmpty: $0.isEmpty) })
-            .map { [UsersSection(header: "", items: $0)] }
+            .map { [UsersSection(header: String(), items: $0)] }
             .drive(usersSearchView.tableView.rx.items(dataSource: tableDataSource))
             .disposed(by: bag)
         output.didNavigate
@@ -90,6 +90,7 @@ extension UsersSearchViewController {
     private func selectionInput() -> Driver<Int> {
         usersSearchView.tableView.rx
             .itemSelected
+            .do(onNext: { self.usersSearchView.tableView.deselectRow(at: $0, animated: true) })
             .map({ $0.row })
             .asDriver(onErrorDriveWith: .empty())
     }

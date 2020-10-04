@@ -17,12 +17,20 @@ public struct TweetViewModel: IdentifiableType, Equatable {
         tweet.user.asViewModel
     }
 
+    public var date: String {
+        tweet.createdAt.asTwitterDate?.with(formart: Domain.L10n.Brazil.Date.format) ?? String()
+    }
+
     public var subTitle: String {
-        "\(userViewModel)"
+        "\(userViewModel.username) - \(date)"
+    }
+
+    public var text: String {
+        tweet.text
     }
 
     public var identity: String {
-        String()
+        tweet.id.description
     }
 }
 

@@ -47,6 +47,7 @@ public class UserTweetsViewController: UIViewController, UDTAnimatorViewable {
 extension UserTweetsViewController {
 
     private func setupUI() {
+        title = L10n.UserTweetsViewController.title
         navigationController?.asTranslucent()
         userTweetsView.tableView.isHidden = true
     }
@@ -65,6 +66,7 @@ extension UserTweetsViewController {
     private func selectionInput() -> Driver<Int> {
         userTweetsView.tableView.rx
             .itemSelected
+            .do(onNext: { self.userTweetsView.tableView.deselectRow(at: $0, animated: true) })
             .map({ $0.row })
             .asDriver(onErrorDriveWith: .empty())
     }
@@ -84,7 +86,7 @@ extension UserTweetsViewController {
         let output = viewModel.transform(input: viewModelInput())
         output.didSucceed
             .do(onNext: { self.setSubViewsVisibility(isDataSourceEmpty: $0.isEmpty) })
-            .map { [TweetsSection(header: "", items: $0)] }
+            .map { [TweetsSection(header: String(), items: $0)] }
             .drive(userTweetsView.tableView.rx.items(dataSource: tableDataSource))
             .disposed(by: bag)
         output.didNavigate
@@ -100,9 +102,13 @@ extension UserTweetsViewController: UserTweetsViewDelegate {
         .leastNormalMagnitude
     }
 
+    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+
     public func tableView(_ tableView: UITableView,
                           heightForRowAt indexPath: IndexPath) -> CGFloat {
-        80
+        UITableView.automaticDimension
     }
 
     public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
