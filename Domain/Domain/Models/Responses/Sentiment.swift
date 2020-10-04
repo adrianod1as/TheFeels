@@ -15,7 +15,8 @@ public enum Sentiment: String, CaseIterable {
             self = .positive
         } else if polarity < 0 {
             self = .negative
+        } else {
+            self = .neutral
         }
-        self = .neutral
     }
 }

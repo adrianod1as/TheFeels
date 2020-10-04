@@ -72,7 +72,8 @@ public class TweetCell: UITableViewCell {
     func bind(viewModel: TweetViewModel) {
         profileView.lblUsername.text = viewModel.subTitle
         profileView.lblTitle.text = viewModel.userViewModel.name
-        profileView.setProfileImage(url: viewModel.userViewModel.profileImageUrl)
+        profileView.imgAvatar.image = viewModel.avatar
+        profileView.setProfileImage(url: viewModel.photoUrl)
         lblMessage.text = viewModel.text
     }
 

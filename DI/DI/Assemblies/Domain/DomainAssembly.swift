@@ -16,5 +16,7 @@ class DomainAssembly: Assembly {
                                initializer: SearchUserByNameUseCase.init)
         container.autoregister(SearchTweetsByUsernameUseCaseable.self,
                                initializer: SearchTweetsByUsernameUseCase.init)
+        container.autoregister(AnalyzeSentimentForTextUseCaseable.self,
+                               initializer: AnalyzeSentimentForTextUseCase.init)
     }
 }
