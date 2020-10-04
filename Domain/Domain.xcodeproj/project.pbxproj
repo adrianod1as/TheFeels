@@ -24,6 +24,16 @@
 		E1693DBE2520D538009D7F41 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1693DB42520D538009D7F41 /* Domain.framework */; };
 		E1693DC32520D538009D7F41 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693DC22520D538009D7F41 /* DomainTests.swift */; };
 		E1693DC52520D538009D7F41 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = E1693DB72520D538009D7F41 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1D12DA12528B4F90054C40A /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DA02528B4F90054C40A /* Tweet.swift */; };
+		E1D12DA52528B66F0054C40A /* TweetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DA42528B66F0054C40A /* TweetRepository.swift */; };
+		E1D12DA92528B6AC0054C40A /* SearchTweetsByUsernameUseCaseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DA82528B6AC0054C40A /* SearchTweetsByUsernameUseCaseable.swift */; };
+		E1D12DAD2528B6C80054C40A /* SearchTweetsByUsernameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DAC2528B6C80054C40A /* SearchTweetsByUsernameUseCase.swift */; };
+		E1D12DB12528B75B0054C40A /* TweetRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DB02528B75B0054C40A /* TweetRepositorySpy.swift */; };
+		E1D12DB52528B7A80054C40A /* Tweet+Fakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DB42528B7A80054C40A /* Tweet+Fakeable.swift */; };
+		E1D12DB92528B91E0054C40A /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DB82528B91E0054C40A /* Date+Ext.swift */; };
+		E1D12DBD2528BBB60054C40A /* SearchTweetsByUsernameUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DBC2528BBB60054C40A /* SearchTweetsByUsernameUseCaseTests.swift */; };
+		E1D12DC12528BCBE0054C40A /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12DC02528BCBE0054C40A /* DateExtensionsTests.swift */; };
+		E1D12E1C2528E75D0054C40A /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D12E1B2528E75D0054C40A /* String+Ext.swift */; };
 		E1E272162520E76B001903B0 /* SwiftGenStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E271E92520E76B001903B0 /* SwiftGenStrings.swift */; };
 		E1E2721C2520E76B001903B0 /* Fakery+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E271F12520E76B001903B0 /* Fakery+Extensions.swift */; };
 		E1E2721D2520E76B001903B0 /* Array+Fakery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E271F22520E76B001903B0 /* Array+Fakery.swift */; };
@@ -82,6 +92,16 @@
 		E1693DBD2520D538009D7F41 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1693DC22520D538009D7F41 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		E1693DC42520D538009D7F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D12DA02528B4F90054C40A /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		E1D12DA42528B66F0054C40A /* TweetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRepository.swift; sourceTree = "<group>"; };
+		E1D12DA82528B6AC0054C40A /* SearchTweetsByUsernameUseCaseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTweetsByUsernameUseCaseable.swift; sourceTree = "<group>"; };
+		E1D12DAC2528B6C80054C40A /* SearchTweetsByUsernameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTweetsByUsernameUseCase.swift; sourceTree = "<group>"; };
+		E1D12DB02528B75B0054C40A /* TweetRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRepositorySpy.swift; sourceTree = "<group>"; };
+		E1D12DB42528B7A80054C40A /* Tweet+Fakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+Fakeable.swift"; sourceTree = "<group>"; };
+		E1D12DB82528B91E0054C40A /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		E1D12DBC2528BBB60054C40A /* SearchTweetsByUsernameUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTweetsByUsernameUseCaseTests.swift; sourceTree = "<group>"; };
+		E1D12DC02528BCBE0054C40A /* DateExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
+		E1D12E1B2528E75D0054C40A /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		E1E271E92520E76B001903B0 /* SwiftGenStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGenStrings.swift; sourceTree = "<group>"; };
 		E1E271F12520E76B001903B0 /* Fakery+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fakery+Extensions.swift"; sourceTree = "<group>"; };
 		E1E271F22520E76B001903B0 /* Array+Fakery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Fakery.swift"; sourceTree = "<group>"; };
@@ -188,6 +208,8 @@
 			children = (
 				E1622CA62522453D002204A7 /* SearchUserByNameUseCaseable.swift */,
 				E1622CAA252245A5002204A7 /* SearchUserByNameUseCase.swift */,
+				E1D12DA82528B6AC0054C40A /* SearchTweetsByUsernameUseCaseable.swift */,
+				E1D12DAC2528B6C80054C40A /* SearchTweetsByUsernameUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -236,6 +258,8 @@
 				E1E272582520EA3E001903B0 /* Encodable+Ext.swift */,
 				E1E2725C2520EA5F001903B0 /* SwiftyJSON+Ext.swift */,
 				E1E272602520EA79001903B0 /* Data+Ext.swift */,
+				E1D12DB82528B91E0054C40A /* Date+Ext.swift */,
+				E1D12E1B2528E75D0054C40A /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				E1622C5525223EE2002204A7 /* User.swift */,
+				E1D12DA02528B4F90054C40A /* Tweet.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -272,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				E1622CB225225D2F002204A7 /* User+Fakeable.swift */,
+				E1D12DB42528B7A80054C40A /* Tweet+Fakeable.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -305,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				E1622C1D25223B0D002204A7 /* UserRepository.swift */,
+				E1D12DA42528B66F0054C40A /* TweetRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -373,6 +400,7 @@
 				E1622D4E2522684A002204A7 /* EncodableExtensionsTests.swift */,
 				E1622D52252268FB002204A7 /* NumberExtensionsTests.swift */,
 				E1622D562522696C002204A7 /* SwiftyJSONExtensionsTests.swift */,
+				E1D12DC02528BCBE0054C40A /* DateExtensionsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				E1622CB62522627A002204A7 /* SearchUserByNameUseCaseTests.swift */,
+				E1D12DBC2528BBB60054C40A /* SearchTweetsByUsernameUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -389,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				E1622CAE25225CC4002204A7 /* UserRepositorySpy.swift */,
+				E1D12DB02528B75B0054C40A /* TweetRepositorySpy.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -578,27 +608,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D12DB92528B91E0054C40A /* Date+Ext.swift in Sources */,
 				E1E272B32520EEF9001903B0 /* InteractionError.swift in Sources */,
 				E1E273F125210A4E001903B0 /* SignOutSceneCoordinating.swift in Sources */,
 				E1622CB325225D2F002204A7 /* User+Fakeable.swift in Sources */,
 				E1E272352520E76B001903B0 /* Validatable.swift in Sources */,
+				E1D12DA92528B6AC0054C40A /* SearchTweetsByUsernameUseCaseable.swift in Sources */,
 				E1E272162520E76B001903B0 /* SwiftGenStrings.swift in Sources */,
 				E1E272AF2520EEC9001903B0 /* Validation+Collection.swift in Sources */,
+				E1D12DA52528B66F0054C40A /* TweetRepository.swift in Sources */,
 				E1E2721D2520E76B001903B0 /* Array+Fakery.swift in Sources */,
 				E1622C1E25223B0D002204A7 /* UserRepository.swift in Sources */,
 				E1E272592520EA3E001903B0 /* Encodable+Ext.swift in Sources */,
 				E1E272372520E76B001903B0 /* Enforcer.swift in Sources */,
 				E1E2724B2520E897001903B0 /* Result+Ext.swift in Sources */,
 				E1622CA72522453D002204A7 /* SearchUserByNameUseCaseable.swift in Sources */,
+				E1D12DB52528B7A80054C40A /* Tweet+Fakeable.swift in Sources */,
 				E1E2721C2520E76B001903B0 /* Fakery+Extensions.swift in Sources */,
 				E1E2725D2520EA5F001903B0 /* SwiftyJSON+Ext.swift in Sources */,
 				E1E272552520EA0C001903B0 /* Numbers+Ext.swift in Sources */,
 				E1622CAB252245A5002204A7 /* SearchUserByNameUseCase.swift in Sources */,
 				E1E272612520EA79001903B0 /* Data+Ext.swift in Sources */,
 				E1622C5625223EE2002204A7 /* User.swift in Sources */,
+				E1D12E1C2528E75D0054C40A /* String+Ext.swift in Sources */,
 				E1E2722F2520E76B001903B0 /* DomainConvertibleType.swift in Sources */,
 				E1E2722E2520E76B001903B0 /* Fakeable.swift in Sources */,
 				E1E272342520E76B001903B0 /* Validation.swift in Sources */,
+				E1D12DAD2528B6C80054C40A /* SearchTweetsByUsernameUseCase.swift in Sources */,
+				E1D12DA12528B4F90054C40A /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,8 +644,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E272872520EDF0001903B0 /* ModelStub.swift in Sources */,
+				E1D12DB12528B75B0054C40A /* TweetRepositorySpy.swift in Sources */,
+				E1D12DBD2528BBB60054C40A /* SearchTweetsByUsernameUseCaseTests.swift in Sources */,
 				E1E272862520EDF0001903B0 /* ErrorStub.swift in Sources */,
 				E1E272882520EDF0001903B0 /* ValidationTests.swift in Sources */,
+				E1D12DC12528BCBE0054C40A /* DateExtensionsTests.swift in Sources */,
 				E1622D4F2522684A002204A7 /* EncodableExtensionsTests.swift in Sources */,
 				E1622D472522674B002204A7 /* InteractionErrorTests.swift in Sources */,
 				E1622D572522696C002204A7 /* SwiftyJSONExtensionsTests.swift in Sources */,

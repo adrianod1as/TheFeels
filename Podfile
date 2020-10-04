@@ -40,7 +40,6 @@ end
 def presentationPods
   pod 'SwiftGen', '~> 6.0'
   pod 'SwiftMessages'
-  pod 'SwiftRichString'
   pod 'NVActivityIndicatorView/Extended'
   pod 'Kingfisher', '~> 5.0'
   rxPresentationPods
@@ -131,6 +130,16 @@ target 'User' do
   presentationPods
   diPods
   target 'UserTests' do
+    rxTestingPods
+  end
+end
+
+target 'Tweet' do
+  project 'Presentation/Tweet/Tweet'
+  sharedPods
+  presentationPods
+  diPods
+  target 'TweetTests' do
     rxTestingPods
   end
 end

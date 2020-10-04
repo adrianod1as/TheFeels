@@ -10,10 +10,12 @@ import RxSwift
 
 class SearchUserByNameUseCaseableSpy: SearchUserByNameUseCaseable {
 
+    let users = User.getFakedArray(amount: 4)
+
     var executionCalled = false
 
     func execute(_ name: String) -> Observable<[User]> {
         executionCalled.toggle()
-        return .just(User.getFakedArray(amount: 4))
+        return .just(users)
     }
 }

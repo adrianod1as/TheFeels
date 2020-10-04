@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		04795FE650BF5340D8EC4ECB /* Pods_DI_DITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20191BC0B1E90D844CF7DAA6 /* Pods_DI_DITests.framework */; };
 		ABD27327173C3B1F4EA98B42 /* Pods_DI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A86FF520DCAFC8592CEA5B2 /* Pods_DI.framework */; };
+		E103B2E425288DAB00282E9E /* Tweet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E103B2E325288DAA00282E9E /* Tweet.framework */; };
+		E103B38D2528971700282E9E /* TweetFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B38C2528971700282E9E /* TweetFlowAssembly.swift */; };
+		E103B3912528974200282E9E /* TweetsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B3902528974200282E9E /* TweetsFactory.swift */; };
 		E148F6FD2523FFF80066210C /* UserFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F6FC2523FFF80066210C /* UserFlowAssembly.swift */; };
-		E148F701252400AC0066210C /* UserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F700252400AC0066210C /* UserFactory.swift */; };
+		E148F701252400AC0066210C /* UsersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148F700252400AC0066210C /* UsersFactory.swift */; };
 		E14F80F12521270B003075F9 /* DI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F80E72521270A003075F9 /* DI.framework */; };
 		E14F80F62521270B003075F9 /* DITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F80F52521270B003075F9 /* DITests.swift */; };
 		E14F80F82521270B003075F9 /* DI.h in Headers */ = {isa = PBXBuildFile; fileRef = E14F80EA2521270A003075F9 /* DI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,8 +54,11 @@
 		2103E0EF3D8229CCD0FEC487 /* Pods-DI-DITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DI-DITests.debug.xcconfig"; path = "Target Support Files/Pods-DI-DITests/Pods-DI-DITests.debug.xcconfig"; sourceTree = "<group>"; };
 		294A16A4C688AA7B5338863F /* Pods-DI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DI.debug.xcconfig"; path = "Target Support Files/Pods-DI/Pods-DI.debug.xcconfig"; sourceTree = "<group>"; };
 		B3F7AADFB84ABF498B02A328 /* Pods-DI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DI.release.xcconfig"; path = "Target Support Files/Pods-DI/Pods-DI.release.xcconfig"; sourceTree = "<group>"; };
+		E103B2E325288DAA00282E9E /* Tweet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tweet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E103B38C2528971700282E9E /* TweetFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFlowAssembly.swift; sourceTree = "<group>"; };
+		E103B3902528974200282E9E /* TweetsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsFactory.swift; sourceTree = "<group>"; };
 		E148F6FC2523FFF80066210C /* UserFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFlowAssembly.swift; sourceTree = "<group>"; };
-		E148F700252400AC0066210C /* UserFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFactory.swift; sourceTree = "<group>"; };
+		E148F700252400AC0066210C /* UsersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFactory.swift; sourceTree = "<group>"; };
 		E14F80E72521270A003075F9 /* DI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F80EA2521270A003075F9 /* DI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DI.h; sourceTree = "<group>"; };
 		E14F80EB2521270A003075F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			files = (
 				E14F811225212772003075F9 /* Domain.framework in Frameworks */,
 				E14F838425215591003075F9 /* User.framework in Frameworks */,
+				E103B2E425288DAB00282E9E /* Tweet.framework in Frameworks */,
 				E14F811025212772003075F9 /* Common.framework in Frameworks */,
 				E14F811625212772003075F9 /* Storage.framework in Frameworks */,
 				E14F810E25212772003075F9 /* AppNavigation.framework in Frameworks */,
@@ -164,6 +171,7 @@
 		E14F810525212772003075F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E103B2E325288DAA00282E9E /* Tweet.framework */,
 				E14F838325215591003075F9 /* User.framework */,
 				E14F810625212772003075F9 /* AppData.framework */,
 				E14F810725212772003075F9 /* AppNavigation.framework */,
@@ -211,6 +219,7 @@
 				E14F816325212830003075F9 /* CoordinatorsAssembly.swift */,
 				E14F816525212830003075F9 /* CoordinatorFactoryAssembly.swift */,
 				E148F6FC2523FFF80066210C /* UserFlowAssembly.swift */,
+				E103B38C2528971700282E9E /* TweetFlowAssembly.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -277,7 +286,8 @@
 		E14F817325212831003075F9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				E148F700252400AC0066210C /* UserFactory.swift */,
+				E148F700252400AC0066210C /* UsersFactory.swift */,
+				E103B3902528974200282E9E /* TweetsFactory.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -466,10 +476,12 @@
 				E14F817C25212831003075F9 /* SwiftGenStrings.swift in Sources */,
 				E14F817E25212831003075F9 /* DependencyInjector.swift in Sources */,
 				E14F818025212831003075F9 /* DependencyManufacturing.swift in Sources */,
-				E148F701252400AC0066210C /* UserFactory.swift in Sources */,
+				E148F701252400AC0066210C /* UsersFactory.swift in Sources */,
+				E103B3912528974200282E9E /* TweetsFactory.swift in Sources */,
 				E148F6FD2523FFF80066210C /* UserFlowAssembly.swift in Sources */,
 				E14F817525212831003075F9 /* StorageAssembly.swift in Sources */,
 				E14F817F25212831003075F9 /* CoordinatorFactory.swift in Sources */,
+				E103B38D2528971700282E9E /* TweetFlowAssembly.swift in Sources */,
 				E14F817725212831003075F9 /* DomainAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

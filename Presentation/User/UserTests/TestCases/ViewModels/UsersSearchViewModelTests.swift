@@ -17,7 +17,6 @@ import RxSwiftUtilities
 
 class UsersSearchViewModelTests: XCTestCase {
 
-    var bag: DisposeBag!
     var useCaseSpy: SearchUserByNameUseCaseableSpy!
     var coordinatorSpy: UsersSearchSceneCoordinatingSpy!
     var sut: UsersSearchViewModel<UsersSearchSceneCoordinatingSpy>!
@@ -26,7 +25,6 @@ class UsersSearchViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        bag = DisposeBag()
         useCaseSpy = SearchUserByNameUseCaseableSpy()
         coordinatorSpy = UsersSearchSceneCoordinatingSpy()
         sut = UsersSearchViewModel(useCase: useCaseSpy, coordinator: coordinatorSpy)
@@ -39,7 +37,7 @@ class UsersSearchViewModelTests: XCTestCase {
     }
 
     func testUsers() {
-        XCTAssertNotNil(try getUsers().toBlocking(timeout: 0.1).first())
+        XCTAssertEqual(try getUsers().toBlocking(timeout: 0.1).first(), useCaseSpy.users.asViewModels)
         XCTAssert(useCaseSpy.executionCalled)
     }
 

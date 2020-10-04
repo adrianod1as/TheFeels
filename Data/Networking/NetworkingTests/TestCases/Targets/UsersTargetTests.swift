@@ -17,7 +17,7 @@ class UsersTargetTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        sut = .lookup(username: usernameStub)
+        sut = .search(username: usernameStub)
     }
 
     override func tearDown() {
@@ -37,11 +37,11 @@ class UsersTargetTests: XCTestCase {
     }
 
     func testPath() {
-        XCTAssertEqual(sut.path, "\(sut.version)/\(sut.api)/lookup.json")
+        XCTAssertEqual(sut.path, "\(sut.version)/\(sut.api)/search.json")
     }
 
     func testSpecificHeaderTypes() {
-        XCTAssertEqual(sut.specificHeaderTypes.map({ $0.key }), [SpecificHeaderType.twitter.key])
+        XCTAssert(sut.specificHeaderTypes.isEmpty)
     }
 
     func testKeyPathForData() {
@@ -65,7 +65,7 @@ class UsersTargetTests: XCTestCase {
     }
 
     func testTask() {
-        let task = Task.requestParameters(parameters: ["screen_name": usernameStub], encoding: URLEncoding.default)
+        let task = Task.requestParameters(parameters: ["q": usernameStub], encoding: URLEncoding.default)
         switch (sut.task, task) {
         case (.requestParameters(let parametersA, let encodingA),
               .requestParameters(let parametersB, let encodingB)):

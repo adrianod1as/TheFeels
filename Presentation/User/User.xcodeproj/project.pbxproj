@@ -126,7 +126,7 @@
 			children = (
 				E14F82E72521527D003075F9 /* UserTests.swift */,
 				E148F718252414670066210C /* ViewModels */,
-				E148F719252414790066210C /* UserCoordiantorTests.swift */,
+				E18B7B7D252A0D4700C758CB /* Coordinators */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -301,6 +301,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E18B7B7D252A0D4700C758CB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E148F719252414790066210C /* UserCoordiantorTests.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

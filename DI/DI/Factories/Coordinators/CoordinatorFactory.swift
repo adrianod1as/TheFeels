@@ -10,6 +10,7 @@ import Swinject
 import Common
 import AppNavigation
 import User
+import Tweet
 
 public class CoordinatorFactory: DependencyManufacturing {
 
@@ -22,6 +23,10 @@ public class CoordinatorFactory: DependencyManufacturing {
 }
 
 extension CoordinatorFactory: CoordinatorManufacturing {
+
+    public func makeTweetsCoordinator() -> TweetsCoordinator {
+        resolver.safelyResolve(TweetsCoordinator.self)
+    }
 
     public func makeUsersCoordinator() -> UsersCoordinator {
         resolver.safelyResolve(UsersCoordinator.self)

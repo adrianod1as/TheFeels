@@ -2,7 +2,7 @@
 //  UserViewModel.swift
 //  Common
 //
-//  Created by Adriano Dias on 29/09/20.
+//  Created by Adriano Dias on 03/10/20.
 //
 
 import Domain
@@ -10,7 +10,7 @@ import RxDataSources
 
 public struct UserViewModel: IdentifiableType, Equatable {
 
-    let user: User
+    public let user: User
 
     public var identity: String {
         user.id.description
@@ -26,8 +26,8 @@ public struct UserViewModel: IdentifiableType, Equatable {
 
     public var profileImageUrl: URL? {
         URL(string: user.profileImageUrl
-                    .replacingOccurrences(of: L10n.Twitter.ProfileImage.Size.normal,
-                                          with: L10n.Twitter.ProfileImage.Size.bigger))
+                .replacingOccurrences(of: L10n.Twitter.ProfileImage.Size.normal,
+                                      with: L10n.Twitter.ProfileImage.Size.bigger))
     }
 }
 

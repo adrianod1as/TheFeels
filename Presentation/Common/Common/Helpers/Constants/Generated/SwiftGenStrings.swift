@@ -35,6 +35,11 @@ public enum L10n {
       }
     }
   }
+
+  public enum UISearchBar {
+    /// searchField
+    public static let searchField = L10n.tr("Localizable", "UISearchBar.searchField")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

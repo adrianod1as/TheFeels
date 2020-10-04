@@ -15,7 +15,7 @@ public protocol UsersSearchSceneCoordinating where Self: ReactiveCompatible, Rea
 
 public extension Reactive where Base: UsersSearchSceneCoordinating {
 
-    func show(user: UserViewModel) -> Observable<Void> {
+    func showTweets(for user: UserViewModel) -> Observable<Void> {
         Observable.create { observer in
             self.base.showTweets(for: user)
             observer.onNext(())

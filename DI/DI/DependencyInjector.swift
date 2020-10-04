@@ -29,6 +29,7 @@ public class DependencyInjector {
             CoordinatorFactoryAssembly(),
             CoordinatorsAssembly(navigationController: navigationController),
             UsersFlowAssembly(),
+            TweetsFlowAssembly(),
             DomainAssembly(),
             DataAssembly(),
             NetworkingAssembly(environment: environment),

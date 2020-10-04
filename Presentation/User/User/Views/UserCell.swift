@@ -41,13 +41,16 @@ public class UserCell: UITableViewCell {
     }
 
     private func setupViews() {
-        contentView.backgroundColor = .black
+        selectionStyle = .blue
+        backgroundColor = .black
         addSubviews()
         activateProfileViewConstraints()
     }
 
     func bind(viewModel: UserViewModel) {
-        profileView.bind(viewModel: viewModel)
+        profileView.lblUsername.text = viewModel.username
+        profileView.lblTitle.text = viewModel.name
+        profileView.setProfileImage(url: viewModel.profileImageUrl)
     }
 
     func cancelProfileImageRequest() {

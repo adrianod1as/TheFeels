@@ -9,6 +9,8 @@
 import UIKit
 import Common
 import User
+import Tweet
+import Domain
 
 public class AppCoordinator: Coordinator {
 
@@ -37,6 +39,8 @@ public class AppCoordinator: Coordinator {
 extension AppCoordinator: UsersDepartingCoordinating {
 
     public func showTweets(for user: UserViewModel) {
-
+        factory.makeTweetsCoordinator().showTweets(for: user)
     }
 }
+
+extension AppCoordinator: TweetsDepartingCoordinating {}

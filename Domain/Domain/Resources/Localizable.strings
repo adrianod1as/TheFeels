@@ -9,4 +9,8 @@
 "Symbol.locale" = "pt_BR";
 "Error.Title.ops" = "Ops!";
 "Error.Message.requiment" = "Campo obrigatório.";
+"Error.Message.Username.multipleWords" = "Usuário inválido: múltiplas palavras";
 "User.ProfileImageUrl.sample" = "https://pbs.twimg.com/profile_images/473550724433858560/tuHsaI2U_normal.png";
+"Twitter.Date.format" = "EEE MMM dd HH:mm:ss Z yyyy";
+"Twitter.Date.locale" = "en_US_POSIX";
+"Brazil.Date.format" = "dd/MM/yyyy";
