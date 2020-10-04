@@ -16,7 +16,7 @@ class SpecificHeaderTypeTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        sut = .token
+        sut = .twiiterBearerToken
     }
 
     override func tearDown() {

@@ -11,7 +11,7 @@ import OAuthSwift
 extension SpecificHeaders {
 
     var authHeaders: Headers {
-        self[SpecificHeaderType.apiKeyAndSecret.key] ?? [:]
+        self[SpecificHeaderType.twiiterKeyAndSecret.key] ?? [:]
     }
 
     var apiKey: String? {

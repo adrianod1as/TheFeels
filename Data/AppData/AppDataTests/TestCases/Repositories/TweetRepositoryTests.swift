@@ -30,4 +30,10 @@ class TweetRepositoryTests: XCTestCase {
         XCTAssertEqual(try sut.searchTweets(by: "SwiftLang").toBlocking(timeout: 0.1).first(), spy.tweets)
         XCTAssert(spy.searchTweetsCalled)
     }
+
+    func testAnalyzeTweet() {
+        XCTAssertEqual(spy.sentimentAnalysis,
+                       try sut.analyzeTweet(text: "Some random thing").toBlocking(timeout: 0.1).first())
+        XCTAssert(spy.analyzeTweetForTextCalled)
+    }
 }

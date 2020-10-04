@@ -42,8 +42,8 @@ struct SetupConstants {
     }()
 
     static let specificHeaders: SpecificHeaders = {
-        return [SpecificHeaderType.token.key: twitterHeaders,
-                SpecificHeaderType.apiKeyAndSecret.key: authHeaders]
+        return [SpecificHeaderType.twiiterBearerToken.key: twitterHeaders,
+                SpecificHeaderType.twiiterKeyAndSecret.key: authHeaders]
     }()
 
     static let environment: Environment = {
