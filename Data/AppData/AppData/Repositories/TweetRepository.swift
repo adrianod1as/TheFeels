@@ -19,6 +19,10 @@ public class TweetRepository {
 
 extension TweetRepository: Domain.TweetRepository {
 
+    public func analyzeTweet(text: String) -> Observable<SentimentAnalysis> {
+        remoteDataSource.analyzeTweet(text: text)
+    }
+
     public func searchTweets(by username: String) -> Observable<[Tweet]> {
         remoteDataSource.searchTweets(by: username)
     }

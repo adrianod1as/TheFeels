@@ -11,4 +11,5 @@ import Domain
 public protocol TweetRemoteDataSource: AnyObject {
 
     func searchTweets(by username: String) -> Observable<[Tweet]>
+    func analyzeTweet(text: String) -> Observable<SentimentAnalysis>
 }
