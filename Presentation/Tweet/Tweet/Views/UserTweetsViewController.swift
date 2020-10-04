@@ -49,6 +49,7 @@ extension UserTweetsViewController {
     private func setupUI() {
         title = L10n.UserTweetsViewController.title
         navigationController?.asTranslucent()
+        navigationController?.setNavigationBarHidden(false, animated: true)
         userTweetsView.tableView.isHidden = true
     }
 

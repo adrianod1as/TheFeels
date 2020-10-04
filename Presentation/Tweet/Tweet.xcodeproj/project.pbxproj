@@ -32,6 +32,7 @@
 		E18B7B78252A0BB300C758CB /* UserTweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B77252A0BB300C758CB /* UserTweetsViewModel.swift */; };
 		E18B7B86252A0D6800C758CB /* TweetCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B85252A0D6800C758CB /* TweetCoordinatorTests.swift */; };
 		E18B7B8C252A0E4A00C758CB /* TweetViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B8B252A0E4A00C758CB /* TweetViewModelTests.swift */; };
+		E1C65800252A7A710010054A /* AnalyzeSentimentForTextUseCaseableSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C657FF252A7A710010054A /* AnalyzeSentimentForTextUseCaseableSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E18B7B77252A0BB300C758CB /* UserTweetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTweetsViewModel.swift; sourceTree = "<group>"; };
 		E18B7B85252A0D6800C758CB /* TweetCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCoordinatorTests.swift; sourceTree = "<group>"; };
 		E18B7B8B252A0E4A00C758CB /* TweetViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModelTests.swift; sourceTree = "<group>"; };
+		E1C657FF252A7A710010054A /* AnalyzeSentimentForTextUseCaseableSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentForTextUseCaseableSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				E18B7B07252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift */,
+				E1C657FF252A7A710010054A /* AnalyzeSentimentForTextUseCaseableSpy.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				E18B7B8C252A0E4A00C758CB /* TweetViewModelTests.swift in Sources */,
 				E18B7B13252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift in Sources */,
 				E18B7B70252A0B2500C758CB /* UserTweetsSceneCoordinatingSpy.swift in Sources */,
+				E1C65800252A7A710010054A /* AnalyzeSentimentForTextUseCaseableSpy.swift in Sources */,
 				E18B7B08252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
