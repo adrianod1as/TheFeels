@@ -1,30 +1,30 @@
 //
-//  TwitterApiFriendly.swift
+//  SentimApiFriendly.swift
 //  Networking
 //
-//  Created by Adriano Dias on 28/09/20.
+//  Created by Adriano Dias on 04/10/20.
 //
 
 import OxeNetworking
 import Moya
 
-public protocol TwitterApiFriendly: SampleHeadersReturning, HigherLayerHeadersSpecifyable, KeyPathable {
+public protocol SentimApiFriendly: SampleHeadersReturning, HigherLayerHeadersSpecifyable, KeyPathable {
 
 }
 
-extension TwitterApiFriendly {
+extension SentimApiFriendly {
 
     // swiftlint:disable force_https
     public var baseURL: URL {
-        return URL(string: "https://api.twitter.com/")!
+        return URL(string: "https://sentim-api.herokuapp.com")!
     }
 
     public var specificHeaderTypes: [HeaderSpecifying] {
-        return [SpecificHeaderType.token]
+        return [SpecificHeaderType.sentimKey]
     }
 
     public var keyPathForData: String? {
-        return nil
+        return "result"
     }
 
     public var validationType: ValidationType {

@@ -45,4 +45,3 @@ class UserTweetsViewModelTests: XCTestCase {
         return sut.tweets(in: input, indicator)
     }
 }
-

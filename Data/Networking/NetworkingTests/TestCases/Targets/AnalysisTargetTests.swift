@@ -1,23 +1,23 @@
 //
-//  TweetsTargetTests.swift
+//  AnalysisTargetTests.swift
 //  NetworkingTests
 //
-//  Created by Adriano Dias on 03/10/20.
+//  Created by Adriano Dias on 04/10/20.
 //
 
 import XCTest
 import Moya
 @testable import Networking
 
-class TweetsTargetTests: XCTestCase {
+class SentimentTargetTests: XCTestCase {
 
-    private var sut: TweetsTarget!
-    private let usernameStub = "SwiftLang"
+    private var sut: SentimentTarget!
+    private let textStub = "Some random thing"
 
     override func setUp() {
         super.setUp()
 
-        sut = .search(username: usernameStub)
+        sut = .analyze(text: textStub)
     }
 
     override func tearDown() {
@@ -25,27 +25,27 @@ class TweetsTargetTests: XCTestCase {
     }
 
     func testBaseUrl() {
-        XCTAssertEqual(sut.baseURL, URL(string: "https://api.twitter.com/")!)
+        XCTAssertEqual(sut.baseURL, URL(string: "https://sentim-api.herokuapp.com")!)
     }
 
     func testApi() {
-        XCTAssertEqual(sut.api, "statuses")
+        XCTAssertEqual(sut.api, "api")
     }
 
     func testVersion() {
-        XCTAssertEqual(sut.version, 1.1.description)
+        XCTAssertEqual(sut.version, "v1")
     }
 
     func testPath() {
-        XCTAssertEqual(sut.path, "\(sut.version)/\(sut.api)/user_timeline.json")
+        XCTAssertEqual(sut.path, "\(sut.api)/\(sut.version)")
     }
 
     func testSpecificHeaderTypes() {
-        XCTAssertEqual(sut.specificHeaderTypes.map({ $0.key }), [SpecificHeaderType.twiiterBearerToken.key])
+        XCTAssertEqual(sut.specificHeaderTypes.map({ $0.key }), [SpecificHeaderType.sentimKey.key])
     }
 
     func testKeyPathForData() {
-        XCTAssertNil(sut.keyPathForData)
+        XCTAssertEqual(sut.keyPathForData, "result")
     }
 
     func testValidationType() {
@@ -57,7 +57,7 @@ class TweetsTargetTests: XCTestCase {
     }
 
     func testMethod() {
-        XCTAssertEqual(sut.method, .get)
+        XCTAssertEqual(sut.method, .post)
     }
 
     func testSampleData() {
@@ -65,13 +65,13 @@ class TweetsTargetTests: XCTestCase {
     }
 
     func testTask() {
-        let task = Task.requestParameters(parameters: ["screen_name": usernameStub], encoding: URLEncoding.default)
+        let task = Task.requestParameters(parameters: ["text": textStub], encoding: JSONEncoding.default)
         switch (sut.task, task) {
         case (.requestParameters(let parametersA, let encodingA),
               .requestParameters(let parametersB, let encodingB)):
             XCTAssertEqual(parametersA as? [String: String], parametersB as? [String: String])
-            XCTAssertNotNil(encodingA as? URLEncoding)
-            XCTAssertNotNil(encodingB as? URLEncoding)
+            XCTAssertNotNil(encodingA as? JSONEncoding)
+            XCTAssertNotNil(encodingB as? JSONEncoding)
         default:
             XCTFail("Different tasks")
         }

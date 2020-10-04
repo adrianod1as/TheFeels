@@ -33,4 +33,3 @@ class TweetCoordiantorTests: XCTestCase {
         XCTAssert(factorySpy.makeUserTweetsViewControllerCalled)
     }
 }
-

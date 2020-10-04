@@ -36,4 +36,3 @@ class AnalyzeSentimentForTextUseCaseTests: XCTestCase {
         XCTAssertFalse(spy.analyzeTweetForTextCalled)
     }
 }
-

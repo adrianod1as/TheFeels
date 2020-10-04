@@ -18,8 +18,7 @@ extension SentimentAnalysis: Fakeable {
     }
 
     public static func getFakedItem() -> SentimentAnalysis {
-        let faker = Faker.brazilian
-        return SentimentAnalysis(polarity: faker.number.randomDouble(min: -1, max: 1))
+        SentimentAnalysis(polarity: Faker.brazilian.number.randomDouble(min: -1, max: 1).rounded())
     }
 
 }
