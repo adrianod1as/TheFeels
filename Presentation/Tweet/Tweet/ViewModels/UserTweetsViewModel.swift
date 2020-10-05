@@ -54,19 +54,29 @@ extension UserTweetsViewModel: UserTweetsViewModeling {
 
     internal func evaluation(in input: Input, _ indicator: ActivityIndicator) -> Driver<[TweetViewModel]> {
         input.selection
-            .distinctUntilChanged()
             .withLatestFrom(evaluated.startWith([]).asDriver(onErrorJustReturn: [])) { ($0, $1) }
+            .distinctUntilChanged({ $1[$0] })
             .filter({ $1[$0].analysis == nil })
             .flatMap { (index, tweets) -> Driver<[TweetViewModel]> in
                 return self.analysisCase.execute(tweets[index].text)
                         .trackActivity(indicator)
                         .flatMap { analysis -> Driver<[TweetViewModel]> in
-                            var evaluatedTweets = self.evaluated.value
-                            evaluatedTweets[index].analysis = analysis
-                            self.evaluated.accept(evaluatedTweets)
-                            return Driver.just(evaluatedTweets)
-                        }.asDriver(onErrorJustReturn: self.evaluated.value)
+                            self.set(analysis: analysis, for: index)
+                            return Driver.just(self.evaluated.value)
+                        }.asDriver { _ -> Driver<[TweetViewModel]> in
+                            self.set(analysis: nil, for: index)
+                            return Driver.just(self.evaluated.value)
+                        }
             }
+    }
+
+    private func set(analysis: SentimentAnalysis?, for index: Int) {
+        var evaluatedTweets = self.evaluated.value
+        evaluatedTweets[index].analysisFailed = analysis == nil
+        if let analysis = analysis {
+            evaluatedTweets[index].analysis = analysis
+        }
+        self.evaluated.accept(evaluatedTweets)
     }
 
     public func transform(input: Input) -> Output {

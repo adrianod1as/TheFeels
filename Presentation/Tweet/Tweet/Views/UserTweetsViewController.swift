@@ -17,20 +17,10 @@ public class UserTweetsViewController: UIViewController {
 
     // MARK: Properties
     private lazy var userTweetsView = UserTweetsView()
+    private lazy var loadingView = EvaluatingView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
     private let bag = DisposeBag()
     private let viewModel: UserTweetsViewModeling
     private let loadSubject = BehaviorRelay(value: ())
-
-    lazy var loadingView: AnimationView = {
-        let filepath = Bundle(for: UserTweetsViewController.self)
-            .path(forResource: L10n.Animation.Filename.sentiments,
-                  ofType: Common.L10n.File.Formart.json) ?? String()
-        let view = AnimationView(filePath: filepath)
-        view.loopMode = .loop
-        view.contentMode = .scaleToFill
-        view.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        return view
-    }()
 
     // MARK: Init
     public init(viewModel: UserTweetsViewModeling) {
@@ -75,11 +65,11 @@ extension UserTweetsViewController {
     }
 
     func setAnimation(isLoading: Bool) {
-        loadingView.alpha = isLoading ? 1 : 0
-        if isLoading, !loadingView.isAnimationPlaying {
-            loadingView.play(completion: nil)
+        loadingView.animationView.alpha = isLoading ? 1 : 0
+        if isLoading, !loadingView.animationView.isAnimationPlaying {
+            loadingView.animationView.play(completion: nil)
         } else if !isLoading {
-            loadingView.stop()
+            loadingView.animationView.stop()
         }
     }
 }

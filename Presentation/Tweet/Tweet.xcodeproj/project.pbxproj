@@ -26,7 +26,8 @@
 		E103B36125288ECA00282E9E /* UsersManufactoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B35525288ECA00282E9E /* UsersManufactoring.swift */; };
 		E103B3772528936E00282E9E /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103B3762528936E00282E9E /* TweetViewModel.swift */; };
 		E185EFB5252B58D5007A6985 /* tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = E185EFB3252B58D5007A6985 /* tweets.json */; };
-		E185EFBB252B8215007A6985 /* sentiments.json in Resources */ = {isa = PBXBuildFile; fileRef = E185EFBA252B8215007A6985 /* sentiments.json */; };
+		E1861B8D252B9A360053C8E2 /* sentiments.json in Resources */ = {isa = PBXBuildFile; fileRef = E1861B8C252B9A360053C8E2 /* sentiments.json */; };
+		E1861B91252BA00C0053C8E2 /* EvaluatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1861B90252BA00C0053C8E2 /* EvaluatingView.swift */; };
 		E18B7B01252A083100C758CB /* TweetsManufacturingSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B00252A083100C758CB /* TweetsManufacturingSpy.swift */; };
 		E18B7B08252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B07252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift */; };
 		E18B7B13252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18B7B12252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift */; };
@@ -74,7 +75,8 @@
 		E103B35525288ECA00282E9E /* UsersManufactoring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersManufactoring.swift; sourceTree = "<group>"; };
 		E103B3762528936E00282E9E /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		E185EFB3252B58D5007A6985 /* tweets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweets.json; sourceTree = "<group>"; };
-		E185EFBA252B8215007A6985 /* sentiments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sentiments.json; sourceTree = "<group>"; };
+		E1861B8C252B9A360053C8E2 /* sentiments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sentiments.json; sourceTree = "<group>"; };
+		E1861B90252BA00C0053C8E2 /* EvaluatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatingView.swift; sourceTree = "<group>"; };
 		E18B7B00252A083100C758CB /* TweetsManufacturingSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsManufacturingSpy.swift; sourceTree = "<group>"; };
 		E18B7B07252A089C00C758CB /* SearchTweetsByUsernameUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTweetsByUsernameUseCaseSpy.swift; sourceTree = "<group>"; };
 		E18B7B12252A090D00C758CB /* TweetsDepartingCoordinatingStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsDepartingCoordinatingStub.swift; sourceTree = "<group>"; };
@@ -181,7 +183,7 @@
 		E103B33F25288EC900282E9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E185EFBA252B8215007A6985 /* sentiments.json */,
+				E1861B8C252B9A360053C8E2 /* sentiments.json */,
 				E185EFB3252B58D5007A6985 /* tweets.json */,
 				E103B34025288EC900282E9E /* Localizable.strings */,
 			);
@@ -261,6 +263,7 @@
 				E103B35125288ECA00282E9E /* UserTweetsViewController.swift */,
 				E103B35225288ECA00282E9E /* TweetCell.swift */,
 				E103B35325288ECA00282E9E /* UserTweetsView.swift */,
+				E1861B90252BA00C0053C8E2 /* EvaluatingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -422,7 +425,7 @@
 			files = (
 				E103B35625288ECA00282E9E /* Localizable.strings in Resources */,
 				E185EFB5252B58D5007A6985 /* tweets.json in Resources */,
-				E185EFBB252B8215007A6985 /* sentiments.json in Resources */,
+				E1861B8D252B9A360053C8E2 /* sentiments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +511,7 @@
 				E103B35E25288ECA00282E9E /* UserTweetsViewController.swift in Sources */,
 				E103B35A25288ECA00282E9E /* UserTweetsViewModel.swift in Sources */,
 				E103B36025288ECA00282E9E /* UserTweetsView.swift in Sources */,
+				E1861B91252BA00C0053C8E2 /* EvaluatingView.swift in Sources */,
 				E103B35825288ECA00282E9E /* TweetsCoordinator.swift in Sources */,
 				E103B35B25288ECA00282E9E /* UserTweetsViewModeling.swift in Sources */,
 				E103B3772528936E00282E9E /* TweetViewModel.swift in Sources */,

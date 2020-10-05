@@ -89,7 +89,8 @@ public class UsersSearchView: UIView {
         loadingView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         loadingView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         loadingView.topSafeAnchor.constraint(equalTo: topSafeAnchor).isActive = true
-        loadingView.bottomAnchor.constraint(equalTo: imgEmpty.topAnchor).isActive = true
+        loadingView.bottomAnchor.constraint(equalTo: imgEmpty.topAnchor,
+                                            constant: UIScreen.minLenght * 0.25).isActive = true
     }
 
     private func setupView() {
