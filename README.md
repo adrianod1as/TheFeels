@@ -20,7 +20,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [features](#features)
+  * [Features](#features)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -38,6 +38,18 @@
 * [License](#license)
 * [Contact](#contact)
   * [Projects](#projects) 
+  
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+The main goal of this project is to demonstrate my knowledge with a few of the technologies and concepts I have been working with for the past few years. Although its straightforward use, sentiment analysis of tweets, the choices made in this app intend to cover projects that might grow exponentially and have as key factors: layer segregation, build time, maintainability, testatibility, among another real world features. Besides all that, you can also have some fun analyzing the sentiment of texts publically tweeted by any searched twitter user.
+
+<!-- Features -->
+### Features
+
+* [Search Twitter's users by username;](https://github.com/adrianodiasx93/TheFeels/issues/18)
+* [Show public tweets from selected user;](https://github.com/adrianodiasx93/TheFeels/issues/22)
+* [Analyze the sentiment expressed in such tweets simultaneously.](https://github.com/adrianodiasx93/TheFeels/issues/37)
 
 <!-- CONTACT -->
 ## Contact
