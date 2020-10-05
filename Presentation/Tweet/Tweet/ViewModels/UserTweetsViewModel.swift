@@ -65,17 +65,18 @@ extension UserTweetsViewModel: UserTweetsViewModeling {
                             evaluatedTweets[index].analysis = analysis
                             self.evaluated.accept(evaluatedTweets)
                             return Driver.just(evaluatedTweets)
-                        }.asDriver(onErrorJustReturn: tweets)
+                        }.asDriver(onErrorJustReturn: self.evaluated.value)
             }
     }
 
     public func transform(input: Input) -> Output {
-        let indicator = ActivityIndicator()
-        let nonEvaluated = tweets(in: input, indicator).startWith([])
-        let evaluate = evaluation(in: input, indicator).startWith([])
+        let isLoading = ActivityIndicator()
+        let isEvaluating = ActivityIndicator()
+        let nonEvaluated = tweets(in: input, isLoading).startWith([])
+        let evaluate = evaluation(in: input, isEvaluating).startWith([])
         let didSucceed = Driver.merge(nonEvaluated, evaluate)
-        return Output(isLoading: indicator.asDriver(), didSucceed: didSucceed,
-                      didFail: .empty(), didNavigate: .empty())
+        return Output(isLoading: isLoading.asDriver().distinctUntilChanged(), didSucceed: didSucceed,
+                      didFail: .empty(), isEvaluating: isEvaluating.asDriver().distinctUntilChanged())
     }
 
 }

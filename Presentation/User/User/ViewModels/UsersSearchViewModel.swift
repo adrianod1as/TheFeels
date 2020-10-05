@@ -56,7 +56,7 @@ extension UsersSearchViewModel: UsersSearchViewModeling {
         let indicator = ActivityIndicator()
         let didSucceed = users(in: input, indicator)
         let didNavigate = navigation(in: input, withLatestFrom: didSucceed)
-        let isLoading = Driver.merge(indicator.asDriver(), loading.asDriver().distinctUntilChanged())
+        let isLoading = Driver.merge(indicator.asDriver(), loading.asDriver()).distinctUntilChanged()
         return Output(isLoading: isLoading, didSucceed: didSucceed,
                       didFail: .empty(), didNavigate: didNavigate)
     }

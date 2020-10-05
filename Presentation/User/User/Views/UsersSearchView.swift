@@ -104,7 +104,7 @@ public class UsersSearchView: UIView {
         imgEmpty.alpha = isLoading ? 0 : 1
         if isLoading, !loadingView.isAnimationPlaying {
             loadingView.play(completion: nil)
-        } else {
+        } else if !isLoading {
             loadingView.stop()
         }
     }

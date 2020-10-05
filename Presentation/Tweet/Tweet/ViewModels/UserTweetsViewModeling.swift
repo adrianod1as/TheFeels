@@ -31,7 +31,7 @@ public struct UserTweetsViewModelInput: UserTweetsViewModelingInput {
 
 public protocol UserTweetsViewModelingOutput: CommonSceneOutput where Success == [TweetViewModel] {
 
-    var didNavigate: Driver<Void> { get }
+    var isEvaluating: Driver<Bool> { get }
 }
 
 public struct UserTweetsViewModelOutput: UserTweetsViewModelingOutput {
@@ -42,6 +42,6 @@ public struct UserTweetsViewModelOutput: UserTweetsViewModelingOutput {
 
     public let didFail: Driver<String>
 
-    public let didNavigate: Driver<Void>
+    public let isEvaluating: Driver<Bool>
 
 }
