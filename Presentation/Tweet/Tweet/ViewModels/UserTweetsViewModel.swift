@@ -26,7 +26,7 @@ public class UserTweetsViewModel<SceneCoordinating: UserTweetsSceneCoordinating>
     internal let coordinator: SceneCoordinating
     internal let tweetsCase: SearchTweetsByUsernameUseCaseable
     internal let analysisCase: AnalyzeSentimentForTextUseCaseable
-    internal let evaluated = PublishSubject<[TweetViewModel]>()
+    internal let evaluated = BehaviorRelay<[TweetViewModel]>(value: [])
     public var user: User?
 
     public init(useCase: SearchTweetsByUsernameUseCaseable,
@@ -47,23 +47,25 @@ extension UserTweetsViewModel: UserTweetsViewModeling {
                 self.tweetsCase.execute($0)
                     .trackActivity(indicator)
                     .map({ $0.asViewModels })
-                    .do(onNext: { self.evaluated.onNext($0) })
+                    .do(onNext: { self.evaluated.accept($0) })
                     .asDriver(onErrorJustReturn: [])
             }
     }
 
     internal func evaluation(in input: Input, _ indicator: ActivityIndicator) -> Driver<[TweetViewModel]> {
         input.selection
+            .distinctUntilChanged()
             .withLatestFrom(evaluated.startWith([]).asDriver(onErrorJustReturn: [])) { ($0, $1) }
-            .flatMapLatest { value -> Driver<[TweetViewModel]> in
-                var (index, array) = value
-                return self.analysisCase.execute(array[index].text)
+            .filter({ $1[$0].analysis == nil })
+            .flatMap { (index, tweets) -> Driver<[TweetViewModel]> in
+                return self.analysisCase.execute(tweets[index].text)
                         .trackActivity(indicator)
-                        .flatMapLatest { analysis -> Driver<[TweetViewModel]> in
-                            array[index].analysis = analysis
-                            self.evaluated.onNext(array)
-                            return Driver.just(array)
-                        }.asDriver(onErrorJustReturn: [])
+                        .flatMap { analysis -> Driver<[TweetViewModel]> in
+                            var evaluatedTweets = self.evaluated.value
+                            evaluatedTweets[index].analysis = analysis
+                            self.evaluated.accept(evaluatedTweets)
+                            return Driver.just(evaluatedTweets)
+                        }.asDriver(onErrorJustReturn: tweets)
             }
     }
 
