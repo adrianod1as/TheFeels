@@ -37,6 +37,21 @@
   * [TO-DO](#todo)  
 * [License](#license)
 * [Contact](#contact)
+  * [Projects](#projects) 
+
+<!-- CONTACT -->
+## Contact
+
+Adriano Dias - [adrianodsilva](https://www.linkedin.com/in/adrianodsilva/)
+
+<!-- PROJECTS -->
+### Projects
+
+[TheFeels](https://github.com/adrianodiasx93/TheFeels)
+
+[OxeNetworking](https://github.com/adrianodiasx93/OxeNetworking-iOS)
+
+[UDTM](https://github.com/adrianodiasx93/udtm)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
