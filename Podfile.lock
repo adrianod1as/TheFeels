@@ -4,88 +4,15 @@ PODS:
     - Alamofire (~> 5.0.0-rc.2)
   - Differentiator (4.0.1)
   - Fakery (4.1.2)
-  - Firebase/Analytics (6.33.0):
-    - Firebase/Core
-  - Firebase/Core (6.33.0):
-    - Firebase/CoreOnly
-    - FirebaseAnalytics (= 6.8.3)
-  - Firebase/CoreOnly (6.33.0):
-    - FirebaseCore (= 6.10.3)
-  - Firebase/Crashlytics (6.33.0):
-    - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 4.6.1)
-  - FirebaseAnalytics (6.8.3):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.6)
-    - GoogleAppMeasurement (= 6.8.3)
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/MethodSwizzler (~> 6.7)
-    - GoogleUtilities/Network (~> 6.7)
-    - "GoogleUtilities/NSData+zlib (~> 6.7)"
-    - nanopb (~> 1.30906.0)
-  - FirebaseCore (6.10.3):
-    - FirebaseCoreDiagnostics (~> 1.6)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/Logger (~> 6.7)
-  - FirebaseCoreDiagnostics (1.7.0):
-    - GoogleDataTransport (~> 7.4)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/Logger (~> 6.7)
-    - nanopb (~> 1.30906.0)
-  - FirebaseCrashlytics (4.6.1):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.6)
-    - GoogleDataTransport (~> 7.2)
-    - nanopb (~> 1.30906.0)
-    - PromisesObjC (~> 1.2)
-  - FirebaseInstallations (1.7.0):
-    - FirebaseCore (~> 6.10)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/UserDefaults (~> 6.7)
-    - PromisesObjC (~> 1.2)
-  - GoogleAppMeasurement (6.8.3):
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/MethodSwizzler (~> 6.7)
-    - GoogleUtilities/Network (~> 6.7)
-    - "GoogleUtilities/NSData+zlib (~> 6.7)"
-    - nanopb (~> 1.30906.0)
-  - GoogleDataTransport (7.4.0):
-    - nanopb (~> 1.30906.0)
-  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
-    - GoogleUtilities/Environment
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.7.2):
-    - PromisesObjC (~> 1.2)
-  - GoogleUtilities/Logger (6.7.2):
-    - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.7.2):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.7.2):
-    - GoogleUtilities/Logger
-    - "GoogleUtilities/NSData+zlib"
-    - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.7.2)"
-  - GoogleUtilities/Reachability (6.7.2):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (6.7.2):
-    - GoogleUtilities/Logger
   - Keys (1.0.1)
   - Kingfisher (5.15.5):
     - Kingfisher/Core (= 5.15.5)
   - Kingfisher/Core (5.15.5)
+  - lottie-ios (3.1.8)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - nanopb (1.30906.0):
-    - nanopb/decode (= 1.30906.0)
-    - nanopb/encode (= 1.30906.0)
-  - nanopb/decode (1.30906.0)
-  - nanopb/encode (1.30906.0)
-  - NVActivityIndicatorView/Base (5.0.1)
-  - NVActivityIndicatorView/Extended (5.0.1):
-    - NVActivityIndicatorView/Base
   - OAuthSwift (2.0.0)
   - OxeNetworking/OxeNetworking (0.2.0):
     - Moya (~> 14.0)
@@ -95,7 +22,6 @@ PODS:
     - OxeNetworking/OxeNetworking
     - RxSwift (~> 5.0)
     - SwiftyJSON (~> 5.0)
-  - PromisesObjC (1.2.10)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
   - RxCocoa (5.1.1):
@@ -134,11 +60,9 @@ PODS:
 DEPENDENCIES:
   - AlamofireNetworkActivityLogger (~> 3.0)
   - Fakery (from `https://github.com/vadymmarkov/Fakery`, branch `master`)
-  - Firebase/Analytics
-  - Firebase/Crashlytics
   - Keys (from `Pods/CocoaPodsKeys`)
   - Kingfisher (~> 5.0)
-  - NVActivityIndicatorView/Extended
+  - lottie-ios
   - OAuthSwift (~> 2.0.0)
   - OxeNetworking/RxOxeNetworking
   - RxBlocking
@@ -160,22 +84,11 @@ SPEC REPOS:
     - Alamofire
     - AlamofireNetworkActivityLogger
     - Differentiator
-    - Firebase
-    - FirebaseAnalytics
-    - FirebaseCore
-    - FirebaseCoreDiagnostics
-    - FirebaseCrashlytics
-    - FirebaseInstallations
-    - GoogleAppMeasurement
-    - GoogleDataTransport
-    - GoogleUtilities
     - Kingfisher
+    - lottie-ios
     - Moya
-    - nanopb
-    - NVActivityIndicatorView
     - OAuthSwift
     - OxeNetworking
-    - PromisesObjC
     - RxBlocking
     - RxCocoa
     - RxRelay
@@ -213,23 +126,12 @@ SPEC CHECKSUMS:
   AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Fakery: eae1f41e41c7fef040b247a3817ca6a64bfcf6c3
-  Firebase: 8db6f2d1b2c5e2984efba4949a145875a8f65fe5
-  FirebaseAnalytics: 5dd088bd2e67bb9d13dbf792d1164ceaf3052193
-  FirebaseCore: d889d9e12535b7f36ac8bfbf1713a0836a3012cd
-  FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
-  FirebaseCrashlytics: 5777d3462fb8c3ab9e80a2473bd7d667a2e8411c
-  FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
-  GoogleAppMeasurement: 966e88df9d19c15715137bb2ddaf52373f111436
-  GoogleDataTransport: b7f406340a291370045a270c599e53c6fa6ec20f
-  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   Kingfisher: e3ec347a5ab8817b7585ef46923a2d2b9a7d8fbe
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
-  NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
   OAuthSwift: 6805456763cf1c7ae0c16765257ed430b7aacae7
   OxeNetworking: 15f44757b83899cf773a30e202feb69f66d6cc41
-  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: 468907bf48f9599d49ea05743b36a9e7703a2ed4
@@ -245,6 +147,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: e95da615d6ffddaa89ef4a8a63d6a6b62f18e368
+PODFILE CHECKSUM: bb73185f742c12939e3e35cc4819efea14bb2f15
 
 COCOAPODS: 1.9.3

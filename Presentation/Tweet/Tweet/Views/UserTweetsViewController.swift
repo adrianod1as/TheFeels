@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-public class UserTweetsViewController: UIViewController, UDTAnimatorViewable {
+public class UserTweetsViewController: UIViewController {
 
     // MARK: Properties
     private lazy var userTweetsView = UserTweetsView()

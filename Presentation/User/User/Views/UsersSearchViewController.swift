@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-public class UsersSearchViewController: UIViewController, UDTAnimatorViewable {
+public class UsersSearchViewController: UIViewController {
 
     // MARK: Properties
     private lazy var usersSearchView = UsersSearchView()
@@ -85,6 +85,11 @@ extension UsersSearchViewController {
         output.didNavigate
             .drive()
             .disposed(by: bag)
+        output.isLoading
+            .distinctUntilChanged()
+            .drive(onNext: {
+                self.usersSearchView.setAnimation(isLoading: $0)
+            }).disposed(by: bag)
     }
 
     private func selectionInput() -> Driver<Int> {
