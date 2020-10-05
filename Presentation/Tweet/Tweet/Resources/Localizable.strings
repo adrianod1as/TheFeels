@@ -7,3 +7,5 @@
 */
 
 "UserTweetsViewController.title" = "Tweets";
+"Animation.Filename.tweets" = "tweets";
+"Animation.Filename.sentiments" = "sentiments";

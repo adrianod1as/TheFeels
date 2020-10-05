@@ -11,13 +11,16 @@ import Common
 import RxSwift
 import RxCocoa
 import RxDataSources
+import Lottie
 
-public class UserTweetsViewController: UIViewController, UDTAnimatorViewable {
+public class UserTweetsViewController: UIViewController {
 
     // MARK: Properties
     private lazy var userTweetsView = UserTweetsView()
+    private lazy var loadingView = EvaluatingView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
     private let bag = DisposeBag()
     private let viewModel: UserTweetsViewModeling
+    private let loadSubject = BehaviorRelay(value: ())
 
     // MARK: Init
     public init(viewModel: UserTweetsViewModeling) {
@@ -51,12 +54,22 @@ extension UserTweetsViewController {
         navigationController?.asTranslucent()
         navigationController?.setNavigationBarHidden(false, animated: true)
         userTweetsView.tableView.isHidden = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: loadingView)
     }
 
     private func setSubViewsVisibility(isDataSourceEmpty: Bool) {
         UIView.animate(withDuration: 0.1) {
-            self.userTweetsView.imgEmpty.isHidden = !isDataSourceEmpty
+            self.userTweetsView.lblEmpty.isHidden = !isDataSourceEmpty
             self.userTweetsView.tableView.isHidden = isDataSourceEmpty
+        }
+    }
+
+    func setAnimation(isLoading: Bool) {
+        loadingView.animationView.alpha = isLoading ? 1 : 0
+        if isLoading, !loadingView.animationView.isAnimationPlaying {
+            loadingView.animationView.play(completion: nil)
+        } else if !isLoading {
+            loadingView.animationView.stop()
         }
     }
 }
@@ -73,7 +86,7 @@ extension UserTweetsViewController {
     }
 
     private func viewDidLoadInput() -> Driver<Void> {
-        .just(())
+        loadSubject.asDriver()
     }
 
     private func viewModelInput() -> UserTweetsViewModeling.Input {
@@ -90,14 +103,22 @@ extension UserTweetsViewController {
             .map { [TweetsSection(header: String(), items: $0)] }
             .drive(userTweetsView.tableView.rx.items(dataSource: tableDataSource))
             .disposed(by: bag)
-        output.didNavigate
-            .drive()
+        output.isLoading
+            .drive(onNext: {
+                self.userTweetsView.isLoading = $0
+            }).disposed(by: bag)
+        output.isEvaluating
+            .drive(onNext: { self.setAnimation(isLoading: $0) })
             .disposed(by: bag)
     }
 }
 
 // MARK: UserTweetsViewDelegate
 extension UserTweetsViewController: UserTweetsViewDelegate {
+
+    func refresh() {
+        loadSubject.accept(())
+    }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         .leastNormalMagnitude

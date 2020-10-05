@@ -19,6 +19,7 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Asset {
+  public static let error = ImageAsset(name: "error")
   public static let negative = ImageAsset(name: "negative")
   public static let neutral = ImageAsset(name: "neutral")
   public static let positive = ImageAsset(name: "positive")
