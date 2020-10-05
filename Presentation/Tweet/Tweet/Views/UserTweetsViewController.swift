@@ -6,12 +6,10 @@
 //
 
 import UIKit
-import SwiftMessages
 import Common
 import RxSwift
 import RxCocoa
 import RxDataSources
-import Lottie
 
 public class UserTweetsViewController: UIViewController {
 

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftMessages
 import Common
 import RxSwift
 import RxCocoa

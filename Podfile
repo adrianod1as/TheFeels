@@ -34,7 +34,6 @@ end
 
 def presentationPods
   pod 'SwiftGen', '~> 6.0'
-  pod 'SwiftMessages'
   pod 'Kingfisher', '~> 5.0'
   pod 'lottie-ios'
   rxPresentationPods
