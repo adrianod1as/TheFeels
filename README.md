@@ -51,6 +51,33 @@ The main goal of this project is to demonstrate my knowledge with a few of the t
 * [Show public tweets from selected user;](https://github.com/adrianodiasx93/TheFeels/issues/22)
 * [Analyze the sentiment expressed in such tweets simultaneously.](https://github.com/adrianodiasx93/TheFeels/issues/37)
 
+<!-- GETTING STARTED -->
+## Getting Started
+
+For starters go on and clone this repository. In oder to run this project you will need Xcode and usually a mac ([*ba dum tss*](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmirkQT8_SU48PedBZl6Eydn5IZxBxwpDQUA&usqp=CAU)), but you also gonna need the following.
+
+### Prerequisites
+
+* [Bundler](https://bundler.io/)
+* [Cocoapods](https://cocoapods.org/)
+* [Cocoapods-keys](https://github.com/orta/cocoapods-keys)
+* Keys and tokens for [Twitter API](https://developer.twitter.com/)
+
+### Installation
+
+After installing [bundler](https://bundler.io/), run in your terminal:
+
+```sh
+bundle install
+```
+It will install the remaining gems, and now you can run:
+
+```sh
+pod install
+```
+
+which will install the projet dependencies needed and prompt you for the keys & tokens you obtained from Twitter. Such credentials will be stored only locally at your keychain and will be ignored from git history (vide [cocoapods-keys guidelines](https://github.com/orta/cocoapods-keys)). Finally you may open `TheFeels.xcworkspace` and run the project in the simulator or in your device by renaming its bundle identifier.
+
 <!-- CONTACT -->
 ## Contact
 
