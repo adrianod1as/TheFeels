@@ -24,9 +24,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [Written in](#written-in)
-  * [Swift Features](#swift-features)
 * [Architeture & Patterns](#architeture-and-patterns)
   * [Architeture](#architeture)
   * [Patterns](#patterns)
@@ -77,6 +75,11 @@ pod install
 ```
 
 which will install the projet dependencies needed and prompt you for the keys & tokens you obtained from Twitter. Such credentials will be stored only locally at your keychain and will be ignored from git history (vide [cocoapods-keys guidelines](https://github.com/orta/cocoapods-keys)). Finally you may open `TheFeels.xcworkspace` and run the project in the simulator or in your device by renaming its bundle identifier.
+
+<!-- WRITTEN IN -->
+## Written in
+
+This appiclation is written fully in Swift and applies Codable, Equatable, Hashable, Higher order functions, Extensions, Associated Types, Typealias, Generics, among many others of its features.
 
 <!-- CONTACT -->
 ## Contact
