@@ -27,7 +27,7 @@
 * [Technical](#Technical)
   * [Written in](#written-in)
   * [Principles](#principles)
-  * [Architeture](#architeture)
+  * [Architecture](#architecture)
   * [Modularization](#modularization)
   * [Patterns](#patterns)
   * [Folder Structure](#folder-structure)
@@ -91,28 +91,28 @@ This appiclation is written fully in Swift and applies Codable, Equatable, Hasha
 
 ### Principles
 
-This project follows the [S.O.L.I.D. Principles](https://medium.com/flawless-app-stories/s-o-l-i-d-principle-with-swift-b42f597ba7e2).
+This project heavily follows the [S.O.L.I.D. Principles](https://medium.com/flawless-app-stories/s-o-l-i-d-principle-with-swift-b42f597ba7e2).
 
-### Architeture
+### Architecture
 
-This project is architectured following the concepts of Clean Architeture(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
+This project is architectured following the concepts of Clean Architecture(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html). Each layer has its own set of models, classes, and protocols, being the last one used for communication among the layers (Dependency Inversion Principle).
 
 ### Modularization
 
-This project is organized in modules primarily following the segregation of layers presented by Clean Architeture. Also, each layer has its own segregation.
+This project is organized in modules primarily following the segregation of layers presented by Clean Architecture. Also, each layer has its own segregation.
 
-* Domain
-* Data
-  * AppData
-  * Networking
-  * Storage
-* Presentation
-  * AppNavigation
-  * Common
-  * User
-  * Tweet
-* DI (Dependency Injection)
-* Main
+* Domain: module containing the bussiness rules of the project, applied by models and use cases. Does not depend from any other module and provide protocols to be used and/or implemented by the other modules. For instance, Repository for the Data layer and UseCase for the Presentation layer.
+* Data: This layer is segregated by how they relate to the app's data. Networking is a module for obtaining/sending data from/to web services, while Storage perform the same task but with local data. AppData then manage both datasources and how their data relate together. However it must be clarified that this is perfomed applying inversion of control. AppData provides datasource protocols which are implemented by their corresponding module and then injected in the Appdata `Repostiry` classes.
+  * Networking: module for performing network requests.
+  * Storage: module for performing local calls.
+  * AppData: module for managing both data sources.
+* Presentation: This layer is segregated mainly by features. The current features in this project are quite small, but you may consider larger concepts. For instance all flows related to transfers in a banking app would compose a module. Likewise all flows related to registration in another module. For sharing code between these features, you have the Common module. However since these features don't know each other, they can't navigated to one another. For that you have the AppNavigation module, which knows any present feauture and can navigative from/to them using protocols implemented by coordinators. 
+  * User: a feature module
+  * Tweet: a feature module.
+  * Common: module for sharing code.
+  * AppNavigation: module for navigation between features.
+* DI: module for dependency Injection.
+* Main: application original module.
 
 ### Patterns
 
