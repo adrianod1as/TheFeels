@@ -8,6 +8,7 @@
 import UIKit
 import RxCocoa
 import Common
+import Lottie
 
 protocol UsersSearchViewDelegate: UITableViewDelegate {
 
@@ -38,6 +39,17 @@ public class UsersSearchView: UIView {
         return tableView
     }()
 
+    lazy var loadingView: AnimationView = {
+        let filepath = Bundle(for: UsersSearchView.self)
+                        .path(forResource: L10n.Animation.Filename.profiles,
+                              ofType: Common.L10n.File.Formart.json) ?? String()
+        let view = AnimationView(filePath: filepath)
+        view.loopMode = .loop
+        view.contentMode = .scaleAspectFit
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     weak var delegate: UsersSearchViewDelegate?
 
     override init(frame: CGRect) {
@@ -54,7 +66,8 @@ public class UsersSearchView: UIView {
 
     private func addSubviews() {
         addSubview(imgEmpty)
-        insertSubview(tableView, aboveSubview: imgEmpty)
+        insertSubview(loadingView, aboveSubview: imgEmpty)
+        insertSubview(tableView, aboveSubview: loadingView)
     }
 
     private func activateTableViewViewConstraints() {
@@ -72,10 +85,28 @@ public class UsersSearchView: UIView {
         imgEmpty.heightAnchor.constraint(equalTo: imgEmpty.widthAnchor).isActive = true
     }
 
+    private func activateLoadingViewContraints() {
+        loadingView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        loadingView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        loadingView.topSafeAnchor.constraint(equalTo: topSafeAnchor).isActive = true
+        loadingView.bottomAnchor.constraint(equalTo: imgEmpty.topAnchor,
+                                            constant: UIScreen.minLenght * 0.25).isActive = true
+    }
+
     private func setupView() {
         backgroundColor = .black
         addSubviews()
         activateImgEmptyConstraints()
         activateTableViewViewConstraints()
+        activateLoadingViewContraints()
+    }
+
+    func setAnimation(isLoading: Bool) {
+        imgEmpty.alpha = isLoading ? 0 : 1
+        if isLoading, !loadingView.isAnimationPlaying {
+            loadingView.play(completion: nil)
+        } else if !isLoading {
+            loadingView.stop()
+        }
     }
 }

@@ -8,20 +8,25 @@
 import UIKit
 import RxCocoa
 import Common
+import Lottie
 
 protocol UserTweetsViewDelegate: UITableViewDelegate {
 
+    func refresh()
 }
 
 public class UserTweetsView: UIView {
 
-    public lazy var imgEmpty: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFill
-        imgView.clipsToBounds = true
-        imgView.image = Asset.twitter.image.withRenderingMode(.alwaysOriginal)
-        return imgView
+    public lazy var lblEmpty: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.font = FontFamily.RubikMedium.regular.font(size: 16)
+        label.numberOfLines = 0
+        label.text = "Sem tweets.\nToque para atualizar."
+        label.addGestureRecognizer(loadTapGesture())
+        return label
     }()
 
     lazy var tableView: UITableView = {
@@ -36,6 +41,26 @@ public class UserTweetsView: UIView {
         tableView.backgroundColor = .black
         return tableView
     }()
+
+    lazy var loadingView: AnimationView = {
+        let filepath = Bundle(for: UserTweetsView.self)
+                        .path(forResource: L10n.Animation.Filename.tweets,
+                              ofType: Common.L10n.File.Formart.json) ?? String()
+        let view = AnimationView(filePath: filepath)
+        view.loopMode = .loop
+        view.contentMode = .scaleToFill
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.addGestureRecognizer(loadTapGesture())
+        return view
+    }()
+
+    func loadTapGesture() -> UITapGestureRecognizer {
+        UITapGestureRecognizer(target: self, action: #selector(refresh))
+    }
+
+    @objc func refresh() {
+        self.delegate?.refresh()
+    }
 
     weak var delegate: UserTweetsViewDelegate?
 
@@ -52,8 +77,9 @@ public class UserTweetsView: UIView {
     }
 
     private func addSubviews() {
-        addSubview(imgEmpty)
-        insertSubview(tableView, aboveSubview: imgEmpty)
+        addSubview(loadingView)
+        addSubview(lblEmpty)
+        insertSubview(tableView, aboveSubview: loadingView)
     }
 
     private func activateTableViewViewConstraints() {
@@ -63,17 +89,48 @@ public class UserTweetsView: UIView {
         tableView.bottomSafeAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 
-    private func activateImgEmptyConstraints() {
-        imgEmpty.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        imgEmpty.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imgEmpty.widthAnchor.constraint(equalToConstant: UIScreen.minLenght * 0.5).isActive = true
-        imgEmpty.heightAnchor.constraint(equalTo: imgEmpty.widthAnchor).isActive = true
+    private func activateLblEmptyConstraints() {
+        lblEmpty.leftAnchor.constraint(equalTo: leftAnchor, constant: 32).isActive = true
+        lblEmpty.rightAnchor.constraint(equalTo: rightAnchor, constant: -32).isActive = true
+        lblEmpty.topAnchor.constraint(equalTo: loadingView.bottomAnchor,
+                                     constant: -UIScreen.minLenght * 0.25).isActive = true
+
+    }
+
+    private func activateLoadingViewContraints() {
+        loadingView.centerYAnchor.constraint(equalTo: centerYAnchor,
+                                             constant: UIScreen.minLenght * -0.1).isActive = true
+        loadingView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        loadingView.widthAnchor.constraint(equalToConstant: UIScreen.minLenght).isActive = true
+        loadingView.heightAnchor.constraint(equalTo: loadingView.widthAnchor).isActive = true
     }
 
     private func setupView() {
         backgroundColor = .black
         addSubviews()
-        activateImgEmptyConstraints()
+        activateLblEmptyConstraints()
         activateTableViewViewConstraints()
+        activateLoadingViewContraints()
+    }
+
+    var isLoading: Bool = false {
+        didSet {
+            setUserInteractionEnabled()
+            if isLoading, !loadingView.isAnimationPlaying {
+                loadingView.loopMode = .loop
+                self.lblEmpty.alpha = 0
+                loadingView.play { _ in
+                    self.setUserInteractionEnabled()
+                    self.lblEmpty.alpha = self.isLoading ? 0 : 1
+                }
+            } else if !isLoading {
+                loadingView.loopMode = .playOnce
+            }
+        }
+    }
+
+    private func setUserInteractionEnabled() {
+        loadingView.isUserInteractionEnabled = !isLoading
+        lblEmpty.isUserInteractionEnabled = !isLoading
     }
 }

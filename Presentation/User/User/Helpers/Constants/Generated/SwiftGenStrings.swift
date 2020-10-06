@@ -11,6 +11,13 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Animation {
+    internal enum Filename {
+      /// profiles
+      internal static let profiles = L10n.tr("Localizable", "Animation.Filename.profiles")
+    }
+  }
+
   internal enum UsersSearchViewController {
     /// Usuários
     internal static let title = L10n.tr("Localizable", "UsersSearchViewController.title")

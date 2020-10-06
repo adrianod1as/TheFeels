@@ -11,6 +11,15 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Animation {
+    internal enum Filename {
+      /// sentiments
+      internal static let sentiments = L10n.tr("Localizable", "Animation.Filename.sentiments")
+      /// tweets
+      internal static let tweets = L10n.tr("Localizable", "Animation.Filename.tweets")
+    }
+  }
+
   internal enum UserTweetsViewController {
     /// Tweets
     internal static let title = L10n.tr("Localizable", "UserTweetsViewController.title")

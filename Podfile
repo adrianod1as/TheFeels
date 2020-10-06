@@ -15,11 +15,6 @@ plugin 'cocoapods-keys', {
   "TwitterBearerToken",
   ]}
 
-def firebase
-  pod 'Firebase/Crashlytics'
-  pod 'Firebase/Analytics'
-end
-
 def sharedPods
   pod 'SwiftLint'
   pod 'Fakery', :git => 'https://github.com/vadymmarkov/Fakery', :branch => 'master'
@@ -39,9 +34,8 @@ end
 
 def presentationPods
   pod 'SwiftGen', '~> 6.0'
-  pod 'SwiftMessages'
-  pod 'NVActivityIndicatorView/Extended'
   pod 'Kingfisher', '~> 5.0'
+  pod 'lottie-ios'
   rxPresentationPods
 end
 
@@ -80,7 +74,6 @@ abstract_target 'TheFeelsTargets' do
   diPods
   networkingPods
   storagePods
-  firebase
   target 'TheFeels' do
     target 'TheFeelsTests' do
 	   inherit! :search_paths
