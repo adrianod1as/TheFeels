@@ -91,15 +91,38 @@ This appiclation is written fully in Swift and applies Codable, Equatable, Hasha
 
 ### Principles
 
+This project follows the [S.O.L.I.D. Principles](https://medium.com/flawless-app-stories/s-o-l-i-d-principle-with-swift-b42f597ba7e2).
+
 ### Architeture
+
+This project is architectured following the concepts of Clean Architeture(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
 
 ### Modularization
 
+This project is organized in modules primarily following the segregation of layers presented by Clean Architeture. Also, each layer has its own segregation.
+
+* Domain
+* Data
+  * AppData
+  * Networking
+  * Storage
+* Presentation
+  * AppNavigation
+  * Common
+  * User
+  * Tweet
+* DI (Dependency Injection)
+* Main
+
 ### Patterns
+
+* Model-View-ViewModel
+* Coordinator
+* Delegation
 
 ### Folder Structure
 
-Besides being physically divied by layers/modules, each module has its files grouped by its reponsibility.
+Besides being physically divied by modules, each module has its files grouped by its reponsibility.
 
 ### Unit tests
 
