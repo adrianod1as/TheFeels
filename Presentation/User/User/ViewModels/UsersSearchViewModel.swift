@@ -23,6 +23,7 @@ public class UsersSearchViewModel<SceneCoordinating: UsersSearchSceneCoordinatin
 
     internal let coordinator: SceneCoordinating
     internal let useCase: SearchUserByNameUseCaseable
+    internal let loading = BehaviorRelay<Bool>(value: false)
 
     public init(useCase: SearchUserByNameUseCaseable, coordinator: SceneCoordinating) {
         self.useCase = useCase
@@ -34,7 +35,8 @@ extension UsersSearchViewModel: UsersSearchViewModeling {
 
     internal func users(in input: Input, _ indicator: ActivityIndicator) -> Driver<[UserViewModel]> {
         input.name
-            .throttle(.milliseconds(500))
+            .do(onNext: { self.loading.accept(!$0.isEmpty) })
+            .debounce(.milliseconds(500))
             .distinctUntilChanged()
             .flatMapLatest {
                 self.useCase.execute($0)
@@ -54,7 +56,9 @@ extension UsersSearchViewModel: UsersSearchViewModeling {
         let indicator = ActivityIndicator()
         let didSucceed = users(in: input, indicator)
         let didNavigate = navigation(in: input, withLatestFrom: didSucceed)
-        return Output(isLoading: indicator.asDriver(), didSucceed: didSucceed, didFail: .empty(), didNavigate: didNavigate)
+        let isLoading = Driver.merge(indicator.asDriver(), loading.asDriver()).distinctUntilChanged()
+        return Output(isLoading: isLoading, didSucceed: didSucceed,
+                      didFail: .empty(), didNavigate: didNavigate)
     }
 
 }

@@ -25,7 +25,6 @@
 		E14F7F5425211D9A003075F9 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F2C25211D99003075F9 /* String+Ext.swift */; };
 		E14F7F5525211D9A003075F9 /* UIScreen+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F2D25211D99003075F9 /* UIScreen+Ext.swift */; };
 		E14F7F5625211D9A003075F9 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F2E25211D99003075F9 /* UIColor+Ext.swift */; };
-		E14F7F5725211D9A003075F9 /* SwiftMessages+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F2F25211D99003075F9 /* SwiftMessages+Ext.swift */; };
 		E14F7F5825211D9A003075F9 /* Resolver+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F3025211D99003075F9 /* Resolver+Ext.swift */; };
 		E14F7F5925211D9A003075F9 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F3125211D99003075F9 /* UIWindow+Ext.swift */; };
 		E14F7F5A25211D9A003075F9 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F7F3225211D99003075F9 /* UIViewController+Ext.swift */; };
@@ -87,7 +86,6 @@
 		E14F7F2C25211D99003075F9 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		E14F7F2D25211D99003075F9 /* UIScreen+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
 		E14F7F2E25211D99003075F9 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
-		E14F7F2F25211D99003075F9 /* SwiftMessages+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftMessages+Ext.swift"; sourceTree = "<group>"; };
 		E14F7F3025211D99003075F9 /* Resolver+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resolver+Ext.swift"; sourceTree = "<group>"; };
 		E14F7F3125211D99003075F9 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
 		E14F7F3225211D99003075F9 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -254,7 +252,6 @@
 				E14F7F2C25211D99003075F9 /* String+Ext.swift */,
 				E14F7F2D25211D99003075F9 /* UIScreen+Ext.swift */,
 				E14F7F2E25211D99003075F9 /* UIColor+Ext.swift */,
-				E14F7F2F25211D99003075F9 /* SwiftMessages+Ext.swift */,
 				E14F7F3025211D99003075F9 /* Resolver+Ext.swift */,
 				E14F7F3125211D99003075F9 /* UIWindow+Ext.swift */,
 				E14F7F3225211D99003075F9 /* UIViewController+Ext.swift */,
@@ -561,7 +558,6 @@
 				E16D367B25261F5E00275329 /* ProfileView.swift in Sources */,
 				E19C861A252903430004657B /* SearchBar+Ext.swift in Sources */,
 				E14F7F6A25211D9A003075F9 /* Coordinator.swift in Sources */,
-				E14F7F5725211D9A003075F9 /* SwiftMessages+Ext.swift in Sources */,
 				E14F7F5625211D9A003075F9 /* UIColor+Ext.swift in Sources */,
 				E14F7F5425211D9A003075F9 /* String+Ext.swift in Sources */,
 				E14F7F4E25211D9A003075F9 /* SwiftGenAssets.swift in Sources */,

@@ -11,6 +11,13 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
 
+  public enum File {
+    public enum Formart {
+      /// json
+      public static let json = L10n.tr("Localizable", "File.Formart.json")
+    }
+  }
+
   public enum Resolver {
     public enum SafelyResolve {
       /// %@ is nil

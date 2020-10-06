@@ -13,6 +13,7 @@ public struct TweetViewModel: IdentifiableType {
 
     public let tweet: Tweet
     public var analysis: SentimentAnalysis?
+    public var analysisFailed = false
 
     public init(tweet: Tweet) {
         self.tweet = tweet
@@ -35,10 +36,13 @@ public struct TweetViewModel: IdentifiableType {
     }
 
     public var photoUrl: URL? {
-        analysis == nil ? userViewModel.profileImageUrl : nil
+        analysis == nil && !analysisFailed ? userViewModel.profileImageUrl : nil
     }
 
     public var avatar: UIImage? {
+        if analysisFailed {
+            return Asset.error.image
+        }
         guard let analysis = analysis else {
             return nil
         }
@@ -62,6 +66,7 @@ extension TweetViewModel: Equatable {
     static public func == (lhs: TweetViewModel, rhs: TweetViewModel) -> Bool {
         return lhs.tweet == rhs.tweet
                 && lhs.analysis?.type.rawValue == rhs.analysis?.type.rawValue
+                && lhs.analysisFailed == rhs.analysisFailed
     }
 }
 
