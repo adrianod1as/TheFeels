@@ -99,7 +99,11 @@ This appiclation is written fully in Swift and applies Codable, Equatable, Hasha
 
 ### Folder Structure
 
+Besides being physically divied by layers/modules, each module has its files grouped by its reponsibility.
+
 ### Unit tests
+
+Each module has its own group of unit tests, as well the necessaries components (spies, stubs, fakes) for such tests. This project uses `XCTest`, assisted by `RxTest` & `RxBlocking` for Rx classes.
 
 ### Dependencies
 
@@ -140,8 +144,16 @@ This project uses dependencies managed by [Cocoapods](https://cocoapods.org/). E
 <!-- ROADMAP -->
 ## Roadmap
 
+This app has many spaces for improvement, and I intend to fill them in them following moments. In the next section you may read some of them.
+
 ### TO-DO
 
+- [ ] Replace [current](https://sentim-api.herokuapp.com/) sentiment analysis for the one provided by [Google](https://cloud.google.com/natural-language/)* or better alternative.
+- [ ] Improve layout by showing more information (hashtags, mentions, photos, etc..) for each tweet.
+- [ ] Cache searches and analysis, providing a offline-first behavior.
+
+
+*: At the moment of this writing, it was not possible to register for a free trial due to a system malfunction. 
 <!-- LICENSE -->
 ## License
 
