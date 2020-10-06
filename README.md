@@ -24,15 +24,17 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Written in](#written-in)
-* [Architeture & Patterns](#architeture-and-patterns)
+* [Technical](#Technical)
+  * [Written in](#written-in)
+  * [Principles](#principles)
   * [Architeture](#architeture)
+  * [Modularization](#modularization)
   * [Patterns](#patterns)
-* [Dependencies](#architeture-and-patterns)
-  * [Internal Modules](#modules)
-  * [Pods](#pods)  
+  * [Folder Structure](#folder-structure)
+  * [Unit tests](#unit-tests)
+  * [Dependencies](#dependencies)
 * [Roadmap](#roadmap)
-  * [TO-DO](#todo)  
+  * [TO-DO](#to-do)  
 * [License](#license)
 * [Contact](#contact)
   * [Projects](#projects) 
@@ -76,10 +78,36 @@ pod install
 
 which will install the projet dependencies needed and prompt you for the keys & tokens you obtained from Twitter. Such credentials will be stored only locally at your keychain and will be ignored from git history (vide [cocoapods-keys guidelines](https://github.com/orta/cocoapods-keys)). Finally you may open `TheFeels.xcworkspace` and run the project in the simulator or in your device by renaming its bundle identifier.
 
-<!-- WRITTEN IN -->
-## Written in
+<!-- TECHNICAL -->
+## Technical
+
+### Written in
 
 This appiclation is written fully in Swift and applies Codable, Equatable, Hashable, Higher order functions, Extensions, Associated Types, Typealias, Generics, among many others of its features.
+
+### Principles
+
+### Architeture
+
+### Modularization
+
+### Patterns
+
+### Folder Structure
+
+### Unit tests
+
+### Dependencies
+
+<!-- ROADMAP -->
+## Roadmap
+
+### TO-DO
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See [LICENSE](https://github.com/adrianodiasx93/TheFeels/blob/main/LICENSE) for more information.
 
 <!-- CONTACT -->
 ## Contact
