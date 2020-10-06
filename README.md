@@ -47,9 +47,13 @@ The main goal of this project is to demonstrate my knowledge with a few of the t
 <!-- Features -->
 ### Features
 
+The features are the following:
+
 * [Search Twitter's users by username;](https://github.com/adrianodiasx93/TheFeels/issues/18)
 * [Show public tweets from selected user;](https://github.com/adrianodiasx93/TheFeels/issues/22)
 * [Analyze the sentiment expressed in such tweets simultaneously.](https://github.com/adrianodiasx93/TheFeels/issues/37)
+
+Their development progress is detailed in the [Project Management](https://github.com/adrianodiasx93/TheFeels/projects/1) section.
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -98,6 +102,40 @@ This appiclation is written fully in Swift and applies Codable, Equatable, Hasha
 ### Unit tests
 
 ### Dependencies
+
+This project uses dependencies managed by [Cocoapods](https://cocoapods.org/). Each dependency is available only for its necessary modules.
+
+#### Shared Pods
+
+* [SwiftLint](https://github.com/realm/SwiftLint): A tool to enforce Swift style and conventions.
+* [Fakery](https://github.com/vadymmarkov/Fakery): Generates fake data. In association with `Fakeable`, a `protocol` of mine, `Models` can be randomly generated.
+* [RxSwift](https://github.com/ReactiveX/RxSwift): High level abstraction, reactive, functional and declarative programming. 😍
+* [RxSwiftExt](https://github.com/RxSwiftCommunity/RxSwiftExt): Useful and conveniente extensions for Rx.
+
+#### Testing Pods
+
+* [RxTest](https://github.com/vadymmarkov/Fakery) & [RxBlocking](https://github.com/vadymmarkov/Fakery): For testing in the Rx way.
+
+#### Presentation Pods
+
+* [SwiftGen](https://github.com/SwiftGen/SwiftGeny): Type-safe them all.
+* [Kingfisher](https://github.com/onevcat/Kingfisher): Downloading and caching of images from the web.
+* [lottie-io](https://github.com/airbnb/lottie-ios): Loadings should be pretty.
+* [RxCocoa](https://github.com/vadymmarkov/Fakery): Rx capabilities for Cocoa APIs. Extra points for [Driver](https://github.com/ReactiveX/RxSwift/blob/main/Documentation/Traits.md#driver).
+* [RxSwiftUtilities](https://github.com/RxSwiftCommunity/RxSwiftUtilities): Track progress of stream events. Basically it tells when to start/stop loading.
+* [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources): Upgraded Rx way of binding your datasource to your TableView/CollectionView.
+
+#### DI Pods
+
+* [Swinject](https://github.com/Swinject/Swinject): Well-known framework for dependency injection.
+* [SwinjectAutoregistration](https://github.com/Swinject/SwinjectAutoregistration): Automate the dependencies registrations in a generic way and reduce their boilerplate.
+
+#### NetworkingPods
+
+* [OxeNetworking](https://github.com/adrianodiasx93/OxeNetworking-iOS): Created by a good friend of mine, this framework is a network layer abstraction using Alamofire and Moya. And it also provides integration with RxSwift.
+* [AlamofireNetworkActivityLogger](https://github.com/konkab/AlamofireNetworkActivityLogger): For logging network activity.
+* [OAuthSwift](https://github.com/OAuthSwift/OAuthSwift):  Acessing of OAuth protected endpoints, for instance the one for [searching twitter users by query](https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-users-search). 
+
 
 <!-- ROADMAP -->
 ## Roadmap
